@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f6f3ee" />
+  <title>注册 · 拾光</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-page="register">
+  <div class="app">
+    <main class="screen">
+      <header class="topbar">
+        <a class="icon-btn" href="login.html" aria-label="返回登录">
+          <svg width="22" height="22" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M15 5 8 12l7 7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </header>
+      <div class="screen-body">
+        <h1>创建账号</h1>
+        <p class="sub">使用手机号接收验证码，完成注册后直接登录</p>
+        <form class="form" id="register-form" novalidate>
+          <div class="field">
+            <label for="phone">手机号</label>
+            <input id="phone" name="phone" type="tel" inputmode="numeric" autocomplete="tel" maxlength="11" placeholder="11 位中国大陆手机号" aria-describedby="phone-error" />
+            <p class="error" id="phone-error" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="code">短信验证码</label>
+            <div class="code-row">
+              <input id="code" name="code" type="text" inputmode="numeric" autocomplete="one-time-code" maxlength="6" placeholder="6 位数字" aria-describedby="code-status code-error" />
+              <button type="button" id="send-code" data-again="重新获取">获取验证码</button>
+            </div>
+            <p class="status" id="code-status" role="status"></p>
+            <p class="error" id="code-error" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="password">密码</label>
+            <div class="control">
+              <input id="password" name="password" type="password" autocomplete="new-password" placeholder="请设置密码" aria-describedby="password-hint password-error" />
+              <button type="button" class="ghost-inline" data-toggle-secret="password" aria-pressed="false" aria-label="显示密码">显示</button>
+            </div>
+            <p class="hint" id="password-hint">至少 8 位，需包含字母和数字</p>
+            <p class="error" id="password-error" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <label for="confirm">确认密码</label>
+            <div class="control">
+              <input id="confirm" name="confirm" type="password" autocomplete="new-password" placeholder="再次输入密码" aria-describedby="confirm-error" />
+              <button type="button" class="ghost-inline" data-toggle-secret="confirm" aria-pressed="false" aria-label="显示密码">显示</button>
+            </div>
+            <p class="error" id="confirm-error" role="alert" hidden></p>
+          </div>
+          <div class="field">
+            <div class="agree">
+              <input id="agree" name="agree" type="checkbox" aria-describedby="agree-error" />
+              <label for="agree">我已阅读并同意</label>
+              <button type="button" class="link" data-legal="terms">《用户协议》</button>
+              <span>与</span>
+              <button type="button" class="link" data-legal="privacy">《隐私政策》</button>
+            </div>
+            <p class="error" id="agree-error" role="alert" hidden></p>
+          </div>
+          <button class="btn btn-primary btn-block" id="register-submit" type="submit">注册并登录</button>
+        </form>
+        <p class="switch">已有账号？<a href="login.html">去登录</a></p>
+        <p class="footnote">界面演示 · 数据仅保存在本机</p>
+      </div>
+    </main>
+    <div class="modal" id="legal-dialog" hidden>
+      <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="legal-title">
+        <h2 id="legal-title">用户协议</h2>
+        <p id="legal-body"></p>
+        <button type="button" class="btn btn-primary btn-block" id="legal-close">我知道了</button>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
