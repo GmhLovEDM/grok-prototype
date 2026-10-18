@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Cross-check routes/*.md against timeline.md and story-flow.md.
 
+Lives in 01-planning/tools/. The planning directory is the parent of this file.
 Prints disagreements. Does not edit files.
 """
 from __future__ import annotations
