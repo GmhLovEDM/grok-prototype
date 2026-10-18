@@ -537,7 +537,8 @@ const renderers = {
       "</div>" +
       '<div class="map-board" aria-hidden="false">' +
       '<svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">' +
-      '<path d="M22 93 L22 28 L40 16" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-dasharray="4 3"/>' +
+      '<path d="M22 93 L22 28" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-dasharray="4 3"/>' +
+      '<path d="M22 42 L34 36" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-dasharray="4 3"/>' +
       '<path d="M8 20 H96" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke"/>' +
       "</svg>" +
       '<span class="map-label sea-label">海</span>' +

@@ -362,7 +362,7 @@ const CafeData = {
     { id: "clinic", name: "卫生所", hint: "第10天起傍晚开放", x: 22, y: 54, locked: true, lockText: "第10天起傍晚开放" },
     { id: "cafe", name: "潮汐", hint: "二楼朝海", x: 22, y: 42 },
     { id: "school", name: "小学", hint: "街的尽头", x: 22, y: 30, landmark: true, blurb: "镇小学在老街最尽头。夏栀白天在这里上课，傍晚不开放。" },
-    { id: "dock", name: "码头", hint: "陆屿", x: 40, y: 16, eveningEvent: true },
+    { id: "dock", name: "码头", hint: "陆屿", x: 34, y: 36, eveningEvent: true },
     { id: "lighthouse", name: "灯塔", hint: "北岬", x: 84, y: 14, eveningEvent: true },
     { id: "rocks", name: "礁石滩", hint: "看海", x: 62, y: 26 },
     { id: "lab", name: "研究站", hint: "第16天", x: 84, y: 36, locked: true, lockText: "研究站对着近岸珊瑚，第 16 天才进得去。" },
