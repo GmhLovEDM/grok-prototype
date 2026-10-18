@@ -84,6 +84,7 @@ function freshState() {
       phoneRead: false,
       phoneReply: "",
       miniResult: "",
+      roamOpen: false,
     },
     settings: loadSettings(),
     saveMode: "load",
@@ -145,12 +146,15 @@ function toast(message) {
   }, 1700);
 }
 
-function flickerHeart() {
+function flickerBond(id) {
+  const kind = cafeBondKind(id, state.player.gender);
   const el = $("#heart");
+  el.classList.remove("play", "is-heart", "is-shell");
+  el.dataset.kind = kind;
+  el.innerHTML = kind === "heart" ? "♥" : cafeShellSvg();
   el.hidden = false;
-  el.classList.remove("play");
   void el.offsetWidth;
-  el.classList.add("play");
+  el.classList.add("play", kind === "heart" ? "is-heart" : "is-shell");
 }
 
 function blip() {
@@ -213,6 +217,7 @@ function show(screen) {
 }
 
 function render() {
+  cafeApplyHeartField(state.player.gender || "male");
   $("#app").innerHTML = (renderers[state.screen] || renderers.title)();
   renderOverlay();
   if (state.screen === "dialogue") {
@@ -294,6 +299,10 @@ function applyGoto(node) {
   if (node.phase) state.phase = node.phase;
   if (node.outing) state.flags.outing = node.outing;
   if (node.phoneReady) state.flags.phoneReady = true;
+  if (node.screen === "phone" && state.flags.phoneReady) {
+    state.flags.phoneRead = true;
+    meet("shen-ruo");
+  }
   show(node.screen);
 }
 
@@ -390,9 +399,9 @@ function choose(index) {
   const option = node.options[index];
   if (!option) return;
   state.history.push({ speaker: state.player.name || "你", text: option.text });
-  if (option.heart) {
-    addHeart(option.heart);
-    flickerHeart();
+  if (option.bond) {
+    addHeart(option.bond);
+    flickerBond(option.bond);
   }
   state.skip = false;
   state.auto = false;
@@ -462,7 +471,7 @@ const renderers = {
     return (
       '<section class="screen new-screen">' +
       '<header class="panel-head"><button class="text-btn" data-act="back-title">返回</button><h2>新的夏天</h2></header>' +
-      '<p class="lead">先选你是谁。名字可以自己起。男女主走同一条主线，差别在可以亲近的人。</p>' +
+      '<p class="lead">先选你是谁。名字可以自己起。男女主走同一条主线。能走在一起的人，图鉴里是心；其余是一枚贝壳。</p>' +
       '<div class="gender-row">' +
       '<button class="gender' + (gender === "male" ? " is-selected" : "") + '" data-act="gender" data-gender="male">' +
       "<b>男主</b><span>可以亲近的人：夏栀、唐棠、叶帆、苏念、程鹭、沈若</span></button>" +
@@ -508,21 +517,32 @@ const renderers = {
   map() {
     const phase = state.phase;
     const places = CafeData.places.map((place) => {
-      const locked = Boolean(place.locked);
-      const cls = "pin" + (locked ? " is-locked" : "") + (place.id === "cafe" ? " is-cafe" : "");
-      return '<button class="' + cls + '" style="left:' + place.x + "%;top:" + place.y + '%" data-act="place" data-place="' + place.id + '"><b>' + esc(place.name) + "</b><span>" + esc(place.hint) + "</span></button>";
+      const today = placeHasEvent(place);
+      const cls = ["pin"];
+      if (place.locked) cls.push("is-locked");
+      if (place.id === "cafe") cls.push("is-cafe");
+      if (place.landmark) cls.push("is-landmark");
+      if (today) cls.push("is-event");
+      const mark = today ? '<i class="today">今日</i>' : "";
+      return '<button class="' + cls.join(" ") + '" style="left:' + place.x + "%;top:" + place.y + '%" data-act="place" data-place="' + place.id + '"><b>' + esc(place.name) + "</b>" + mark + "<span>" + esc(place.hint) + "</span></button>";
     }).join("");
-    const eveningOpen = state.flags.shiftDone;
+    const eveningOpen = state.flags.roamOpen && state.day >= 6;
+    const eveningLabel = eveningOpen ? "第6天傍晚（示意）" : "傍晚 · 第6天起";
     return (
       '<section class="screen play map-screen">' +
       hud() +
       '<div class="phase-switch" role="tablist">' +
       '<button class="' + (phase === "day" ? "is-on" : "") + '" data-act="phase" data-phase="day">白天 · 咖啡馆班次</button>' +
-      '<button class="' + (phase === "evening" ? "is-on" : "") + (eveningOpen ? "" : " is-wait") + '" data-act="phase" data-phase="evening">傍晚 · 自由行动</button>' +
+      '<button class="' + (phase === "evening" ? "is-on" : "") + (eveningOpen ? "" : " is-wait") + '" data-act="phase" data-phase="evening">' + eveningLabel + "</button>" +
       "</div>" +
       '<div class="map-board" aria-hidden="false">' +
+      '<svg class="map-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">' +
+      '<path d="M22 93 L22 28 L40 16" fill="none" stroke="currentColor" stroke-width="1.6" vector-effect="non-scaling-stroke" stroke-dasharray="4 3"/>' +
+      '<path d="M8 20 H96" fill="none" stroke="currentColor" stroke-width="1.2" vector-effect="non-scaling-stroke"/>' +
+      "</svg>" +
       '<span class="map-label sea-label">海</span>' +
-      '<span class="map-label land-label">汐湾老街</span>' +
+      '<span class="map-label beach-label">沙滩一侧</span>' +
+      '<span class="map-label street-label">老街从车站往上，通向海边</span>' +
       places +
       "</div>" +
       '<div class="map-dock">' + mapObjective() + "</div>" +
@@ -608,7 +628,7 @@ const renderers = {
     return (
       '<section class="screen codex-screen">' +
       '<header class="panel-head"><button class="text-btn" data-act="back">返回</button><h2>人物图鉴</h2></header>' +
-      '<p class="lead">遇见过的人，可以看一小段故事。还没遇见的，先锁着。</p>' +
+      '<p class="lead">心是可以走在一起的人，贝壳是朋友。换了主角，同一人的图标会换。还没遇见的，故事先锁着。</p>' +
       '<div class="codex-grid">' + cards + "</div>" +
       "</section>"
     );
@@ -639,9 +659,10 @@ const renderers = {
       '<section class="screen chapter-screen">' +
       sceneHtml("night") +
       '<div class="chapter-card">' +
-      '<p class="kicker">演示快进 · 第 4 天到第 13 天略过</p>' +
+      '<p class="kicker">演示快进 · 第 7 天到第 13 天略过</p>' +
       "<h2>第一章 · 重新开张</h2>" +
       '<p class="day-line">第 14 天 / 60</p>' +
+      "<p>第 6 天傍晚已经单独看过。第 4 天和第 5 天没有演出。</p>" +
       "<p>夏日祭。烟花在码头上空散开。</p>" +
       "<p>回家的路上，城里的前公司打来电话：「位置给你留着，八月底前答复。」</p>" +
       '<ul class="threads">' +
@@ -664,11 +685,12 @@ const renderers = {
       '<div class="ending-layout">' +
       '<div class="ending-figure">' + cafeSilhouette(card.figure) + "</div>" +
       '<article class="ending-card">' +
-      '<p class="kicker">结局示意 · 非正式结算</p>' +
+      '<p class="kicker">示意</p>' +
       "<h2>" + esc(card.who) + " · " + esc(card.title) + "</h2>" +
       '<p class="where">' + esc(card.where) + "</p>" +
       "<p>" + esc(card.text) + "</p>" +
-      '<p class="fine">' + esc(name) + " · " + genderLabel(state.player.gender || "male") + " · 全游戏二十二个结局里的一则。这一张是演示用的固定示意。</p>" +
+      '<p class="fine">这张卡片是「示意」。正式文案以 Kai 的 endings.md 为准。</p>' +
+      '<p class="fine">' + esc(name) + " · " + genderLabel(state.player.gender || "male") + " · 全游戏二十二个结局里的一则。</p>" +
       '<p class="fine">男主可达十四个，女主可达十个，里面都有「独自留在汐湾」和「回到城市」。</p>' +
       '<button class="btn primary" data-act="back-title">回到标题</button>' +
       "</article></div></section>"
@@ -708,35 +730,45 @@ function sliderField(label, key, value, minLabel, maxLabel) {
   );
 }
 
+function placeHasEvent(place) {
+  if (state.phase === "day") return place.id === "cafe" && state.day === 3 && !state.flags.shiftDone;
+  return Boolean(place.eveningEvent) && state.day >= 6 && state.day <= 8;
+}
+
 function mapObjective() {
-  if (state.phase === "day") {
+  if (state.phase === "day" || !state.flags.roamOpen) {
+    if (state.flags.shiftDone && state.day >= 6) {
+      return '<p>白天的班次做完了。</p><button class="btn" data-act="phase" data-phase="evening">第6天傍晚（示意）</button>';
+    }
     if (state.flags.shiftDone) {
-      return '<p>白天的班次做完了。</p><button class="btn" data-act="phase" data-phase="evening">去傍晚</button>';
+      return "<p>班次做完了。第 3 天傍晚，夏栀会留下来擦窗。</p>";
     }
     return '<p>今天的班次：做出回来后的第一杯。夏栀会把旧咖啡壶送来。</p><button class="btn primary" data-act="place" data-place="cafe">开始班次</button>';
   }
-  if (!state.flags.shiftDone) {
-    return "<p>傍晚还没到。先把咖啡馆的班次做完。</p>";
-  }
+  const note = "<p><b>第6天傍晚（示意）</b>第 4、5 天略过。自由行动从第 6 天起到第 8 天。标着「今日」的地方今晚有事。</p>";
   if (!state.flags.outing) {
-    return "<p>收店了。码头、灯塔、礁石滩、老街，今晚可以去一处。邮局要第 11 天才开。</p>";
+    return '<div class="map-copy">' + note + "<p>码头、灯塔、礁石滩，今晚只能去一处。老街·秀姨是日常，只有两句话。</p></div>";
   }
-  if (!state.flags.phoneRead) {
-    return '<p>手机震了一下。是城里的号码。</p><button class="btn primary" data-act="open-phone">打开手机</button>';
-  }
-  if (!state.flags.phoneReply) {
-    return '<p>沈若的消息还在。</p><button class="btn primary" data-act="open-phone">回到短信</button>';
-  }
-  return '<p>这一晚就到这里。后面的日子，演示先快进到章末。</p><button class="btn primary" data-act="chapter">快进到章末</button>';
+  return '<div class="map-copy">' + note + "<p>这一晚就到这里。第 7 天到第 13 天，演示会快进。</p></div>" +
+    '<button class="btn primary" data-act="chapter">快进到章末</button>';
+}
+
+function bondMarks(person, count) {
+  const kind = person.heart || cafeBondKind(person.id, state.player.gender);
+  const total = Math.max(1, count || 1);
+  const marks = kind === "heart" ? "♥".repeat(total) : Array.from({ length: total }, () => cafeShellSvg()).join("");
+  return { kind: kind, marks: marks, label: kind === "heart" ? "心" : "贝壳" };
 }
 
 function codexCard(person) {
   const known = Boolean(state.met[person.id]);
   if (!known) {
+    const icon = bondMarks(person, 1);
     return (
       '<article class="codex-card is-locked">' +
       '<div class="lock-mark">锁定</div>' +
       "<h3>" + esc(person.name) + "</h3>" +
+      '<p class="hearts is-dim" data-bond="' + icon.kind + '" aria-label="' + icon.label + '">' + icon.marks + "</p>" +
       "<p>尚未相遇</p>" +
       '<p class="fine">' + esc(person.day) + "</p></article>"
     );
@@ -744,7 +776,7 @@ function codexCard(person) {
   const tier = Math.max(0, Math.min(2, (state.hearts[person.id] || 1) - 1));
   const gender = state.player.gender === "female" ? "female" : "male";
   const line = (person.bond[gender] || person.bond.male)[tier] || person.bond[gender][0];
-  const hearts = "♥".repeat(Math.min(3, state.hearts[person.id] || 1));
+  const icon = bondMarks(person, Math.min(3, state.hearts[person.id] || 1));
   const badge = person.messageOnly ? '<span class="badge">仅消息</span>' : "";
   return (
     '<article class="codex-card">' +
@@ -752,7 +784,7 @@ function codexCard(person) {
     "<h3>" + esc(person.name) + badge + "</h3>" +
     '<p class="role">' + esc(person.role) + "</p>" +
     "<p>" + esc(person.bio) + "</p>" +
-    '<p class="hearts" aria-label="' + esc(line) + '">' + hearts + "</p>" +
+    '<p class="hearts" data-bond="' + icon.kind + '" aria-label="' + esc(icon.label + "。" + line) + '">' + icon.marks + "</p>" +
     '<p class="bond">' + esc(line) + "</p></article>"
   );
 }
@@ -763,7 +795,9 @@ function saveCard(slot, index) {
   }
   const when = new Date(slot.savedAt);
   const stamp = (when.getMonth() + 1) + "月" + when.getDate() + "日 " + String(when.getHours()).padStart(2, "0") + ":" + String(when.getMinutes()).padStart(2, "0");
-  const where = slot.screen === "map" ? (slot.phase === "evening" ? "傍晚" : "白天班次") : slot.screen === "dialogue" ? "对话" : "进行中";
+  const where = slot.screen === "map"
+    ? (slot.phase === "evening" && slot.day >= 6 ? "傍晚（示意）" : slot.phase === "evening" ? "傍晚" : "白天班次")
+    : slot.screen === "dialogue" ? "对话" : "进行中";
   return (
     '<button class="slot" data-act="slot" data-slot="' + index + '">' +
     "<b>栏位 " + (index + 1) + "</b>" +
@@ -971,36 +1005,47 @@ function onPlace(id) {
     toast(place.lockText);
     return;
   }
-  if (state.phase === "day") {
-    if (id !== "cafe") {
-      toast("白天还在营业，傍晚再出门。");
+  if (place.landmark) {
+    toast(place.blurb);
+    return;
+  }
+  const roaming = state.phase === "evening" && state.flags.roamOpen && state.day >= 6;
+  if (!roaming) {
+    if (id === "cafe" && state.phase === "day" && !state.flags.shiftDone) {
+      playScene("day3");
       return;
     }
-    if (state.flags.shiftDone) {
+    if (id === "cafe" && state.flags.shiftDone) {
       toast("今天的班次已经做完。");
       return;
     }
-    playScene("day3");
+    toast(state.phase === "day" ? "白天还在营业，傍晚再出门。" : "自由行动从第 6 天傍晚开始。");
     return;
   }
-  if (!state.flags.shiftDone) {
-    toast("先把今天的班次做完。");
+  if (place.everyday) {
+    playScene("evening-street");
     return;
   }
   if (id === "cafe") {
-    toast("「潮汐」今天已经打烊。");
+    toast("「潮汐」今天已经打烊。二楼朝海，人已经出来了。");
     return;
   }
   if (state.flags.outing) {
     toast("今晚已经出过门了。");
     return;
   }
+  if (!CafeData.scenes["evening-" + id]) {
+    toast("这里今晚没有事。");
+    return;
+  }
   playScene("evening-" + id);
 }
 
 function setPhase(phase) {
-  if (phase === "evening" && !state.flags.shiftDone) {
-    toast("先把今天的班次做完。");
+  if (phase === "evening" && !state.flags.roamOpen) {
+    toast(state.flags.shiftDone
+      ? "第 3 天傍晚是夏栀留下来擦窗，还有沈若的消息。自由行动从第 6 天起。"
+      : "先把今天的班次做完。自由行动从第 6 天傍晚开始。");
     return;
   }
   state.phase = phase;
@@ -1058,10 +1103,10 @@ function skipMini() {
 
 function finishMini(skipped) {
   state.flags.shiftDone = true;
-  state.phase = "evening";
   state.day = 3;
+  state.phase = "day";
   cancelAnimationFrame(miniRaf);
-  show("map");
+  playScene("day3-evening");
   if (!skipped) toast(state.flags.miniResult === "good" ? "这杯还算顺手" : "这杯可以上桌");
 }
 
@@ -1079,9 +1124,9 @@ function replyPhone(id) {
   const option = CafeData.replies.find((item) => item.id === id);
   if (!option || state.flags.phoneReply === "warm" || state.flags.phoneReply === "cool") return;
   state.flags.phoneReply = id;
-  if (option.heart) {
-    addHeart("shen-ruo");
-    flickerHeart();
+  if (option.bond) {
+    addHeart(option.bond);
+    flickerBond(option.bond);
   }
   render();
 }
@@ -1090,7 +1135,21 @@ function closePhone() {
   if (state.flags.phoneReady && state.flags.phoneReply !== "warm" && state.flags.phoneReply !== "cool") {
     state.flags.phoneReply = "later";
   }
+  if (!state.flags.roamOpen && state.flags.phoneReady && state.day < 6) {
+    openDay6();
+    return;
+  }
   goBack();
+}
+
+function openDay6() {
+  state.day = 6;
+  state.phase = "evening";
+  state.flags.roamOpen = true;
+  state.flags.shiftDone = true;
+  state.flags.outing = "";
+  state.stack = [];
+  show("map");
 }
 
 function onDialogueClick() {
@@ -1340,12 +1399,20 @@ function bootFromHash(hash) {
       show("map");
     },
     "map-evening"() {
-      state.day = 3;
+      state.day = 6;
       state.phase = "evening";
       state.flags.shiftDone = true;
-      state.met = { "lu-yu": true, "xia-zhi": true };
-      state.hearts = { "lu-yu": 2, "xia-zhi": 1 };
+      state.flags.roamOpen = true;
+      state.flags.phoneReady = true;
+      state.flags.phoneRead = true;
+      state.flags.phoneReply = "warm";
+      state.met = { "lu-yu": true, "xia-zhi": true, "shen-ruo": true };
+      state.hearts = { "lu-yu": 2, "xia-zhi": 1, "shen-ruo": 2 };
       show("map");
+    },
+    "day3-evening"() {
+      state.flags.shiftDone = true;
+      bootMid("day3-evening", "w1", { "lu-yu": true, "xia-zhi": true }, { "lu-yu": 2, "xia-zhi": 1 }, 3);
     },
     minigame() {
       state.day = 3;
@@ -1356,14 +1423,13 @@ function bootFromHash(hash) {
     },
     phone() {
       state.day = 3;
-      state.phase = "evening";
+      state.scene = "day3-evening";
+      state.scriptIndex = nodeIndex("day3-evening", "to-phone");
       state.flags.shiftDone = true;
-      state.flags.outing = "dock";
       state.flags.phoneReady = true;
       state.flags.phoneRead = true;
       state.met = { "lu-yu": true, "xia-zhi": true, "shen-ruo": true };
       state.hearts = { "lu-yu": 2, "xia-zhi": 1, "shen-ruo": 1 };
-      state.stack = ["map"];
       show("phone");
     },
     codex() {
@@ -1393,16 +1459,16 @@ function bootFromHash(hash) {
           savedAt: Date.now() - 3600 * 1000,
         },
         {
-          day: 3,
+          day: 6,
           phase: "evening",
-          scene: "main",
-          scriptIndex: nodeIndex("main", "to-map"),
+          scene: "day3-evening",
+          scriptIndex: nodeIndex("day3-evening", "to-phone"),
           screen: "map",
           player: { name: "林夏", gender: lead },
-          met: { "lu-yu": true, "xia-zhi": true },
-          hearts: { "lu-yu": 2, "xia-zhi": 1 },
+          met: { "lu-yu": true, "xia-zhi": true, "shen-ruo": true },
+          hearts: { "lu-yu": 2, "xia-zhi": 1, "shen-ruo": 1 },
           history: [],
-          flags: Object.assign(freshState().flags, { shiftDone: true }),
+          flags: Object.assign(freshState().flags, { shiftDone: true, roamOpen: true, phoneReady: true, phoneRead: true, phoneReply: "warm" }),
           savedAt: Date.now() - 600 * 1000,
         },
         null, null, null, null,

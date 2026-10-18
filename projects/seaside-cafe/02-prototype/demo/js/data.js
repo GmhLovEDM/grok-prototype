@@ -3,6 +3,7 @@ const CafeData = {
   characters: [
     {
       id: "lu-yu",
+      romance: "female",
       name: "陆屿",
       role: "隔壁渔家青年，儿时玩伴",
       bio: "嘴上嫌你麻烦，手上已经把你搬不动的箱子扛上了二楼。",
@@ -14,6 +15,7 @@ const CafeData = {
     },
     {
       id: "xia-zhi",
+      romance: "male",
       name: "夏栀",
       role: "灯塔守塔人的孙女，镇小学老师",
       bio: "像傍晚灯塔亮起的第一束光：不刺眼，但一直在那儿。",
@@ -25,6 +27,7 @@ const CafeData = {
     },
     {
       id: "shen-ruo",
+      romance: "male",
       name: "沈若",
       role: "城里的前同事",
       bio: "穿着高跟鞋踩进沙滩的女人。说是来休假，手机却一刻都没放下。",
@@ -37,6 +40,7 @@ const CafeData = {
     },
     {
       id: "tang-tang",
+      romance: "male",
       name: "唐棠",
       role: "码头海鲜排档的女儿",
       bio: "码头上嗓门最大的姑娘，刀工比她爸还好。",
@@ -45,6 +49,7 @@ const CafeData = {
     },
     {
       id: "xu-zhiyan",
+      romance: "female",
       name: "许之言",
       role: "镇卫生所唯一的医生",
       bio: "话很少。你中暑那天的字条，他写了整整三行。",
@@ -53,6 +58,7 @@ const CafeData = {
     },
     {
       id: "ye-fan",
+      romance: "male",
       name: "叶帆",
       role: "骑单车送信的邮递员",
       bio: "单车铃一响，整条老街都知道她来了。",
@@ -61,6 +67,7 @@ const CafeData = {
     },
     {
       id: "cheng-lu",
+      romance: "male",
       name: "程鹭",
       role: "海洋研究站的潜水研究员",
       bio: "冷淡、专注，不想离开这片海。",
@@ -69,6 +76,7 @@ const CafeData = {
     },
     {
       id: "song-zhiyuan",
+      romance: "female",
       name: "宋知远",
       role: "冲浪民宿老板，冲浪教练",
       bio: "阳光，爱开玩笑。受伤退役后，再没站上过比赛的浪。",
@@ -77,6 +85,7 @@ const CafeData = {
     },
     {
       id: "jiang-xubai",
+      romance: "female",
       name: "江叙白",
       role: "夏天来写生的画家",
       bio: "温和健谈。一年来，再也画不出满意的作品。",
@@ -85,6 +94,7 @@ const CafeData = {
     },
     {
       id: "su-nian",
+      romance: "male",
       name: "苏念",
       role: "来小镇采风的独立音乐人",
       bio: "安静、骄傲。每晚在礁石滩弹琴。",
@@ -166,9 +176,9 @@ const CafeData = {
         quote: "水管漏了。我修。你别在旁边添乱。",
         prompt: "你怎么接这句话？",
         options: [
-          { text: "「还是你利落。箱子就拜托你了。」", heart: "lu-yu", next: "r-a" },
+          { text: "「还是你利落。箱子就拜托你了。」", bond: "lu-yu", next: "r-a" },
           { text: "「我自己可以。你忙你的。」", next: "r-b" },
-          { text: "「谢谢。家里还好吗？」", heart: "lu-yu", next: "r-c" },
+          { text: "「谢谢。家里还好吗？」", bond: "lu-yu", next: "r-c" },
         ],
       },
       {
@@ -244,6 +254,35 @@ const CafeData = {
       { id: "to-mini", type: "goto", screen: "minigame" },
     ],
 
+    "day3-evening": [
+      {
+        id: "w1",
+        type: "line",
+        bg: "cafe",
+        speaker: "旁白",
+        figure: "xia-zhi",
+        day: 3,
+        text: "第 3 天傍晚。杯子收进水槽，店里的灯还亮着。",
+      },
+      {
+        id: "w2",
+        type: "line",
+        bg: "cafe",
+        speaker: "夏栀",
+        figure: "xia-zhi",
+        text: "我再擦一会儿窗。你去忙别的也行。",
+      },
+      {
+        id: "w3",
+        type: "line",
+        bg: "cafe",
+        speaker: "旁白",
+        figure: "xia-zhi",
+        text: "她留下来，把朝海的那面窗擦到能看见灯塔。柜台后面，手机亮了。",
+      },
+      { id: "to-phone", type: "goto", screen: "phone", phoneReady: true },
+    ],
+
     "evening-dock": [
       {
         id: "e1",
@@ -251,7 +290,7 @@ const CafeData = {
         bg: "dock",
         speaker: "陆屿",
         figure: "lu-yu",
-        text: "看什么。渔人结不是看着就会的。",
+        text: "网破了。看什么，渔人结不是看着就会的。",
       },
       {
         id: "e2",
@@ -261,7 +300,7 @@ const CafeData = {
         figure: "lu-yu",
         text: "他嘴上不耐烦，还是把绳子的一头递到你手里。",
       },
-      { id: "back", type: "goto", screen: "map", outing: "dock", phoneReady: true },
+      { id: "back", type: "goto", screen: "map", outing: "dock" },
     ],
 
     "evening-lighthouse": [
@@ -281,7 +320,7 @@ const CafeData = {
         figure: "xia-zhi",
         text: "她往旁边让了让。灯还没亮，海风先到了。",
       },
-      { id: "back", type: "goto", screen: "map", outing: "lighthouse", phoneReady: true },
+      { id: "back", type: "goto", screen: "map", outing: "lighthouse" },
     ],
 
     "evening-rocks": [
@@ -292,7 +331,7 @@ const CafeData = {
         speaker: "旁白",
         text: "潮水退了一半。礁石滩上没有人在等你，只有风，和很远的船。",
       },
-      { id: "back", type: "goto", screen: "map", outing: "rocks", phoneReady: true },
+      { id: "back", type: "goto", screen: "map", outing: "rocks" },
     ],
 
     "evening-street": [
@@ -304,18 +343,30 @@ const CafeData = {
         figure: "xiu-yi",
         text: "营业还顺利吧？别饿着肚子干活，外婆最见不得这个。",
       },
-      { id: "back", type: "goto", screen: "map", outing: "street", phoneReady: true },
+      {
+        id: "e2",
+        type: "line",
+        bg: "street",
+        speaker: "旁白",
+        figure: "xiu-yi",
+        text: "她把一袋橘子塞过来，又去招呼别的客人了。",
+      },
+      { id: "back", type: "goto", screen: "map" },
     ],
   },
 
   places: [
-    { id: "lighthouse", name: "灯塔", hint: "夏栀", x: 18, y: 24 },
-    { id: "clinic", name: "卫生所", hint: "第 9 天", x: 78, y: 28, locked: true, lockText: "卫生所的灯还没为你亮。许之言要到第 9 天才出诊回来。" },
-    { id: "street", name: "老街", hint: "秀姨", x: 56, y: 40 },
-    { id: "cafe", name: "潮汐", hint: "咖啡馆", x: 42, y: 54 },
-    { id: "dock", name: "码头", hint: "陆屿", x: 16, y: 70 },
-    { id: "post", name: "邮局", hint: "第 11 天", x: 38, y: 78, locked: true, lockText: "邮局要等台风之后才开门。叶帆第 11 天才会骑车过来。" },
-    { id: "rocks", name: "礁石滩", hint: "看海", x: 74, y: 68 },
+    { id: "station", name: "车站", hint: "老街这一头", x: 22, y: 90, landmark: true, blurb: "车站在老街这一头。往里走是杂货铺、邮局、卫生所，尽头才是「潮汐」。今晚不在车站停留。" },
+    { id: "street", name: "老街·秀姨", hint: "日常", x: 22, y: 78, everyday: true },
+    { id: "post", name: "邮局", hint: "第11天", x: 22, y: 66, locked: true, lockText: "邮局要等第 11 天，叶帆才会骑车过来。" },
+    { id: "clinic", name: "卫生所", hint: "第10天起傍晚开放", x: 22, y: 54, locked: true, lockText: "第10天起傍晚开放" },
+    { id: "cafe", name: "潮汐", hint: "二楼朝海", x: 22, y: 42 },
+    { id: "school", name: "小学", hint: "街的尽头", x: 22, y: 30, landmark: true, blurb: "镇小学在老街最尽头。夏栀白天在这里上课，傍晚不开放。" },
+    { id: "dock", name: "码头", hint: "陆屿", x: 40, y: 16, eveningEvent: true },
+    { id: "lighthouse", name: "灯塔", hint: "北岬", x: 84, y: 14, eveningEvent: true },
+    { id: "rocks", name: "礁石滩", hint: "看海", x: 62, y: 26 },
+    { id: "lab", name: "研究站", hint: "第16天", x: 84, y: 36, locked: true, lockText: "研究站对着近岸珊瑚，第 16 天才进得去。" },
+    { id: "inn", name: "浪花里", hint: "第20天", x: 62, y: 46, locked: true, lockText: "浪花里在沙滩这一侧。第 20 天的生日烧烤才会过去。" },
   ],
 
   messages: [
@@ -324,8 +375,8 @@ const CafeData = {
   ],
 
   replies: [
-    { id: "warm", label: "我知道。你也别熬太晚。", heart: true, back: "……行。你先把店撑住。别让我白担心。" },
-    { id: "cool", label: "工作的事以后再说。", heart: false, back: "说重点。八月底前，公司要一个答复。" },
+    { id: "warm", label: "我知道。你也别熬太晚。", bond: "shen-ruo", back: "……行。你先把店撑住。别让我白担心。" },
+    { id: "cool", label: "工作的事以后再说。", back: "说重点。八月底前，公司要一个答复。" },
   ],
 
   sceneTag: {
@@ -344,19 +395,52 @@ const CafeData = {
     male: {
       who: "夏栀",
       figure: "xia-zhi",
-      title: "好结局",
+      title: "好结局（示意）",
       where: "留在汐湾",
       text: "灯塔留了下来，改成可以走进去的海洋小课堂。她一边教书，一边读在职研究生。你守着「潮汐」，每天傍晚给灯塔送一杯栀子花蜂蜜拿铁。",
     },
     female: {
       who: "陆屿",
       figure: "lu-yu",
-      title: "好结局",
+      title: "好结局（示意）",
       where: "留在汐湾",
       text: "他重新读了书。你守着店，等他放假回来。「远帆号」交给镇上的渔民代管。每个假期他推门进来，第一句话都是「橘子汽水还有吗」。",
     },
   },
 };
+
+/* romance 写的是哪一种主角能和这个人走在一起。心或贝壳不写死，按当前性别现算。 */
+function cafeBondKind(id, gender) {
+  const person = CafeData.characters.find((item) => item.id === id);
+  if (!person) return "shell";
+  const lead = gender === "female" ? "female" : "male";
+  return person.romance === lead ? "heart" : "shell";
+}
+
+function cafeHeartField(gender) {
+  const field = {};
+  CafeData.characters.forEach((person) => {
+    field[person.id] = cafeBondKind(person.id, gender);
+  });
+  return field;
+}
+
+function cafeApplyHeartField(gender) {
+  const field = cafeHeartField(gender);
+  CafeData.characters.forEach((person) => {
+    person.heart = field[person.id];
+  });
+  return field;
+}
+
+function cafeShellSvg() {
+  return (
+    '<svg class="shell-icon" viewBox="0 0 64 64" aria-hidden="true">' +
+    '<path d="M32 56c-14-8-22-20-22-32 7 6 14 8 22 8s15-2 22-8c0 12-8 24-22 32z" fill="none" stroke="currentColor" stroke-width="3"/>' +
+    '<path d="M32 20v32M23 26c2 8 5 18 9 26M41 26c-2 8-5 18-9 26M16 32c5 4 11 10 16 18M48 32c-5 4-11 10-16 18" fill="none" stroke="currentColor" stroke-width="2"/>' +
+    "</svg>"
+  );
+}
 
 function cafeSilhouette(id) {
   const hair = {
