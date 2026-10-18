@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>汐湾咖啡馆 · 演示流程</title>
+  <link rel="stylesheet" href="css/demo.css">
+  <link rel="stylesheet" href="css/overview.css">
+</head>
+<body class="overview-body">
+  <main class="board">
+    <header class="board-head">
+      <div>
+        <p class="kicker">灰盒演示 · 流程总览</p>
+        <h1>汐湾咖啡馆</h1>
+      </div>
+      <p>按编号从 1 走到 10，就是这一版的主路径。虚线卡片从标题或游戏内菜单进入，不在主路径上。</p>
+    </header>
+
+    <section class="path-row" aria-label="主路径前半">
+      <a class="mini" href="index.html#title">
+        <span class="mini-screen title-mini"><b>汐湾咖啡馆</b><i></i><i></i><i></i></span>
+        <span class="cap"><em>1</em>标题</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#newgame">
+        <span class="mini-screen split-mini"><i></i><i></i></span>
+        <span class="cap"><em>2</em>选择主角</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#dialogue">
+        <span class="mini-screen dialogue-mini"><b></b><i></i></span>
+        <span class="cap"><em>3</em>对话</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#choice">
+        <span class="mini-screen choice-mini"><i></i><i></i><i></i></span>
+        <span class="cap"><em>4</em>分支</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#map">
+        <span class="mini-screen map-mini"><i class="sea"></i><b></b><b></b></span>
+        <span class="cap"><em>5</em>白天班次</span>
+      </a>
+    </section>
+
+    <p class="turn">↓ 第 5 步做完班次后，从左边的第 6 步继续</p>
+
+    <section class="path-row" aria-label="主路径后半">
+      <a class="mini" href="index.html#minigame">
+        <span class="mini-screen brew-mini"><i class="cup"></i><i class="bar"></i></span>
+        <span class="cap"><em>6</em>手冲</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#map-evening">
+        <span class="mini-screen map-mini evening"><i class="sea"></i><b></b><b></b><b></b></span>
+        <span class="cap"><em>7</em>傍晚出门</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#phone">
+        <span class="mini-screen phone-mini"><i></i><i class="me"></i></span>
+        <span class="cap"><em>8</em>沈若的消息</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#chapter">
+        <span class="mini-screen chapter-mini"><b>第一章</b></span>
+        <span class="cap"><em>9</em>章末</span>
+      </a>
+      <span class="arrow" aria-hidden="true">→</span>
+      <a class="mini" href="index.html#ending">
+        <span class="mini-screen ending-mini"><i></i><b>结局示意</b></span>
+        <span class="cap"><em>10</em>结局</span>
+      </a>
+    </section>
+
+    <section class="side" aria-label="随时可进入">
+      <h2>随时可进入</h2>
+      <a class="chip" href="index.html#settings">设置<span>标题、菜单</span></a>
+      <a class="chip" href="index.html#save">读档 / 存档<span>标题读档，菜单两边都有</span></a>
+      <a class="chip" href="index.html#codex">人物图鉴<span>只在菜单里。标题上的图鉴是锁着的</span></a>
+      <a class="chip" href="index.html#log">日志<span>对话和菜单</span></a>
+      <a class="chip" href="index.html#menu">菜单<span>自动、快进旁边</span></a>
+      <a class="chip locked" href="index.html#title">标题图鉴 · 锁定<span>点开会提示还没开放</span></a>
+    </section>
+  </main>
+</body>
+</html>
