@@ -55,7 +55,7 @@ flowchart TD
   zhou[周总]
   laotang[老唐]
   tangtang[唐棠]
-  assistant[齐衡]
+  assistant[郑恪]
   chenglu[程鹭]
   station[海洋研究站]
   shenruo[沈若]
@@ -160,7 +160,7 @@ flowchart TD
 | 江叙白的爷爷 | 江叙白 | 退休美术老师，把速写和一支油画笔留给他 | 第 27 天看到速写 | characters/jiang-xubai.md |
 | 老唐 | 唐棠 | 父女，母亲早逝，由他一手带大。又爱又怕，都嘴硬 | 父女关系随唐棠登场可知；欠债在第 37 天谈开 | characters/tang-tang.md、story-flow.md |
 | 老唐 | 周总 | 暗线。欠债后偷签收购意向书，定金是周总垫的 | 伏笔第 10、20、29 天；第 26 天为额外伏笔；第 36 天揭开；第 38 天撕毁；第 42 天定金分期 | story-flow.md、characters/tang-tang.md |
-| 老唐 | 齐衡 | 周总的助理。庆功宴上两人低声谈价钱 | 第 26 天，唐棠线或友情支线选到该事件才看见 | story-flow.md、characters/tang-tang.md |
+| 老唐 | 郑恪 | 周总的助理。庆功宴上两人低声谈价钱 | 第 26 天，唐棠线或友情支线选到该事件才看见 | story-flow.md、characters/tang-tang.md |
 | 老唐 | 秀姨 | 托秀姨给女儿物色相亲对象 | 第 20 天秀姨安排相亲，需选到唐棠当天的事件 | characters/tang-tang.md、story-flow.md |
 | 程鹭 | 周总 | 暗线。父母在她十五岁时离婚，她随母姓，多年不认父亲；对外仍是环评上的对手 | 第 10 天只有周总的问话，她不在场；第 16 天铜牌；第 26 天庆功宴他一露面她就离开；第 29 天码头再次离开；第 38 天「小鹭」；第 42 天「我也有个女儿」。玩家在第 48 天从周总口中得知父女关系；第 50 天码头谈开 | characters/cheng-lu.md、story-flow.md |
 | 程鹭 | 程鹭的母亲 | 随母姓；母亲希望她回城找稳定工作 | 人设背景，流程未写玩家何时听到 | characters/cheng-lu.md |

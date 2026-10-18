@@ -2,7 +2,7 @@
 
 > 状态：分支结构已按 Grok Bot 审核修订
 
-单周目只走一条性别、一位主攻、一套结局。流程估时约 2 小时 45 分钟，含在 3 小时里。这里不把十条线的场次再抄一遍，节拍见 [`routes/`](routes/README.md)，日子见 [`timeline.md`](timeline.md) 和 [`story-flow.md`](story-flow.md)。
+单周目只走一条性别、一位主攻、一套结局。阅读约 2 小时 40 分钟，加上小游戏约 4 分钟和 16 分钟余量，仍在 3 小时里。这里不把十条线的场次再抄一遍，节拍见 [`routes/`](routes/README.md)，日子见 [`timeline.md`](timeline.md) 和 [`story-flow.md`](story-flow.md)。
 
 男女主看同一条主线：老街、夏日特调、留城还是回城，以及两个反转。性别只改谁能谈恋爱，不改地图，也不改反转。
 
