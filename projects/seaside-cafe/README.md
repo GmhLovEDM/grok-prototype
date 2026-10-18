@@ -9,7 +9,7 @@
 | 阶段 | 目录 | 负责人 | 现在有什么 |
 | --- | --- | --- | --- |
 | 需求 | [00-requirements](00-requirements/README.md) | Mike 确认，Grok Bot 审核 | 已确认需求与决策记录 |
-| 策划 | [01-planning](01-planning/README.md) | Kai | 剧情大纲初稿 |
+| 策划 | [01-planning](01-planning/README.md) | Kai | 剧情大纲初稿、10 位角色小传 |
 | 原型 | [02-prototype](02-prototype/README.md) | Efe | 尚未开始 |
 | 设计 | [03-design](03-design/README.md) | Alex | 尚未开始 |
 | 开发 | [04-dev](04-dev/README.md) | Him | 尚未开始 |
