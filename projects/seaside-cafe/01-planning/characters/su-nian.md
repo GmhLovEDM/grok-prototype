@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/su-nian/)
 [清单](../portrait-list.md#苏念)
+[出图提示词](../../04-art-prompts/characters/su-nian.md)
 
 ## 基本信息
 

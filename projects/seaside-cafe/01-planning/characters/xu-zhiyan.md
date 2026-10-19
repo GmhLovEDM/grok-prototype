@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/xu-zhiyan/)
 [清单](../portrait-list.md#许之言)
+[出图提示词](../../04-art-prompts/characters/xu-zhiyan.md)
 
 ## 基本信息
 

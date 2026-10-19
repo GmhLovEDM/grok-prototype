@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/tang-tang/)
 [清单](../portrait-list.md#唐棠)
+[出图提示词](../../04-art-prompts/characters/tang-tang.md)
 
 ## 基本信息
 

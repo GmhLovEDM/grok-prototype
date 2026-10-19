@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/ye-fan/)
 [清单](../portrait-list.md#叶帆)
+[出图提示词](../../04-art-prompts/characters/ye-fan.md)
 
 ## 基本信息
 

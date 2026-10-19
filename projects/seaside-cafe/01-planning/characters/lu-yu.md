@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/lu-yu/)
 [清单](../portrait-list.md#陆屿)
+[出图提示词](../../04-art-prompts/characters/lu-yu.md)
 
 ## 基本信息
 
