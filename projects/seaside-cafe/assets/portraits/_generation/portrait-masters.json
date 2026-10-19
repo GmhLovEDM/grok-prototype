@@ -1,0 +1,255 @@
+{
+  "created": "2026-10-19",
+  "final_size": [
+    1536,
+    2304
+  ],
+  "format": "PNG",
+  "mode": "RGBA",
+  "sizing": "Resample generated source proportionally with Lanczos; preserve alpha, no crop.",
+  "future_variants": "Use the corresponding final *_normal.png as the primary identity reference and edit target. Preserve face geometry, eye color, hair, proportions, posture, framing, lighting, and unchanged outfit details. Change only the requested expression or costume; retain real transparency. Never use another cast member as the face reference.",
+  "characters": [
+    {
+      "id": "xia-zhi",
+      "name": "夏栀",
+      "file": "xia-zhi/xia-zhi_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-a3b186db-7d72-4e30-ad03-5626f907e36a.png",
+      "generator": "built-in image_gen",
+      "reference": null,
+      "prompt": "Use case: illustration-story.\nAsset: master default character portrait for the Chinese coastal visual novel 《汐湾咖啡馆》, character 夏栀 Xia Zhi. Generate ONE image, PNG with real alpha transparency, canvas EXACTLY 1536 pixels wide × 2304 pixels tall (2:3).\nVisual direction for this entire cast: polished semi-realistic hand-drawn Chinese visual-novel character illustration, realistic adult anatomy and facial proportions, refined clean linework, restrained delicate painterly shading, believable fabric texture, natural skin. Not photography, not 3D, not chibi, no oversized anime eyes. Soft seaside summer natural daylight, warm-neutral sun from upper left and subtle cool sky fill, gentle shadows, consistent neutral white balance. No visible scenery, no ground, no backdrop; genuinely transparent pixels outside the person, no checkerboard painted into image, no shadow plate.\nComposition: single standing adult, waist-up portrait, centered with full head and hair, modest clear space above head, body facing almost front with a slight 10-degree three-quarter turn, eyes toward viewer. Upright natural posture. Both arms hang naturally at sides, never crossed, no hands lifted or posed; lower arms may continue beyond the waist crop. Frame closely enough for the face to be useful in dialogue, no full-body view. Small bag and key visible near waist. No text, labels, border or watermark.\nSubject EXACTLY: 25-year-old Chinese woman, slender and slightly thin, narrow delicate shoulders, standing straight. Soft oval face, deep dark-brown almond eyes with subtly downturned outer corners, gentle quiet neutral expression, closed relaxed lips with only a faint hint of warmth, no broad smile. Black medium-length straight hair loosely twisted into a low updo behind her head held by a clearly visible simple wooden hairpin, a few loose straight strands falling beside her face. Pale ivory cotton-linen button-up shirt, modest everyday fit, subtle weave and natural folds. A simple everyday shoulder bag partly visible at the waist, with ONE small weathered brass lighthouse-shaped key dangling visibly from its strap. No other jewelry or props.\nThis image will define the face, proportions, hair and default costume for all future expressions and costume variants. Distinctive consistent adult identity.",
+      "correction_prompt": "Use case: precise-object-edit. This is the approved default master portrait of 夏栀 Xia Zhi. Make ONE strictly localized correction ONLY: replace the small hanging brass lighthouse-shaped CHARM on her bag with a visibly functional OLD BRASS DOOR KEY for a lighthouse. The key must have a simple round bow with a tiny discreet lighthouse engraving, a long straight key shaft, and clearly visible key teeth at its lower end. It hangs from the SAME keyring on the SAME bag strap and remains a small believable practical accessory. It is a KEY, not a tower-shaped pendant. Preserve her exact face, expression, eye color, skin, hairstyle, wooden hairpin, posture, arms, bag, clothing, framing, canvas ratio, natural daylight, and all other pixels as closely as possible. Keep the genuine alpha-transparent background. Do not add any other objects or change any other details. Output a 2:3 PNG, requested 1536x2304.",
+      "correction_reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "5c9f83d58c1539bbdf0ecfe01cf0cec9f21eeef10e182cd93846e82018f6ba50",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1191701,
+      "bytes": 3523384
+    },
+    {
+      "id": "tang-tang",
+      "name": "唐棠",
+      "file": "tang-tang/tang-tang_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-a4d5fa4b-e120-415e-8d2d-167953ae63be.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n唐棠 Tang Tang: 23-year-old Chinese woman, petite yet robust with strong practical arms and warm wheat-tan skin. Distinct round face and large ROUND dark-brown eyes of realistic size, lively alert ordinary expression, closed lips with slight energetic warmth rather than broad laughing smile. Brown-red EAR-LENGTH short hair, slightly outward-flipped ends, a simple RED hairband holding bangs back. White crew-neck T-shirt under BLUE DENIM bib short overalls, with the denim shoulder straps visibly readable. A practical waterproof work apron tied OVER the overalls, printed on its chest with exactly these two Chinese characters: 「唐记」. Simple dark red apron, legible modest cream-colored print 唐记 only, no other text. Arms lowered naturally, no knife, no food prop.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "2c2453b557a5b018a8c1dd1947c1a376490ffa736a68c7d6d33294acb7f68efd",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1188163,
+      "bytes": 3974579
+    },
+    {
+      "id": "ye-fan",
+      "name": "叶帆",
+      "file": "ye-fan/ye-fan_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-2f9402dc-261d-4a32-9ef2-dcaafa853858.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n叶帆 Ye Fan: 22-year-old Chinese woman, tall and balanced athletic proportions, lightly sun-touched skin, a scattering of fine sun freckles clearly across the bridge of her nose. Distinct youthful oval face with a slightly broad nose and large open AMBER eyes of realistic scale, bright cheerful everyday expression with relaxed closed lips. CHESTNUT hair in a HIGH PONYTAIL, wispy broken fringe, wearing a FADED GREEN traditional POSTAL CAP with short brim, ponytail emerging behind the cap. GREEN SHORT-SLEEVE button-up postal uniform shirt with sleeves rolled once, practical modest fit, khaki shorts visible only at waist. A BULGING WEATHERED CANVAS MAIL SATCHEL slung diagonally, wide strap across torso, upper part of stuffed mailbag clearly visible at her hip. No envelope held up, both arms rest straight naturally at sides. No invented writing or logos.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "05cf769bf21fa6235b77cdea53ec2a5dc83ad62d61dd54f4ec46e74a20347bde",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1125788,
+      "bytes": 4292560
+    },
+    {
+      "id": "lu-yu",
+      "name": "陆屿",
+      "file": "lu-yu/lu-yu_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-e788888a-4b33-4006-8ec0-9d891e9df76c.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n陆屿 Lu Yu: 24-year-old Chinese man, tall robust working fisherman, broad shoulders, strong arms and back of neck tanned deeply dark by sunlight; natural skin with clear tan variation. Distinct strong angular face, straight sturdy nose, thick masculine brows, NARROW nearly-black MONOLID eyes half narrowed, slightly impatient guarded neutral expression, unsmiling closed mouth. SHORT BLACK hair ruffled by sea breeze, one stubborn small forelock flicking UP above forehead. Worn pale washed-out GREY TANK TOP under an OPEN PLAID cotton SHIRT, the outer shirt sleeves rolled up so tanned muscular forearms are clearly visible. A single OLD BRASS WHISTLE on a plain dark cord around his neck, clearly resting at chest. No cap, no glamour accessories, no fishing equipment. Arms hanging down naturally, square capable posture. Not bodybuilder, not baby-faced.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "4586661c2781f6ba57728a064232c1159ebc5f6fb834291d1fb487c078655920",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1048176,
+      "bytes": 4438095
+    },
+    {
+      "id": "xu-zhiyan",
+      "name": "许之言",
+      "file": "xu-zhiyan/xu-zhiyan_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-b1497995-8211-4981-904c-f2650d455e1d.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n许之言 Xu Zhiyan: 31-year-old Chinese man, tall and lean rather than muscular, straight upright shoulders and back, long clean slender fingers. Distinct mature narrow rectangular face, neat straight nose and refined jaw, short BLACK hair very neatly trimmed with slightly longer fringe. GREY-BROWN eyes, subtle inner double eyelids, wearing thin METAL-FRAME prescription eyeglasses. Calm clinical everyday expression, closed neutral mouth, absolutely NOT smiling. Crisp WHITE SHIRT beneath an open WHITE DOCTOR'S COAT; exactly ONE plain PEN clipped in the chest pocket. Natural white fabric folds and summer weight, dark trousers only visible at waist. Hands relaxed down at sides, no hand in pocket. No stethoscope, no medical cross or nametag text, no other prop. Soft natural daylight must match the reference.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "757ba5f38f8195d869c7d01fc785d845195eeaab7a0f639c6ddc5deb3b38d763",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1106610,
+      "bytes": 2911996
+    },
+    {
+      "id": "su-nian",
+      "name": "苏念",
+      "file": "su-nian/su-nian_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-8bd4ae74-ae2f-4854-b5f2-68e85c846192.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n苏念 Su Nian: 27-year-old Chinese woman, tall and very slender with long elegant fingers, narrow frame. Distinct long oval face with high cheekbones, slightly pointed chin, slender GREY-BLACK phoenix eyes (narrow realistically proportioned eyes, subtly raised outer corners), chin held slightly UP. Cool aloof quietly proud neutral expression, no smile, closed lips. Long BLACK WAVY hair worn LOOSE all the way to her WAIST, clearly defined relaxed natural waves, no hair updo, no bangs hiding eyes. LOOSE BLACK LINEN button-up SHIRT with sleeves loosely rolled, modest everyday silhouette, natural black linen texture. A thin airy GREY SILK SCARF softly wrapped at her NECK with loose short ends visible over chest. No guitar, no jewelry, no extra props. Both arms hang naturally downward, relaxed wrists by sides near lower edge. Keep same seaside natural daylight and palette as reference, black fabric still readable.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "6e34c8dbbc887a742b92155f5a3a58f946691f3dd5ae1d790ffc6d9c4bcf7c14",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 981317,
+      "bytes": 4571966
+    },
+    {
+      "id": "cheng-lu",
+      "name": "程鹭",
+      "file": "cheng-lu/cheng-lu_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-d5a7b71b-d9b5-4732-a6de-c656677ca144.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n程鹭 Cheng Lu: 29-year-old Chinese woman, tall long-limbed lean strong physique, clearly capable shoulders and forearms, natural lightly tanned skin with several FINE PALE HEALED LINEAR SCARS along forearms. Distinct somewhat angular oval face with strong straight brow and firm jaw; deep GREY NARROW MONOLID eyes looking DIRECTLY at viewer, cool focused expression, lips closed, no smile. BLACK hair tied in a LOW PONYTAIL, slightly damp straight hair and a few damp flyaways, ends faded BROWN by seawater. Practical muted SLATE-GREY QUICK-DRY SHORT-SLEEVE BUTTON-UP SHIRT, restrained utilitarian fit, cargo trousers only visible at waist. ONE OLD-FASHIONED ANALOG DIVING WATCH with round dial and worn dark strap clearly visible on wrist near bottom edge. Both arms hang naturally straight down with wrists visible as framing allows. No wetsuit, no scuba equipment, no other jewelry. Consistent same light as reference.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "c3841bd6d82ed5594ffb63599213fb0a3f40c66a6489f2e7713ed641a440d86c",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1254808,
+      "bytes": 3742347
+    },
+    {
+      "id": "shen-ruo",
+      "name": "沈若",
+      "file": "shen-ruo/shen-ruo_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-b6c86ef4-763d-4299-9939-f9b985efc023.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n沈若 Shen Ruo: 28-year-old Chinese woman, balanced slim proportions and very straight professional posture. Distinct oval face with precise angular brows and refined firm jaw, BLACK upturned DANFENG eyes with carefully applied subtle eyeliner and an appraising scrutinizing gaze; composed neutral expression, no smile. DARK CHESTNUT SHOULDER-LENGTH STRAIGHT HAIR with ends neatly CURLED INWARD, precise practical haircut, no ponytail. Tailored crisp WHITE SHIRT with clean sharp collar, tucked into DARK SUIT TROUSERS visible at the waist. A pair of DARK SUNGLASSES clearly CLIPPED AT THE SHIRT COLLAR. Her arms are lowered NATURALLY AT HER SIDES, ONE relaxed HAND loosely holding a slim SMARTPHONE vertically DOWNWARD near her hip, never lifted and never using it, other hand at side. Frame waist-up down through upper hip enough to see phone hand without making full body portrait. No bag or notebook or jewelry.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "e7c3c71790bd8bbfda43e98dbcd884caa8e87df8d5e961d961b56b7b78dd3a80",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1401129,
+      "bytes": 3031373
+    },
+    {
+      "id": "jiang-xubai",
+      "name": "江叙白",
+      "file": "jiang-xubai/jiang-xubai_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-d30c0111-507d-49bf-8426-db134e366d28.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n江叙白 Jiang Xubai: 30-year-old Chinese man, tall slender relaxed frame, narrow delicate wrists and long fingers visibly stained with small traces of permanent dried artist's pigments. Distinct mature gentle long face with soft cheekbones, a fine straight nose, expressive DEEP DARK-BROWN peach-blossom-shaped eyes, warm listening everyday expression with relaxed closed mouth and only faint warmth. DARK BROWN hair just past his ears, gathered in a SMALL SHORT TIED TUFT behind the head, loose strands resting beside the neck, clearly not a large long ponytail. LOOSE LIGHT NATURAL LINEN button-up SHIRT, open at neck modestly, sleeves casually rolled with SMALL DRIED PAINT STAINS on cuffs. Neutral cotton trousers only visible at waist. Both arms naturally hanging down; frame slightly down to upper hip so some relaxed fingers with paint traces and slender wrists can be seen near bottom edge. No brush in hand, no sketchbook, no easel, no hat or jewelry. Not muscular and not teenager. Same lighting as reference.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "79762e1dd68f5fe71b0e415a4f2c48b4dcfeb918e77788c248b4c05ba9f293cb",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1104790,
+      "bytes": 3876799
+    },
+    {
+      "id": "song-zhiyuan",
+      "name": "宋知远",
+      "file": "song-zhiyuan/song-zhiyuan_normal.png",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a1542a-bdb2-73d2-b44e-1331ecb53030\\exec-1bba7bdf-bbf1-4c39-8116-65fababd7d71.png",
+      "generator": "built-in image_gen",
+      "reference": "C:/Users/Administrator/.codex/generated_images/01a1542a-bdb2-73d2-b44e-1331ecb53030/exec-d99215da-b40a-4bc1-bc2c-bfe33d261b6b.png",
+      "prompt": "Use case: illustration-story. Create ONE master default character portrait for Chinese coastal visual novel 《汐湾咖啡馆》. Requested final canvas 1536 × 2304, 2:3 portrait PNG with real alpha transparency.\nThe input image is a STYLE, LIGHTING AND WAIST-UP FRAMING reference ONLY, NOT an identity reference. Draw the NEW distinct person described below, never reuse the reference woman's face or clothing. Match this cast's finely finished semi-realistic illustration, natural adult anatomy, subtle clean linework and delicate shading, believable fabric textures, realistic-size eyes. Soft seaside summer daylight from upper left, warm-neutral sun and subtle cool sky fill. Genuinely transparent outside the person; no scenery, ground, background, checkerboard painting, glow or shadow plate.\nSingle standing adult centered, full head/hair with small top margin, waist-up to hip line, almost front-facing with slight 10-degree three-quarter turn, eyes toward viewer. Both arms naturally hanging down, hands never raised or crossed; relaxed hands may be partly cropped by bottom edge. Necessary wrist accessories visible near lower edge. No full-body or head-only crop. No collage, labels, border, watermark. Preserve all specified identity and costume details. This is the face/body/hair/costume master for later variants.\n宋知远 Song Zhiyuan: 28-year-old Chinese man, tall broad shoulders and NARROW WAIST, distinctly athletic surfer physique with well-defined functional muscle and BRONZE sun-tanned skin. Distinct warm masculine slightly broad face with friendly LIGHT BROWN DOWNTURNED eyes and fine small smile lines at outer eye corners. Relaxed everyday friendly closed-mouth SMILE, neither laughing nor posing seductively. LIGHT BROWN SHORT SLIGHTLY CURLY hair, sunshine-bleached tips, casually tousled and messy. An airy colorful FLORAL HAWAIIAN SHIRT worn fully OPEN with unbuttoned front over bare chest, relaxed summer beachwear; tasteful muted sea-blue and warm faded coral botanical print, beach shorts at waist. On ONE WRIST a SMALL STACK OF FADED CLOTH COMPETITION NUMBER WRISTBANDS with weathered subtle number markings, make wrist visible near lower edge. Both arms hanging naturally down, hands relaxed by sides. No surfboard, no necklace, no other props, no sunglasses. Same soft seaside summer natural light as reference, preserve bronze skin rather than pale complexion.",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "sha256": "ccc956c5cb608749456a0b7888317091519a11c3aa10880474185d19b39a6c94",
+      "verified_size": [
+        1536,
+        2304
+      ],
+      "alpha_range": [
+        0,
+        255
+      ],
+      "fully_transparent_pixels": 1014806,
+      "bytes": 4481344
+    }
+  ]
+}
