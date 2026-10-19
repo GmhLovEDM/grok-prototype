@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/lu-yu/lu-yu_normal.png" width="240" alt="陆屿">
+
+[文件夹](../../assets/portraits/lu-yu/)
+[清单](../portrait-list.md#陆屿)
+
 ## 基本信息
 
 | 项目 | 内容 |

@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/xu-zhiyan/xu-zhiyan_normal.png" width="240" alt="许之言">
+
+[文件夹](../../assets/portraits/xu-zhiyan/)
+[清单](../portrait-list.md#许之言)
+
 ## 基本信息
 
 | 项目 | 内容 |

@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/ye-fan/ye-fan_normal.png" width="240" alt="叶帆">
+
+[文件夹](../../assets/portraits/ye-fan/)
+[清单](../portrait-list.md#叶帆)
+
 ## 基本信息
 
 | 项目 | 内容 |

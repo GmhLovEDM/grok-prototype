@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/tang-tang/tang-tang_normal.png" width="240" alt="唐棠">
+
+[文件夹](../../assets/portraits/tang-tang/)
+[清单](../portrait-list.md#唐棠)
+
 ## 基本信息
 
 | 项目 | 内容 |

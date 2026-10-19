@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/jiang-xubai/jiang-xubai_normal.png" width="240" alt="江叙白">
+
+[文件夹](../../assets/portraits/jiang-xubai/)
+[清单](../portrait-list.md#江叙白)
+
 ## 基本信息
 
 | 项目 | 内容 |

@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/xia-zhi/xia-zhi_normal.png" width="240" alt="夏栀">
+
+[文件夹](../../assets/portraits/xia-zhi/)
+[清单](../portrait-list.md#夏栀)
+
 ## 基本信息
 
 | 项目 | 内容 |
