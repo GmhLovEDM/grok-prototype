@@ -6,9 +6,9 @@
 [立绘清单](../01-planning/portrait-list.md)
 [立绘 README](../assets/portraits/README.md)
 [母版提示词记录](../assets/portraits/_generation/portrait-masters.json)
-[基准立绘审核 `fe9c128`](https://github.com/GmhLovEDM/grok-prototype/blob/fe9c1282fde5f5a4ebc439432c782a48db51d274/projects/seaside-cafe/assets/portraits/_reviews/portrait-masters-review.md)
+[基准立绘审核](../assets/portraits/_reviews/portrait-masters-review.md)
 
-审核报告在分支 `cursor/portrait-masters-review-780b` 的 commit `fe9c128`，还没有合进本分支。四处必须改和可选小修以那一版的「修正提示词」为准。本目录只链过去，不另写一套改法。
+四处必须改和可选小修以 [基准立绘审核](../assets/portraits/_reviews/portrait-masters-review.md) 的「修正提示词」为准。本目录只链过去，不另写一套改法。
 
 ## 场景
 

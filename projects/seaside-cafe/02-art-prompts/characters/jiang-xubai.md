@@ -4,7 +4,7 @@
 
 现有母版：[jiang-xubai_normal.png](../../assets/portraits/jiang-xubai/jiang-xubai_normal.png)
 
-审核以这一版为准：[基准立绘审核 `fe9c128` 的「修正提示词 · 江叙白」](https://github.com/GmhLovEDM/grok-prototype/blob/fe9c1282fde5f5a4ebc439432c782a48db51d274/projects/seaside-cafe/assets/portraits/_reviews/portrait-masters-review.md)
+审核以这一版为准：[基准立绘审核的「修正提示词」](../../assets/portraits/_reviews/portrait-masters-review.md#修正提示词)
 
 ## 重画要点
 

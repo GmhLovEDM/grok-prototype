@@ -4,7 +4,7 @@
 
 现有母版：[song-zhiyuan_normal.png](../../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png)
 
-审核以这一版为准：[基准立绘审核 `fe9c128`](https://github.com/GmhLovEDM/grok-prototype/blob/fe9c1282fde5f5a4ebc439432c782a48db51d274/projects/seaside-cafe/assets/portraits/_reviews/portrait-masters-review.md)
+审核以这一版为准：[基准立绘审核](../../assets/portraits/_reviews/portrait-masters-review.md)
 
 ## 重画要点
 

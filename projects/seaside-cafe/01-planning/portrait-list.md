@@ -66,7 +66,7 @@
 
 <img src="../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png" width="240" alt="宋知远">
 
-基准图定稿后，其余表情和服装都用它做参考图。唐棠、叶帆、陆屿、江叙白先按审核 [`fe9c128`](https://github.com/GmhLovEDM/grok-prototype/blob/fe9c1282fde5f5a4ebc439432c782a48db51d274/projects/seaside-cafe/assets/portraits/_reviews/portrait-masters-review.md) 的「修正提示词」做局部修改，改完再派生。提示词在 [02-art-prompts](../02-art-prompts/README.md)。
+基准图定稿后，其余表情和服装都用它做参考图。唐棠、叶帆、陆屿、江叙白先按 [基准立绘审核](../assets/portraits/_reviews/portrait-masters-review.md) 的「修正提示词」做局部修改，改完再派生。提示词在 [02-art-prompts](../02-art-prompts/README.md)。
 
 ## 不画
 
