@@ -27,7 +27,6 @@ Polished semi-realistic hand-drawn 1920×1080 background. Dusk at the Xiwān doc
 - 时间：傍晚。潮水拍桩。
 - 构图：靠近船舷。船名在中间。
 - 物件：船名「远帆号」还在，漆有一处掉了，另有一块新补的深色。湿网铺开，一个边沿磨白的小洞。针可以放在网边上，不要握在手里。
-- 第 7 天「修网已看」不另给 id。参考图：用这一张。船还在，人已经出海，所以甲板是空的。铺开的湿网改成堆在船边的一堆。不要画人。
 - 气氛：湿，咸。
 - 优先级：P0
 
@@ -42,7 +41,7 @@ Polished semi-realistic hand-drawn 1920×1080 background. Dusk beside the fishin
 ## bg-dock-no-boat-dusk
 
 - 路径：`projects/seaside-cafe/assets/backgrounds/bg-dock-no-boat-dusk/bg-dock-no-boat-dusk.png`
-- 用于：第 8 天「修网已看」。只这一天。
+- 用于：第 7、8 天「修网已看」。远帆号已经出海，泊位是空的。「船边」是原来停船的地方，不是画面里还有船。
 - 时间：傍晚。
 - 参考图：用 `bg-dock-nets-dusk`。把船去掉。网是干的，留在岸上或桩边。
 - 构图：原来泊船的水面空着。没有人。

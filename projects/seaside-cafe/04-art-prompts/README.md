@@ -37,7 +37,7 @@
 | `bg-chaoxi-after-storm` | `assets/backgrounds/bg-chaoxi-after-storm/bg-chaoxi-after-storm.png` | P0 | 第 10、11 天台风后的店内。配方本是合上的 |
 | `bg-chaoxi-door-night` | `assets/backgrounds/bg-chaoxi-door-night/bg-chaoxi-door-night.png` | P0 | 第 14 天「来电」开门之前，人站在关着的店门外 |
 | `bg-dock-entrance-dusk` | `assets/backgrounds/bg-dock-entrance-dusk/bg-dock-entrance-dusk.png` | P0 | 第 6 到 8 天「码头入口」 |
-| `bg-dock-nets-dusk` | `assets/backgrounds/bg-dock-nets-dusk/bg-dock-nets-dusk.png` | P0 | 第 6 到 8 天第一次「修网」。第 7 天「修网已看」用这张作参考，网改成堆在船边 |
+| `bg-dock-nets-dusk` | `assets/backgrounds/bg-dock-nets-dusk/bg-dock-nets-dusk.png` | P0 | 第 6 到 8 天第一次「修网」 |
 | `bg-tangji-kitchen-night` | `assets/backgrounds/bg-tangji-kitchen-night/bg-tangji-kitchen-night.png` | P0 | 第 6 到 8 天第一次「练刀」 |
 | `bg-lighthouse-dusk` | `assets/backgrounds/bg-lighthouse-dusk/bg-lighthouse-dusk.png` | P0 | 第 6 到 8 天第一次「灯塔」 |
 | `bg-reef-dusk` | `assets/backgrounds/bg-reef-dusk/bg-reef-dusk.png` | P0 | 第 6 到 8 天「礁石滩」 |
@@ -48,7 +48,7 @@
 | `bg-plaza-fireworks` | `assets/backgrounds/bg-plaza-fireworks/bg-plaza-fireworks.png` | P0 | 第 14 天「广场」和烟花各场 |
 | `bg-chaoxi-noon` | `assets/backgrounds/bg-chaoxi-noon/bg-chaoxi-noon.png` | P1 | 第 5 天中午店内。参考 `bg-chaoxi-day` |
 | `bg-dock-empty-night` | `assets/backgrounds/bg-dock-empty-night/bg-dock-empty-night.png` | P1 | 第 10 到 12 天「码头空」。船在，网干，后厨从外面看是黑的 |
-| `bg-dock-no-boat-dusk` | `assets/backgrounds/bg-dock-no-boat-dusk/bg-dock-no-boat-dusk.png` | P1 | 第 8 天「修网已看」。船不在，网是干的 |
+| `bg-dock-no-boat-dusk` | `assets/backgrounds/bg-dock-no-boat-dusk/bg-dock-no-boat-dusk.png` | P1 | 第 7、8 天「修网已看」。船不在，网是干的 |
 | `bg-tangji-kitchen-dark` | `assets/backgrounds/bg-tangji-kitchen-dark/bg-tangji-kitchen-dark.png` | P1 | 第 7、8 天「练刀已看」。后厨灯关着 |
 | `bg-lighthouse-papers-dusk` | `assets/backgrounds/bg-lighthouse-papers-dusk/bg-lighthouse-papers-dusk.png` | P1 | 第 7、8 天「灯塔已看」。黄昏，门口，报叠在台阶上 |
 | `bg-lighthouse-distant-night` | `assets/backgrounds/bg-lighthouse-distant-night/bg-lighthouse-distant-night.png` | P1 | 第 10 到 12 天「灯塔空」。夜里从山脚远远看，不上山 |

@@ -14,7 +14,7 @@
 
 全身小图。透明 PNG。画风与人物相同：半写实，干净的线，海边夏天的自然光，不是照片，不是 3D，不是 Q 版。
 
-清单没有写像素。建议方形 1024×1024，猫居中，四周留透明边。这是建议，不是既定尺寸。
+成图已定：全身，1024×1024，透明 PNG。猫居中，四周留透明边。
 
 只有一张：坐着看人。烟花那场只是尾巴收紧，不另画。
 
@@ -24,10 +24,10 @@
 
 ### na-tie_normal.png
 
-中文：汐湾咖啡馆的橘猫拿铁，全身，坐着，看着看画的人。普通家猫大小。短毛，橘色，可以有一点白。尾巴在身边。不要碗，不要字，不要项圈。透明背景。半写实，和人物立绘同一套线与光。
+中文：汐湾咖啡馆的橘猫拿铁，全身，坐着，看着看画的人。普通家猫大小。短毛，橘色，可以有一点白。尾巴在身边。不要碗，不要字，不要项圈。透明背景。成图 1024×1024。半写实，和人物立绘同一套线与光。
 
 ```text
-Use case: illustration-story. Full-body portrait of 拿铁, the orange house cat of café 「潮汐」 in 《汐湾咖啡馆》. Ordinary domestic cat, not giant, not a chibi mascot. Sitting, looking toward the viewer. Short orange fur, a little white allowed. Tail beside the body. No bowl, no collar text, no scenery. Same semi-realistic line and seaside daylight as the human cast. Real alpha transparency. Suggested square 1024×1024 PNG, cat centered with clear transparent margin. Not a photo, not 3D.
+Use case: illustration-story. Full-body portrait of 拿铁, the orange house cat of café 「潮汐」 in 《汐湾咖啡馆》. Ordinary domestic cat, not giant, not a chibi mascot. Sitting, looking toward the viewer. Short orange fur, a little white allowed. Tail beside the body. No bowl, no collar text, no scenery. Same semi-realistic line and seaside daylight as the human cast. Real alpha transparency. Final canvas exactly 1024×1024 PNG, cat centered with a clear transparent margin. Not a photo, not 3D.
 ```
 
 负向：人物，饮品，咖啡杯，碗，文字，项圈字，巨型猫，Q 版，照片，3D，水印，风景，棋盘格。
