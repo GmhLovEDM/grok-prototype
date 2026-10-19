@@ -6,7 +6,7 @@
 [总览图](../assets/portraits/_generation/cast-preview.jpg)
 [立绘 README](../assets/portraits/README.md)
 [提示词记录](../assets/portraits/_generation/portrait-masters.json)
-[出图提示词](../02-art-prompts/README.md)
+[出图提示词](../04-art-prompts/README.md)
 
 ## 规格
 
@@ -66,7 +66,7 @@
 
 <img src="../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png" width="240" alt="宋知远">
 
-基准图定稿后，其余表情和服装都用它做参考图。唐棠、叶帆、陆屿、江叙白先按 [基准立绘审核](../assets/portraits/_reviews/portrait-masters-review.md) 的「修正提示词」做局部修改，改完再派生。提示词在 [02-art-prompts](../02-art-prompts/README.md)。
+基准图定稿后，其余表情和服装都用它做参考图。唐棠、叶帆、陆屿、江叙白先按 [基准立绘审核](../assets/portraits/_reviews/portrait-masters-review.md) 的「修正提示词」做局部修改，改完再派生。提示词在 [04-art-prompts](../04-art-prompts/README.md)。
 
 ## 不画
 
@@ -100,7 +100,7 @@
 
 外观依据：`characters/xia-zhi.md`。「浅色棉麻衬衫配长裙或九分裤，帆布鞋；去灯塔时套一件爷爷的旧藏青工作外套，袖子挽两道。」
 
-首次登场：第 3 天，送来旧咖啡壶。优先级：P0。出图提示词：[xia-zhi.md](../02-art-prompts/characters/xia-zhi.md)。
+首次登场：第 3 天，送来旧咖啡壶。优先级：P0。出图提示词：[xia-zhi.md](../04-art-prompts/characters/xia-zhi.md)。
 
 服装两套。
 
@@ -134,7 +134,7 @@
 
 外观依据：`characters/tang-tang.md`。「白 T 恤配牛仔背带短裤，外面系一条印着『唐记』的防水围裙，脚上是雨靴。」第 5 天剧本写头发用皮筋随便扎着，额上有一缕。画短发和红发带，皮筋是干活时的扎法。
 
-首次登场：第 5 天，送海鲜。优先级：P0。出图提示词：[tang-tang.md](../02-art-prompts/characters/tang-tang.md)。
+首次登场：第 5 天，送海鲜。优先级：P0。出图提示词：[tang-tang.md](../04-art-prompts/characters/tang-tang.md)。
 
 服装一套。烟花那晚围裙还在。餐厅结局没有另写制服，不另画。
 
@@ -165,7 +165,7 @@
 
 外观依据：`characters/ye-fan.md`。「绿色短袖邮政制服，袖子卷起，配卡其短裤和运动鞋。」
 
-首次登场：第 11 天，送来积压的信。优先级：P0。出图提示词：[ye-fan.md](../02-art-prompts/characters/ye-fan.md)。
+首次登场：第 11 天，送来积压的信。优先级：P0。出图提示词：[ye-fan.md](../04-art-prompts/characters/ye-fan.md)。
 
 服装一套。烟花、推车、翻仓库都是这套制服。
 
@@ -195,7 +195,7 @@
 
 外观依据：`characters/lu-yu.md`。「洗到发白的灰色背心或旧 T 恤，外搭一件敞开的格子衬衫，工装短裤，人字拖或防水靴。」
 
-首次登场：第 2 天，来搬东西、修水管。优先级：P0。出图提示词：[lu-yu.md](../02-art-prompts/characters/lu-yu.md)。
+首次登场：第 2 天，来搬东西、修水管。优先级：P0。出图提示词：[lu-yu.md](../04-art-prompts/characters/lu-yu.md)。
 
 服装一套。烟花那晚仍是这身，袖口有绳子的味道。复学结局没有另写校服。
 
@@ -224,7 +224,7 @@
 
 外观依据：`characters/xu-zhiyan.md`。「白衬衫袖口挽到小臂，深色休闲裤；出诊时套白大褂。」「下班后换成浅灰针织衫。」第 14 天剧本写白大褂没穿，衬衫袖子挽着，烟花打在脸上，他不笑。
 
-首次登场：第 9 天。第 5 天他人在外岛，只有字条，不画。优先级：P0。出图提示词：[xu-zhiyan.md](../02-art-prompts/characters/xu-zhiyan.md)。
+首次登场：第 9 天。第 5 天他人在外岛，只有字条，不画。优先级：P0。出图提示词：[xu-zhiyan.md](../04-art-prompts/characters/xu-zhiyan.md)。
 
 服装两套。浅灰针织衫文档有，这一版并进衬衫，不另画。
 
@@ -255,7 +255,7 @@
 
 外观依据：`supporting-cast.md` 只写了身份和说话。服装待定，建议：家常短袖，外面一条杂货铺围裙。
 
-首次登场：第 1 天，车站接你。优先级：P0。
+首次登场：第 1 天，车站接你。优先级：P0。出图提示词：[xiu-yi.md](../04-art-prompts/characters/xiu-yi.md)。
 
 服装一套。
 
@@ -276,7 +276,7 @@
 
 外观依据：`supporting-cast.md`。「潮汐」的橘猫。第 1 天从柜台后面出来。
 
-首次登场：第 1 天。优先级：P0。
+首次登场：第 1 天。优先级：P0。出图提示词：[na-tie.md](../04-art-prompts/characters/na-tie.md)。
 
 服装没有。表情一种，坐着看人。烟花那场只是尾巴收紧，不另画。
 
@@ -296,7 +296,7 @@
 
 外观依据：`supporting-cast.md`。第 5 天他把海鲜箱放下就走，剧本没有写他的衣服。服装待定，建议：深色短袖，排档工装。不要和唐棠穿同一条围裙。
 
-首次登场：第 5 天，「潮汐」门口。优先级：P0。
+首次登场：第 5 天，「潮汐」门口。优先级：P0。出图提示词：[lao-tang.md](../04-art-prompts/characters/lao-tang.md)。
 
 服装一套。
 
@@ -321,7 +321,7 @@
 
 外观依据：第 10 天剧本。「西装没有皱。鞋是干的，像是在车上换过。」臂弯里有一只封面空白的文件夹。
 
-首次登场：第 10 天，上门谈收购。优先级：P0。
+首次登场：第 10 天，上门谈收购。优先级：P0。出图提示词：[zhou-zong.md](../04-art-prompts/characters/zhou-zong.md)。
 
 服装一套。第 48 天夜里来店，没有另写衣服，仍用这套西装。
 
@@ -346,7 +346,7 @@
 
 外观依据：第 5 天剧本。她让你坐到风扇下面，递字条，续水。衣服没写。服装待定，建议：卫生所白制服。
 
-首次登场：第 5 天。优先级：P0。
+首次登场：第 5 天。优先级：P0。出图提示词：[lao-hushi.md](../04-art-prompts/characters/lao-hushi.md)。
 
 服装一套。
 
@@ -369,7 +369,7 @@
 
 外观依据：第 6 天剧本。「夏栀给轮椅上的老人读报。」「膝上盖着一条薄毯。」夏栀去灯塔时套的是他的旧藏青工作外套，所以他的工作服是藏青。
 
-首次登场：第 6 到 8 天，选灯塔才看见本人。第 3 天只被提起。优先级：P0。
+首次登场：第 6 到 8 天，选灯塔才看见本人。第 3 天只被提起。优先级：P0。出图提示词：[lao-xia.md](../04-art-prompts/characters/lao-xia.md)。
 
 服装一套。坐在轮椅上，半身仍按腰以上画，轮椅的扶手可以进画。
 
@@ -397,7 +397,7 @@
 
 外观依据：`characters/su-nian.md`。「宽松的黑色或深蓝色亚麻衬衫配阔腿裤，夜里加一件男款旧牛仔外套；常赤脚走在沙滩上。」
 
-首次登场：第 23 天夜里，礁石滩。本人要到第二章。优先级：P1。出图提示词：[su-nian.md](../02-art-prompts/characters/su-nian.md)。
+首次登场：第 23 天夜里，礁石滩。本人要到第二章。优先级：P1。出图提示词：[su-nian.md](../04-art-prompts/characters/su-nian.md)。
 
 服装两套。
 
@@ -431,7 +431,7 @@
 
 外观依据：`characters/cheng-lu.md`。「下水穿黑色潜水服（拉链拉到腰，上身套一件研究站的灰色 T 恤）；上岸后是速干衬衫配工装裤和潜水凉鞋。」
 
-首次登场：第 16 天，刚潜水上来。优先级：P1。出图提示词：[cheng-lu.md](../02-art-prompts/characters/cheng-lu.md)。
+首次登场：第 16 天，刚潜水上来。优先级：P1。出图提示词：[cheng-lu.md](../04-art-prompts/characters/cheng-lu.md)。
 
 服装两套。
 
@@ -465,7 +465,7 @@
 
 外观依据：`characters/shen-ruo.md`。「刚来时是剪裁利落的白衬衫、西装裤、细高跟和墨镜；后来换上在秀姨杂货铺买的碎花裙和人字拖，自己都觉得别扭。」
 
-首次登场：第 3 天只有消息，第 6 天和第 14 天只有电话，不画脸。本人第 18 天拖着行李箱到「潮汐」门口。优先级：P1。出图提示词：[shen-ruo.md](../02-art-prompts/characters/shen-ruo.md)。
+首次登场：第 3 天只有消息，第 6 天和第 14 天只有电话，不画脸。本人第 18 天拖着行李箱到「潮汐」门口。优先级：P1。出图提示词：[shen-ruo.md](../04-art-prompts/characters/shen-ruo.md)。
 
 服装两套。墨镜是刚来时的配饰，夹在西装那套的平常脸上，不另做文件。
 
@@ -500,7 +500,7 @@
 
 外观依据：`characters/jiang-xubai.md`。「宽松的亚麻衬衫（袖口有颜料渍）配卷边棉裤，草帽，帆布鞋。」
 
-首次登场：第 21 天，背着画架进店。优先级：P1。出图提示词：[jiang-xubai.md](../02-art-prompts/characters/jiang-xubai.md)。
+首次登场：第 21 天，背着画架进店。优先级：P1。出图提示词：[jiang-xubai.md](../04-art-prompts/characters/jiang-xubai.md)。
 
 服装一套。
 
@@ -529,7 +529,7 @@
 
 外观依据：`characters/song-zhiyuan.md`。「花衬衫敞着扣子配沙滩短裤，或者半褪到腰间的防寒泳衣；常年赤脚或人字拖。」
 
-首次登场：第 17 天，涨潮时用冲浪板把你送回岸。优先级：P1。出图提示词：[song-zhiyuan.md](../02-art-prompts/characters/song-zhiyuan.md)。
+首次登场：第 17 天，涨潮时用冲浪板把你送回岸。优先级：P1。出图提示词：[song-zhiyuan.md](../04-art-prompts/characters/song-zhiyuan.md)。
 
 服装两套。
 

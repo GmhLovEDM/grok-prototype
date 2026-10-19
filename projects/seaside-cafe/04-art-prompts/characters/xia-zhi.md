@@ -58,12 +58,12 @@ Use case: precise-object-edit. Same master. Expression only: quiet sadness, gaze
 
 灯塔上的旧藏青工作外套。第 6 到 8 天读报，以及后来上塔。袖子挽两道。里面仍是浅色衬衫。
 
-派生时下装按长裙对齐，只在底边露出裙腰。不要为了长裙去重画当前母版。
+可选，不挡住这套外套：派生时下装可以按长裙对齐，只在底边露出裙腰。当前母版的长裤裤腰不用重画。不做也可以。
 
 中文：在同一人身上加一件旧的藏青工作外套，袖子挽两道。木簪、钥匙、脸保持。底边若要改，改成裙腰，不要画到裙摆。平常不笑。
 
 ```text
-Use case: precise-object-edit. Same 夏栀 identity. Add her grandfather's old navy work coat over the pale shirt, sleeves rolled twice. Keep the wooden hairpin and the brass key. Unsmiling calm. At the bottom edge, prefer a long-skirt waistband rather than trousers; do not show the skirt below the waist. No sugar tin. Real alpha. Output 1536×2304 PNG.
+Use case: precise-object-edit. Same 夏栀 identity. Add her grandfather's old navy work coat over the pale shirt, sleeves rolled twice. Keep the wooden hairpin and the brass key. Unsmiling calm. Optional, not required: a long-skirt waistband at the bottom edge rather than trousers; do not show the skirt below the waist. The current trouser waistband may stay. No sugar tin. Real alpha. Output 1536×2304 PNG.
 ```
 
 ### xia-zhi_coat_smile.png

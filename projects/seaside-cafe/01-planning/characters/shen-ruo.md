@@ -8,7 +8,7 @@
 
 [文件夹](../../assets/portraits/shen-ruo/)
 [清单](../portrait-list.md#沈若)
-[出图提示词](../../02-art-prompts/characters/shen-ruo.md)
+[出图提示词](../../04-art-prompts/characters/shen-ruo.md)
 
 ## 基本信息
 
