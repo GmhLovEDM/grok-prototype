@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/xia-zhi/)
 [清单](../portrait-list.md#夏栀)
+[出图提示词](../../02-art-prompts/characters/xia-zhi.md)
 
 ## 基本信息
 

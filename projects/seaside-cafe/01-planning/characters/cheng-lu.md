@@ -8,6 +8,7 @@
 
 [文件夹](../../assets/portraits/cheng-lu/)
 [清单](../portrait-list.md#程鹭)
+[出图提示词](../../02-art-prompts/characters/cheng-lu.md)
 
 ## 基本信息
 
