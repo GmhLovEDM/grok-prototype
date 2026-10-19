@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/cheng-lu/cheng-lu_normal.png" width="240" alt="程鹭">
+
+[文件夹](../../assets/portraits/cheng-lu/)
+[清单](../portrait-list.md#程鹭)
+
 ## 基本信息
 
 | 项目 | 内容 |

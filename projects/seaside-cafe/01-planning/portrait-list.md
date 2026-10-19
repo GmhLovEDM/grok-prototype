@@ -3,6 +3,10 @@
 > 状态：给生成图用的清单。场景图不在这里。
 > 外观只引用已有文档。文档没写的，标「待定，建议：…」，不是既定设定。
 
+[总览图](../assets/portraits/_generation/cast-preview.jpg)
+[立绘 README](../assets/portraits/README.md)
+[提示词记录](../assets/portraits/_generation/portrait-masters.json)
+
 ## 规格
 
 - 半身，腰以上。透明背景 PNG。建议竖图 1536×2304。
@@ -21,25 +25,45 @@
 
 统一规格：腰以上半身，正面稍侧，双手自然垂下。透明背景 PNG，1536×2304。写实比例，海边夏日自然光，线条干净。不要 Q 版。
 
-夏栀。`projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_normal.png`。25 岁女性。163 cm，纤细偏瘦，肩膀薄，站得端正。黑色中长直发，一根木簪松松挽在脑后，有几缕垂下来。深棕色瞳，圆而偏垂的杏眼。平常神情慢，有距离，不笑。浅色棉麻衬衫。包上挂一把灯塔铜钥匙。旧铁皮糖盒不画。
+夏栀。[`projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_normal.png`](../assets/portraits/xia-zhi/xia-zhi_normal.png)。25 岁女性。163 cm，纤细偏瘦，肩膀薄，站得端正。黑色中长直发，一根木簪松松挽在脑后，有几缕垂下来。深棕色瞳，圆而偏垂的杏眼。平常神情慢，有距离，不笑。浅色棉麻衬衫。包上挂一把灯塔铜钥匙。旧铁皮糖盒不画。
 
-唐棠。`projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_normal.png`。23 岁女性。158 cm，娇小但结实，手臂有力，皮肤小麦色。棕红色短发，齐耳略翘，一条红色发带扎住刘海。深棕色瞳，大而亮的圆眼，眼神直。平常不瞪人，也不笑。白 T 恤，牛仔背带，外面系一条印着「唐记」的防水围裙。用旧报纸包着的日式厨刀不画。
+<img src="../assets/portraits/xia-zhi/xia-zhi_normal.png" width="240" alt="夏栀">
 
-叶帆。`projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_normal.png`。22 岁女性。166 cm，高挑匀称，鼻梁上有一点晒出来的雀斑。栗色长发扎成高马尾，碎刘海，戴一顶褪色的绿色邮差帽。琥珀色瞳，眼睛睁得大。平常是看着人的神情，不是大笑。绿色短袖邮政制服，袖子卷起。斜挎一只鼓鼓的帆布邮包。
+唐棠。[`projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_normal.png`](../assets/portraits/tang-tang/tang-tang_normal.png)。23 岁女性。158 cm，娇小但结实，手臂有力，皮肤小麦色。棕红色短发，齐耳略翘，一条红色发带扎住刘海。深棕色瞳，大而亮的圆眼，眼神直。平常不瞪人，也不笑。白 T 恤，牛仔背带，外面系一条印着「唐记」的防水围裙。用旧报纸包着的日式厨刀不画。
 
-陆屿。`projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_normal.png`。24 岁男性。183 cm，高大结实，肩宽，手臂和后颈晒得黝黑，手上有缆绳磨出的老茧和一道旧疤。黑色短发有点乱，额前一撮翘着。这一张不出海，不戴旧棒球帽。深黑色瞳，狭长单眼皮。平常眯着眼，带着不耐烦，不笑。洗到发白的灰色背心，外面敞开一件格子衬衫。旧 T 恤是同一套的另一种，这一张用背心。脖子上挂一枚旧铜哨。
+<img src="../assets/portraits/tang-tang/tang-tang_normal.png" width="240" alt="唐棠">
 
-许之言。`projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_normal.png`。31 岁男性。181 cm，高而清瘦，肩背挺直，手指干净修长。黑色短发修剪整齐，刘海略长。头平视，不用刘海把眼睛挡住。偏浅的灰褐瞳，内双，一副细金属框眼镜。平常不笑，神情冷静。白大褂套在白衬衫外，衬衫袖口挽到小臂。旧皮质出诊箱不画。
+叶帆。[`projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_normal.png`](../assets/portraits/ye-fan/ye-fan_normal.png)。22 岁女性。166 cm，高挑匀称，鼻梁上有一点晒出来的雀斑。栗色长发扎成高马尾，碎刘海，戴一顶褪色的绿色邮差帽。琥珀色瞳，眼睛睁得大。平常是看着人的神情，不是大笑。绿色短袖邮政制服，袖子卷起。斜挎一只鼓鼓的帆布邮包。
 
-苏念。`projects/seaside-cafe/assets/portraits/su-nian/su-nian_normal.png`。27 岁女性。168 cm，高瘦，手指修长，指尖有弹琴磨出的薄茧。黑色长卷发及腰，披着，不盘起来。灰黑色瞳，细长凤眼。平常微微抬下巴，脸冷，不笑。宽松的黑色亚麻衬衫。深蓝色是同一件衬衫的另一种，这一张用黑色。不穿夜里那件男款旧牛仔外套。脖子上一条灰色薄丝巾。旧木吉他不画。
+<img src="../assets/portraits/ye-fan/ye-fan_normal.png" width="240" alt="叶帆">
 
-程鹭。`projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_normal.png`。29 岁女性。170 cm，高挑修长，肩背结实，手臂上有珊瑚划过的浅色细疤。黑色长发扎成低马尾，头发是湿的，发尾有点褐。深灰色瞳，细长单眼皮，看人很直，不太眨眼。平常神情冷，不笑。上岸的衣服：速干衬衫。不穿潜水服。手腕上一块老式潜水表。
+陆屿。[`projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_normal.png`](../assets/portraits/lu-yu/lu-yu_normal.png)。24 岁男性。183 cm，高大结实，肩宽，手臂和后颈晒得黝黑，手上有缆绳磨出的老茧和一道旧疤。黑色短发有点乱，额前一撮翘着。这一张不出海，不戴旧棒球帽。深黑色瞳，狭长单眼皮。平常眯着眼，带着不耐烦，不笑。洗到发白的灰色背心，外面敞开一件格子衬衫。旧 T 恤是同一套的另一种，这一张用背心。脖子上挂一枚旧铜哨。
 
-沈若。`projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_normal.png`。28 岁女性。167 cm，匀称偏瘦，站得笔直。深栗色齐肩直发，发尾内扣，一丝不乱，不扎低丸子。黑色瞳，上挑的丹凤眼，化着精致的眼线。平常看人带审视，不笑。剪裁利落的白衬衫。墨镜是这套的配饰，架在头顶，不挡眼睛。
+<img src="../assets/portraits/lu-yu/lu-yu_normal.png" width="240" alt="陆屿">
 
-江叙白。`projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_normal.png`。30 岁男性。178 cm，修长偏瘦，手腕细，手指上有洗不掉的颜料。深棕色微长发，过耳，脑后扎一个小揪，碎发落在颈侧。深褐色瞳，温和的桃花眼。平常神情温和，像在听人说话，不笑，眼神也不空。宽松的亚麻衬衫，袖口有颜料渍，草帽。草帽不要挡住脸。厚速写本不画。油画笔不画。
+许之言。[`projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_normal.png`](../assets/portraits/xu-zhiyan/xu-zhiyan_normal.png)。31 岁男性。181 cm，高而清瘦，肩背挺直，手指干净修长。黑色短发修剪整齐，刘海略长。头平视，不用刘海把眼睛挡住。偏浅的灰褐瞳，内双，一副细金属框眼镜。平常不笑，神情冷静。白大褂套在白衬衫外，衬衫袖口挽到小臂。旧皮质出诊箱不画。
 
-宋知远。`projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_normal.png`。28 岁男性。185 cm，高大，宽肩窄腰，肌肉线条明显，皮肤古铜色。浅棕微卷短发，被海水和阳光漂过，有点乱。浅褐色瞳，圆而带笑的下垂眼。平常不是开玩笑的大笑，眼角细纹留到笑的那一张。花衬衫敞着扣子。不穿防寒泳衣。手腕上一串褪色的比赛号码手环。墙上那块旧比赛冲浪板不画进这张。
+<img src="../assets/portraits/xu-zhiyan/xu-zhiyan_normal.png" width="240" alt="许之言">
+
+苏念。[`projects/seaside-cafe/assets/portraits/su-nian/su-nian_normal.png`](../assets/portraits/su-nian/su-nian_normal.png)。27 岁女性。168 cm，高瘦，手指修长，指尖有弹琴磨出的薄茧。黑色长卷发及腰，披着，不盘起来。灰黑色瞳，细长凤眼。平常微微抬下巴，脸冷，不笑。宽松的黑色亚麻衬衫。深蓝色是同一件衬衫的另一种，这一张用黑色。不穿夜里那件男款旧牛仔外套。脖子上一条灰色薄丝巾。旧木吉他不画。
+
+<img src="../assets/portraits/su-nian/su-nian_normal.png" width="240" alt="苏念">
+
+程鹭。[`projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_normal.png`](../assets/portraits/cheng-lu/cheng-lu_normal.png)。29 岁女性。170 cm，高挑修长，肩背结实，手臂上有珊瑚划过的浅色细疤。黑色长发扎成低马尾，头发是湿的，发尾有点褐。深灰色瞳，细长单眼皮，看人很直，不太眨眼。平常神情冷，不笑。上岸的衣服：速干衬衫。不穿潜水服。手腕上一块老式潜水表。
+
+<img src="../assets/portraits/cheng-lu/cheng-lu_normal.png" width="240" alt="程鹭">
+
+沈若。[`projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_normal.png`](../assets/portraits/shen-ruo/shen-ruo_normal.png)。28 岁女性。167 cm，匀称偏瘦，站得笔直。深栗色齐肩直发，发尾内扣，一丝不乱，不扎低丸子。黑色瞳，上挑的丹凤眼，化着精致的眼线。平常看人带审视，不笑。剪裁利落的白衬衫。墨镜是这套的配饰，架在头顶，不挡眼睛。
+
+<img src="../assets/portraits/shen-ruo/shen-ruo_normal.png" width="240" alt="沈若">
+
+江叙白。[`projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_normal.png`](../assets/portraits/jiang-xubai/jiang-xubai_normal.png)。30 岁男性。178 cm，修长偏瘦，手腕细，手指上有洗不掉的颜料。深棕色微长发，过耳，脑后扎一个小揪，碎发落在颈侧。深褐色瞳，温和的桃花眼。平常神情温和，像在听人说话，不笑，眼神也不空。宽松的亚麻衬衫，袖口有颜料渍，草帽。草帽不要挡住脸。厚速写本不画。油画笔不画。
+
+<img src="../assets/portraits/jiang-xubai/jiang-xubai_normal.png" width="240" alt="江叙白">
+
+宋知远。[`projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_normal.png`](../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png)。28 岁男性。185 cm，高大，宽肩窄腰，肌肉线条明显，皮肤古铜色。浅棕微卷短发，被海水和阳光漂过，有点乱。浅褐色瞳，圆而带笑的下垂眼。平常不是开玩笑的大笑，眼角细纹留到笑的那一张。花衬衫敞着扣子。不穿防寒泳衣。手腕上一串褪色的比赛号码手环。墙上那块旧比赛冲浪板不画进这张。
+
+<img src="../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png" width="240" alt="宋知远">
 
 基准图定稿后，其余表情和服装都用它做参考图。
 
@@ -59,7 +83,7 @@
 
 ## 夏栀
 
-文件名：`xia-zhi`。目录：`projects/seaside-cafe/assets/portraits/xia-zhi/`。
+文件名：`xia-zhi`。目录：[`projects/seaside-cafe/assets/portraits/xia-zhi/`](../assets/portraits/xia-zhi/)。
 
 身份：灯塔守塔人的孙女，灯塔小学老师。男主可攻略。
 
@@ -84,16 +108,16 @@
 
 表情三种，两套都要。平常是慢、有距离。笑是眼尾弯下去。难过用于第 16 天看作文沉默、第 22 天爷爷发病、第 29 天一个人坐在塔顶、第 38 天发言发抖。
 
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_normal.png`
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_smile.png`
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_sad.png`
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_normal.png`
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_smile.png`
-- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_sad.png`
+- [`projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_normal.png`](../assets/portraits/xia-zhi/xia-zhi_normal.png)
+- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xia-zhi/xia-zhi_coat_sad.png` 未生成
 
 ## 唐棠
 
-文件名：`tang-tang`。目录：`projects/seaside-cafe/assets/portraits/tang-tang/`。
+文件名：`tang-tang`。目录：[`projects/seaside-cafe/assets/portraits/tang-tang/`](../assets/portraits/tang-tang/)。
 
 身份：码头海鲜排档「唐记」老板的女儿，排档帮工。男主可攻略。
 
@@ -115,16 +139,16 @@
 
 表情六种。笑是元气。生气是瞪人、顶嘴。害羞是别过脸，说「还……凑合吧」。担心是第 5 天看见你中暑，声音低下去。难过是在你面前哭过的那一次，以及第 37 天和父亲吵到欠债。
 
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_normal.png`
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_smile.png`
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_angry.png`
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_shy.png`
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_worried.png`
-- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_sad.png`
+- [`projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_normal.png`](../assets/portraits/tang-tang/tang-tang_normal.png)
+- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_angry.png` 未生成
+- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_shy.png` 未生成
+- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_worried.png` 未生成
+- `projects/seaside-cafe/assets/portraits/tang-tang/tang-tang_sad.png` 未生成
 
 ## 叶帆
 
-文件名：`ye-fan`。目录：`projects/seaside-cafe/assets/portraits/ye-fan/`。
+文件名：`ye-fan`。目录：[`projects/seaside-cafe/assets/portraits/ye-fan/`](../assets/portraits/ye-fan/)。
 
 身份：汐湾邮局邮递员，骑单车送信。男主可攻略。
 
@@ -146,15 +170,15 @@
 
 表情五种。笑是送信时的亮。惊讶是「诶？」。害羞是话到嘴边又留下。难过用于撤并通知、母亲的旧地址、没寄出的明信片。
 
-- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_normal.png`
-- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_smile.png`
-- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_surprised.png`
-- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_shy.png`
-- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_sad.png`
+- [`projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_normal.png`](../assets/portraits/ye-fan/ye-fan_normal.png)
+- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_surprised.png` 未生成
+- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_shy.png` 未生成
+- `projects/seaside-cafe/assets/portraits/ye-fan/ye-fan_sad.png` 未生成
 
 ## 陆屿
 
-文件名：`lu-yu`。目录：`projects/seaside-cafe/assets/portraits/lu-yu/`。
+文件名：`lu-yu`。目录：[`projects/seaside-cafe/assets/portraits/lu-yu/`](../assets/portraits/lu-yu/)。
 
 身份：隔壁渔家青年，独自经营家里的渔船。你的儿时玩伴。女主可攻略。
 
@@ -176,14 +200,14 @@
 
 表情四种。平常就是眯眼、不耐烦。笑很少，留到后期叫出外号。害羞是第 14 天「别回头」。难过是第 25 天说起父亲和爷爷都没回来。
 
-- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_normal.png`
-- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_smile.png`
-- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_shy.png`
-- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_sad.png`
+- [`projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_normal.png`](../assets/portraits/lu-yu/lu-yu_normal.png)
+- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_shy.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lu-yu/lu-yu_sad.png` 未生成
 
 ## 许之言
 
-文件名：`xu-zhiyan`。目录：`projects/seaside-cafe/assets/portraits/xu-zhiyan/`。
+文件名：`xu-zhiyan`。目录：[`projects/seaside-cafe/assets/portraits/xu-zhiyan/`](../assets/portraits/xu-zhiyan/)。
 
 身份：镇卫生所唯一的医生。女主可攻略。
 
@@ -208,15 +232,15 @@
 
 表情三种。不画笑。平常是不笑的冷静。累用于台风夜和泡面。难过用于没拆的城里来信，以及没救回的病人。衬衫那套没有单独的累，累留在白大褂。
 
-- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_normal.png`
-- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_tired.png`
-- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_sad.png`
-- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_shirt_normal.png`
-- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_shirt_sad.png`
+- [`projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_normal.png`](../assets/portraits/xu-zhiyan/xu-zhiyan_normal.png)
+- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_tired.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_shirt_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xu-zhiyan/xu-zhiyan_shirt_sad.png` 未生成
 
 ## 秀姨
 
-文件名：`xiu-yi`。目录：`projects/seaside-cafe/assets/portraits/xiu-yi/`。
+文件名：`xiu-yi`。目录：`projects/seaside-cafe/assets/portraits/xiu-yi/` 未生成。
 
 身份：老街杂货铺老板娘。不可攻略。
 
@@ -236,14 +260,14 @@
 
 表情四种。笑是接站、说开张。沉是周总提起码头时，她的手停住。难过是第 37 天写生展上哭了，只在江叙白的线里。
 
-- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_normal.png`
-- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_smile.png`
-- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_serious.png`
-- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_sad.png`
+- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/xiu-yi/xiu-yi_sad.png` 未生成
 
 ## 拿铁
 
-文件名：`na-tie`。目录：`projects/seaside-cafe/assets/portraits/na-tie/`。
+文件名：`na-tie`。目录：`projects/seaside-cafe/assets/portraits/na-tie/` 未生成。
 
 身份：「潮汐」的橘猫。不是一杯饮品。没有台词。
 
@@ -255,11 +279,11 @@
 
 服装没有。表情一种，坐着看人。烟花那场只是尾巴收紧，不另画。
 
-- `projects/seaside-cafe/assets/portraits/na-tie/na-tie_normal.png`
+- `projects/seaside-cafe/assets/portraits/na-tie/na-tie_normal.png` 未生成
 
 ## 老唐
 
-文件名：`lao-tang`。目录：`projects/seaside-cafe/assets/portraits/lao-tang/`。
+文件名：`lao-tang`。目录：`projects/seaside-cafe/assets/portraits/lao-tang/` 未生成。
 
 身份：唐棠的父亲，「唐记」老板。不可攻略。
 
@@ -277,14 +301,14 @@
 
 表情四种。平常是放下箱子就走。生气是催人、第 37 天后厨争吵。沉是第 38 天当众撕掉意向书。笑只给好结局，他在排档旧址门口招呼熟客，笑很短。
 
-- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_normal.png`
-- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_angry.png`
-- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_serious.png`
-- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_smile.png`
+- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_angry.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-tang/lao-tang_smile.png` 未生成
 
 ## 周总
 
-文件名：`zhou-zong`。目录：`projects/seaside-cafe/assets/portraits/zhou-zong/`。
+文件名：`zhou-zong`。目录：`projects/seaside-cafe/assets/portraits/zhou-zong/` 未生成。
 
 身份：度假村的代表。文档没有他的名字，文件夹用这个称呼。不可攻略。
 
@@ -302,14 +326,14 @@
 
 表情四种。平常是谈价钱。笑很淡，点头就算。沉是听数据、收回文件夹。难过是第 38 天失神叫出「小鹭」，以及第 48 天承认自己是父亲。
 
-- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_normal.png`
-- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_smile.png`
-- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_serious.png`
-- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_sad.png`
+- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/zhou-zong/zhou-zong_sad.png` 未生成
 
 ## 老护士
 
-文件名：`lao-hushi`。目录：`projects/seaside-cafe/assets/portraits/lao-hushi/`。
+文件名：`lao-hushi`。目录：`projects/seaside-cafe/assets/portraits/lao-hushi/` 未生成。
 
 身份：卫生所的护士。只有她和许之言。文档写明不起名。不可攻略。
 
@@ -327,12 +351,12 @@
 
 表情两种。平常是递水。沉是第 19 天翻出旧病历。
 
-- `projects/seaside-cafe/assets/portraits/lao-hushi/lao-hushi_normal.png`
-- `projects/seaside-cafe/assets/portraits/lao-hushi/lao-hushi_serious.png`
+- `projects/seaside-cafe/assets/portraits/lao-hushi/lao-hushi_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-hushi/lao-hushi_serious.png` 未生成
 
 ## 老夏
 
-文件名：`lao-xia`。目录：`projects/seaside-cafe/assets/portraits/lao-xia/`。
+文件名：`lao-xia`。目录：`projects/seaside-cafe/assets/portraits/lao-xia/` 未生成。
 
 身份：夏栀的爷爷，灯塔守塔人。信里称老夏。不可攻略。
 
@@ -350,13 +374,13 @@
 
 表情三种。平常是点头、闭上眼。难过是第 22 天发病。笑是第 35 天坐在轮椅上看灯亮起，只在夏栀的线里，笑很轻。
 
-- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_normal.png`
-- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_sad.png`
-- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_smile.png`
+- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lao-xia/lao-xia_smile.png` 未生成
 
 ## 苏念
 
-文件名：`su-nian`。目录：`projects/seaside-cafe/assets/portraits/su-nian/`。
+文件名：`su-nian`。目录：[`projects/seaside-cafe/assets/portraits/su-nian/`](../assets/portraits/su-nian/)。
 
 身份：来汐湾采风的独立音乐人。男主可攻略。
 
@@ -381,16 +405,16 @@
 
 表情：默认要平常、难过、生气。平常是冷，抬一点下巴。难过是看见诊断书。生气是破音后摔门。`night` 要平常、难过、笑。难过是弹了一夜。笑很少，留到嗓子好转、唱现在的歌。
 
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_normal.png`
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_sad.png`
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_angry.png`
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_normal.png`
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_sad.png`
-- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_smile.png`
+- [`projects/seaside-cafe/assets/portraits/su-nian/su-nian_normal.png`](../assets/portraits/su-nian/su-nian_normal.png)
+- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_angry.png` 未生成
+- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/su-nian/su-nian_night_smile.png` 未生成
 
 ## 程鹭
 
-文件名：`cheng-lu`。目录：`projects/seaside-cafe/assets/portraits/cheng-lu/`。
+文件名：`cheng-lu`。目录：[`projects/seaside-cafe/assets/portraits/cheng-lu/`](../assets/portraits/cheng-lu/)。
 
 身份：海洋研究站的潜水研究员。男主可攻略。
 
@@ -415,16 +439,16 @@
 
 表情：默认要平常、笑、难过、沉。平常是冷。笑很小，只在说珊瑚的时候。难过是撤并通知、第 50 天和父亲谈开。沉是看见周总就离开，脸上没有大动作。`wetsuit` 要平常和生气。生气是「别踩」。
 
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_normal.png`
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_smile.png`
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_sad.png`
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_serious.png`
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_wetsuit_normal.png`
-- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_wetsuit_angry.png`
+- [`projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_normal.png`](../assets/portraits/cheng-lu/cheng-lu_normal.png)
+- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_wetsuit_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/cheng-lu/cheng-lu_wetsuit_angry.png` 未生成
 
 ## 沈若
 
-文件名：`shen-ruo`。目录：`projects/seaside-cafe/assets/portraits/shen-ruo/`。
+文件名：`shen-ruo`。目录：[`projects/seaside-cafe/assets/portraits/shen-ruo/`](../assets/portraits/shen-ruo/)。
 
 身份：你在城里的前同事。男主可攻略。
 
@@ -449,17 +473,17 @@
 
 表情：默认要平常、生气、累、难过。平常是审视。生气是催你说重点、劝你回城。累是低血糖还在回邮件，「让我坐一会儿」。难过是看见自己在优化名单上。`floral` 要平常、害羞、笑。害羞是穿上碎花裙自己觉得别扭。笑很少，留到她为自己辞职的那一头。
 
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_normal.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_angry.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_tired.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_sad.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_normal.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_shy.png`
-- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_smile.png`
+- [`projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_normal.png`](../assets/portraits/shen-ruo/shen-ruo_normal.png)
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_angry.png` 未生成
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_tired.png` 未生成
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_shy.png` 未生成
+- `projects/seaside-cafe/assets/portraits/shen-ruo/shen-ruo_floral_smile.png` 未生成
 
 ## 江叙白
 
-文件名：`jiang-xubai`。目录：`projects/seaside-cafe/assets/portraits/jiang-xubai/`。
+文件名：`jiang-xubai`。目录：[`projects/seaside-cafe/assets/portraits/jiang-xubai/`](../assets/portraits/jiang-xubai/)。
 
 身份：夏天来汐湾写生的画家。女主可攻略。
 
@@ -481,14 +505,14 @@
 
 表情四种。平常是温和地听。笑是夸光线。空是画了一整天、画布仍是空白，眼神空着。难过是第 30 天当着你把画撕了。
 
-- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_normal.png`
-- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_smile.png`
-- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_blank.png`
-- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_sad.png`
+- [`projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_normal.png`](../assets/portraits/jiang-xubai/jiang-xubai_normal.png)
+- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_blank.png` 未生成
+- `projects/seaside-cafe/assets/portraits/jiang-xubai/jiang-xubai_sad.png` 未生成
 
 ## 宋知远
 
-文件名：`song-zhiyuan`。目录：`projects/seaside-cafe/assets/portraits/song-zhiyuan/`。
+文件名：`song-zhiyuan`。目录：[`projects/seaside-cafe/assets/portraits/song-zhiyuan/`](../assets/portraits/song-zhiyuan/)。
 
 身份：冲浪民宿「浪花里」老板，冲浪教练。前职业冲浪选手。女主可攻略。
 
@@ -513,16 +537,16 @@
 
 表情：默认要平常、笑、沉、难过。笑是他最常见的脸。沉是第 29 天大浪，他站在岸边没有下水，以及第 33 天给你看膝盖上的疤，不开玩笑。难过留在疤和退役那一场，不另做哭。`wetsuit` 只要平常和笑。
 
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_normal.png`
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_smile.png`
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_serious.png`
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_sad.png`
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_wetsuit_normal.png`
-- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_wetsuit_smile.png`
+- [`projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_normal.png`](../assets/portraits/song-zhiyuan/song-zhiyuan_normal.png)
+- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_smile.png` 未生成
+- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_sad.png` 未生成
+- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_wetsuit_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/song-zhiyuan/song-zhiyuan_wetsuit_smile.png` 未生成
 
 ## 外婆
 
-文件名：`wai-po`。目录：`projects/seaside-cafe/assets/portraits/wai-po/`。
+文件名：`wai-po`。目录：`projects/seaside-cafe/assets/portraits/wai-po/` 未生成。
 
 身份：「潮汐」原店主。第 1 天之前已经去世。不可攻略。
 
@@ -538,11 +562,11 @@
 
 服装一套。表情一种，看着镜头，平静。
 
-- `projects/seaside-cafe/assets/portraits/wai-po/wai-po_normal.png`
+- `projects/seaside-cafe/assets/portraits/wai-po/wai-po_normal.png` 未生成
 
 ## 陆汀
 
-文件名：`lu-ting`。目录：`projects/seaside-cafe/assets/portraits/lu-ting/`。
+文件名：`lu-ting`。目录：`projects/seaside-cafe/assets/portraits/lu-ting/` 未生成。
 
 身份：陆屿的妹妹。刚考完，人还在家里。不可攻略。选到陆屿才看见。
 
@@ -560,12 +584,12 @@
 
 表情两种。平常是把通知书递过来。笑是通知书已经拿到。
 
-- `projects/seaside-cafe/assets/portraits/lu-ting/lu-ting_normal.png`
-- `projects/seaside-cafe/assets/portraits/lu-ting/lu-ting_smile.png`
+- `projects/seaside-cafe/assets/portraits/lu-ting/lu-ting_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lu-ting/lu-ting_smile.png` 未生成
 
 ## 郑恪
 
-文件名：`zheng-ke`。目录：`projects/seaside-cafe/assets/portraits/zheng-ke/`。
+文件名：`zheng-ke`。目录：`projects/seaside-cafe/assets/portraits/zheng-ke/` 未生成。
 
 身份：周总的助理。姓郑，单名恪。不是周家的人。不可攻略。
 
@@ -583,12 +607,12 @@
 
 表情两种。平常是低声说话。沉是话不能让旁边听见。
 
-- `projects/seaside-cafe/assets/portraits/zheng-ke/zheng-ke_normal.png`
-- `projects/seaside-cafe/assets/portraits/zheng-ke/zheng-ke_serious.png`
+- `projects/seaside-cafe/assets/portraits/zheng-ke/zheng-ke_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/zheng-ke/zheng-ke_serious.png` 未生成
 
 ## 陆母
 
-文件名：`lu-mu`。目录：`projects/seaside-cafe/assets/portraits/lu-mu/`。
+文件名：`lu-mu`。目录：`projects/seaside-cafe/assets/portraits/lu-mu/` 未生成。
 
 身份：陆屿的母亲。文档没有她的名字，文件夹用这个称呼。不可攻略。
 
@@ -606,9 +630,9 @@
 
 表情三种。平常是坐在最后一排，不看人。沉是第 41 天关门。难过是第 46 天把那两句说完，没有大哭。
 
-- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_normal.png`
-- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_serious.png`
-- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_sad.png`
+- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_normal.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_serious.png` 未生成
+- `projects/seaside-cafe/assets/portraits/lu-mu/lu-mu_sad.png` 未生成
 
 ## 汇总
 

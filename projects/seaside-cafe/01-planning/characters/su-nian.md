@@ -2,6 +2,13 @@
 
 > 状态：人设初稿，待 Mike 确认
 
+## 立绘
+
+<img src="../../assets/portraits/su-nian/su-nian_normal.png" width="240" alt="苏念">
+
+[文件夹](../../assets/portraits/su-nian/)
+[清单](../portrait-list.md#苏念)
+
 ## 基本信息
 
 | 项目 | 内容 |
