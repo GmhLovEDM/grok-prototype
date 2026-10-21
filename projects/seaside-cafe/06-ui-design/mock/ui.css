@@ -53,13 +53,7 @@ img { display: block; max-width: none; }
   pointer-events: none;
 }
 
-.page-title .bg { background-image: url("../../assets/backgrounds/bg-old-street-day/bg-old-street-day.png"); }
-.page-dialogue .bg,
-.page-choices .bg,
-.page-quick .bg,
-.page-save .bg,
-.page-settings .bg { background-image: url("../../assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png"); }
-.page-narration .bg { background-image: url("../../assets/backgrounds/bg-chaoxi-dusty-afternoon/bg-chaoxi-dusty-afternoon.png"); }
+/* 静态稿的底图在 backgrounds.css。游戏不引用那三张大图，自己用资源目录里的背景。 */
 
 .page-title .bg::after {
   background: linear-gradient(to top, rgba(36, 24, 16, 0.38) 0%, rgba(36, 24, 16, 0.05) 42%, transparent 70%);

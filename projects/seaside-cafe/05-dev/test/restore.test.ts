@@ -61,6 +61,50 @@ describe("仍要读取", () => {
     expect(state.gender).toBeNull();
   });
 
+  it("天数超出剧本时回到标题，不会当成结局读进来", () => {
+    const state = createState({});
+    state.gender = "女";
+    const pos: Pos = { ...saved, dayIndex: 8 };
+    const before = structuredClone(pos);
+    const result = tryRestore(story, state, pos, 60);
+    expect(result).toEqual({ ok: false, notice: "这份存档和当前剧本对不上，已经回到标题。" });
+    expect(pos).toEqual(before);
+  });
+
+  it("场景下标超出这一天时同样拒绝", () => {
+    const state = createState({});
+    state.gender = "女";
+    const pos: Pos = { ...saved, sceneIndex: 4 };
+    const before = structuredClone(pos);
+    const result = tryRestore(story, state, pos, 60);
+    expect(result.ok).toBe(false);
+    if (result.ok) return;
+    expect(result.notice).toContain("回到标题");
+    expect(pos).toEqual(before);
+  });
+
+  it("这一行在剧本里已经没有时同样拒绝", () => {
+    const state = createState({});
+    state.gender = "女";
+    const pos: Pos = { ...saved, lineIndex: 3 };
+    const before = structuredClone(pos);
+    const result = tryRestore(story, state, pos, 60);
+    expect(result.ok).toBe(false);
+    if (result.ok) return;
+    expect(result.notice).toContain("回到标题");
+    expect(pos).toEqual(before);
+    expect(state.gender).toBe("女");
+  });
+
+  it("停在结局上的存档仍能读取", () => {
+    const state = createState({});
+    const pos: Pos = { ...saved, dayIndex: 9, screen: "end" };
+    const result = tryRestore(story, state, pos, 60);
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.player.view().kind).toBe("end");
+  });
+
   it("去向指向已经没有的天，也不会把调用方卡在抛错外面", () => {
     const state = createState({});
     state.gender = "女";

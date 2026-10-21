@@ -58,10 +58,12 @@ describe("剧本解析", () => {
     expect([...speakers].sort()).toEqual(["叶帆", "周总", "唐棠", "夏栀", "老唐", "老护士", "许之言", "电话", "秀姨", "陆屿", "沈若"].sort());
   });
 
-  it("每个场景都有背景", () => {
+  it("每个场景都有背景和给玩家看的地名", () => {
     for (const day of story.days) {
       for (const scene of day.scenes) {
-        expect(presentation[`${day.day}:${scene.id}` as keyof typeof presentation], `${day.day}:${scene.id}`).toBeTruthy();
+        const look = presentation[`${day.day}:${scene.id}` as keyof typeof presentation];
+        expect(look, `${day.day}:${scene.id}`).toBeTruthy();
+        expect(look?.place?.trim(), `${day.day}:${scene.id}`).toBeTruthy();
       }
     }
   });

@@ -19,7 +19,7 @@ export type SaveData = {
     name: string;
     gender: string | null;
     chapter: string;
-    /** 场景名，旧档可能没有。 */
+    /** 给玩家看的地名。旧档可能没有，或仍是内部场景名。 */
     place?: string;
     /** 背景文件名，不含路径。旧档可能没有。 */
     background?: string;

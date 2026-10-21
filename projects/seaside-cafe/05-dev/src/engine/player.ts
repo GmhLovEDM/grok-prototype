@@ -400,7 +400,45 @@ export function applyPlayerName(text: string, name: string): string {
 export const SAVE_REJECTED = "这份存档和当前剧本对不上，已经回到标题。";
 
 /**
- * 先按存档位置走一遍播放器，再真正取一帧画面。
+ * 存档停着的那一格必须还在剧本里：天、场，以及这一行或这个选项。
+ * 超出范围时播放器会自己往后跳，甚至把没有的天数收成结局，所以要在构造之前拒绝。
+ * 不改传入的位置。
+ */
+export function positionInRange(story: Story, state: GameState, pos: Pos): boolean {
+  if (pos.screen === "end") return true;
+  const day = story.days[pos.dayIndex];
+  if (!day) return false;
+  if (pos.screen === "day") return true;
+  if (pos.screen !== "play") return false;
+  let scene: Scene | undefined;
+  let blockIndex = pos.blockIndex;
+  let lineIndex = pos.lineIndex;
+  if (pos.jump) {
+    const ref = pos.jump.queue[pos.jump.index];
+    const source = ref ? story.days[ref.dayIndex] : undefined;
+    scene = ref && source ? source.scenes[ref.sceneIndex] : undefined;
+    blockIndex = pos.jump.blockIndex;
+    lineIndex = pos.jump.lineIndex;
+  } else {
+    scene = day.scenes[pos.sceneIndex];
+  }
+  if (!scene || blockIndex < 0 || lineIndex < 0) return false;
+  const block = scene.blocks[blockIndex];
+  if (!block || block.type === "effects") return false;
+  if (block.type === "choice" || block.type === "input" || block.type === "minigame") return true;
+  if (block.type === "lines") return lineIndex < block.items.length;
+  if (block.type === "replace") {
+    if (state.gender) return lineIndex < block.byGender[state.gender].length;
+    return lineIndex < block.byGender.男.length || lineIndex < block.byGender.女.length;
+  }
+  for (const arm of block.arms) {
+    if (evalCond(state, arm.condition)) return lineIndex < arm.items.length;
+  }
+  return false;
+}
+
+/**
+ * 先核对位置还在剧本里，再按存档走一遍播放器，然后取一帧画面。
  * 剧本改过之后，有的位置能构造、但一渲染就抛错；这个错若漏出点击处理，界面会停在「仍要读取」。
  * 失败时不改传入的状态和位置。
  */
@@ -411,6 +449,7 @@ export function tryRestore(
   totalDays: number,
   cues: Record<string, string> = {},
 ): { ok: true; player: Player } | { ok: false; notice: string } {
+  if (!positionInRange(story, state, pos)) return { ok: false, notice: SAVE_REJECTED };
   try {
     const player = new Player(story, structuredClone(state), structuredClone(pos), totalDays, cues);
     player.view();

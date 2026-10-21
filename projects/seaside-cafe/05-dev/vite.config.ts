@@ -59,12 +59,11 @@ function serveAssets(): Plugin {
       const outDir = path.resolve(root, "dist");
       if (!fs.existsSync(outDir)) return;
       copyAssets(outDir);
-      const fontDir = path.resolve(root, "../06-ui-design/mock/fonts");
-      const outFonts = path.join(outDir, "fonts");
-      fs.mkdirSync(outFonts, { recursive: true });
-      for (const name of ["SourceHanSansCN-Regular-subset.woff2", "OFL.txt"]) {
-        fs.copyFileSync(path.join(fontDir, name), path.join(outFonts, name));
-      }
+      const assetsDir = path.join(outDir, "assets");
+      const fonts = fs.existsSync(assetsDir) ? fs.readdirSync(assetsDir).filter((name) => name.endsWith(".woff2")) : [];
+      if (fonts.length !== 1) throw new Error(`字体应该只打进一份，实际 ${fonts.length} 份`);
+      const ofl = path.resolve(root, "../06-ui-design/mock/fonts/OFL.txt");
+      fs.copyFileSync(ofl, path.join(assetsDir, "OFL.txt"));
     },
   };
 }

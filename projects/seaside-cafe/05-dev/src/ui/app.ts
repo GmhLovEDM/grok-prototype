@@ -22,7 +22,7 @@ import {
 } from "../engine/storage";
 import type { GameState, Pos, Story } from "../engine/types";
 
-type Look = { background: string; shift?: { includes: string; background: string } };
+type Look = { background: string; place: string; shift?: { includes: string; background: string } };
 type Mode = "title" | "settings" | "saves" | "log" | "play" | "version" | "menu";
 type Back = "title" | "menu" | "play";
 
@@ -90,6 +90,20 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     return { src: asset(`assets/portraits/${person.id}/${person.id}_${tag}.png`), cat: person.id === "na-tie" };
   }
 
+  function placeName(view: View): string {
+    if (!("scene" in view)) return "";
+    return looks[`${view.sourceDay}:${view.scene}`]?.place?.trim() ?? "";
+  }
+
+  function shownPlace(saved: string | undefined): string {
+    const raw = saved?.trim() ?? "";
+    if (!raw) return "";
+    const hits = Object.entries(looks).filter(([key]) => key.endsWith(`:${raw}`));
+    const place = hits[0]?.[1].place?.trim() ?? "";
+    if (place && hits.every(([, look]) => look.place.trim() === place)) return place;
+    return raw;
+  }
+
   function lookId(view: View): string {
     if (view.kind === "line" || view.kind === "choice" || view.kind === "minigame" || view.kind === "input") {
       const look = looks[`${view.sourceDay}:${view.scene}`];
@@ -108,6 +122,12 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
   function backgroundOf(view: View): string {
     const id = lookId(view);
     return asset(`assets/backgrounds/${id}/${id}.png`);
+  }
+
+  function shellBackground(): string {
+    if (mode === "title" || mode === "version") return asset("assets/backgrounds/bg-old-street-day/bg-old-street-day.png");
+    if (mode === "settings" || mode === "saves") return asset("assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png");
+    return "";
   }
 
   function remember(view: View) {
@@ -147,7 +167,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     const view = player.view();
     const day = "day" in view ? view.day : script.days[script.days.length - 1]?.day ?? 1;
     const chapter = "chapter" in view ? view.chapter : "";
-    const place = "scene" in view ? view.scene : "";
+    const place = placeName(view);
     return {
       v: 1,
       scriptVersion,
@@ -190,7 +210,8 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     stage.className = `stage ${pageClass(playing ? view : null)}`;
     stage.replaceChildren();
     const bg = el("div", "bg");
-    if (playing && view) bg.style.backgroundImage = `url("${backgroundOf(view)}")`;
+    const painted = playing && view ? backgroundOf(view) : shellBackground();
+    if (painted) bg.style.backgroundImage = `url("${painted}")`;
     stage.append(bg);
     if (playing && view && mode !== "title") {
       if (mode === "play") remember(view);
@@ -240,12 +261,12 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     const inner = el("div", "hud-inner");
     const day = "day" in view ? view.day : 1;
     const chapter = "chapter" in view ? view.chapter : "";
-    const place = "scene" in view ? view.scene : "";
+    const place = placeName(view);
     const capsule = el("p", "hud-day");
     capsule.append(el("b", "", `第 ${day} 天`));
     capsule.append(el("span", "hud-total", `/ ${schedule.totalDays}`));
     if (chapter) capsule.append(el("span", "hud-chapter", chapter));
-    if (place) capsule.append(el("span", "", place));
+    if (place) capsule.append(el("span", "hud-place", place));
     const actions = el("nav", "hud-actions");
     actions.setAttribute("aria-label", "顶部菜单");
     actions.append(
@@ -670,7 +691,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     const mismatch = data ? !saveScriptMatches(data.scriptVersion, scriptVersion) : false;
     if (!data) where.textContent = "空栏位";
     else {
-      const bits = [data.summary.chapter, data.summary.place].filter(Boolean);
+      const bits = [data.summary.chapter, shownPlace(data.summary.place)].filter(Boolean);
       if (mismatch) bits.push("另一版");
       where.textContent = bits.join(" · ") || "已保存";
     }
@@ -705,7 +726,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
 
   function overwriteModal(data: SaveData): HTMLElement {
     const box = modal("覆盖这个存档？");
-    const bits = [`第 ${data.summary.day} 天`, data.summary.chapter, data.summary.place].filter(Boolean);
+    const bits = [`第 ${data.summary.day} 天`, data.summary.chapter, shownPlace(data.summary.place)].filter(Boolean);
     box.append(el("h3", "", "覆盖这个存档？"), el("p", "", bits.join(" · ")));
     box.append(el("p", "fine", `${formatWhen(data.savedAt)} 写下的。盖掉就找不回来了。`));
     const actions = el("div", "modal-actions");
