@@ -1,6 +1,6 @@
 {
   "totalDays": 60,
-  "saveSlots": 3,
+  "saveSlots": 6,
   "mapChoiceIds": ["傍晚"],
   "genderChoiceId": "性别",
   "nameInputId": "名字",

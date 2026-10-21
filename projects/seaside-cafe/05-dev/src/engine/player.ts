@@ -397,6 +397,29 @@ export function applyPlayerName(text: string, name: string): string {
   return text.replaceAll("{主角}", name);
 }
 
+export const SAVE_REJECTED = "这份存档和当前剧本对不上，已经回到标题。";
+
+/**
+ * 先按存档位置走一遍播放器，再真正取一帧画面。
+ * 剧本改过之后，有的位置能构造、但一渲染就抛错；这个错若漏出点击处理，界面会停在「仍要读取」。
+ * 失败时不改传入的状态和位置。
+ */
+export function tryRestore(
+  story: Story,
+  state: GameState,
+  pos: Pos,
+  totalDays: number,
+  cues: Record<string, string> = {},
+): { ok: true; player: Player } | { ok: false; notice: string } {
+  try {
+    const player = new Player(story, structuredClone(state), structuredClone(pos), totalDays, cues);
+    player.view();
+    return { ok: true, player };
+  } catch {
+    return { ok: false, notice: SAVE_REJECTED };
+  }
+}
+
 function choiceOf(block: Block | undefined): ChoiceBlock | null {
   if (!block) return null;
   if (block.type === "choice") return block;

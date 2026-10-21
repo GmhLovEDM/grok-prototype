@@ -57,7 +57,14 @@ function serveAssets(): Plugin {
     },
     closeBundle() {
       const outDir = path.resolve(root, "dist");
-      if (fs.existsSync(outDir)) copyAssets(outDir);
+      if (!fs.existsSync(outDir)) return;
+      copyAssets(outDir);
+      const fontDir = path.resolve(root, "../06-ui-design/mock/fonts");
+      const outFonts = path.join(outDir, "fonts");
+      fs.mkdirSync(outFonts, { recursive: true });
+      for (const name of ["SourceHanSansCN-Regular-subset.woff2", "OFL.txt"]) {
+        fs.copyFileSync(path.join(fontDir, name), path.join(outFonts, name));
+      }
     },
   };
 }
