@@ -2,18 +2,28 @@ import characters from "../data/characters.json";
 import initial from "../data/initial.json";
 import presentation from "../data/presentation.json";
 import schedule from "../data/schedule.json";
-import story from "../generated/story.json";
+import compiled from "../generated/story.json";
 import { Player, type View } from "../engine/player";
 import { createState } from "../engine/state";
-import { browserStorage, readSave, writeSave, type SaveData, type SaveStorage } from "../engine/storage";
+import {
+  browserStorage,
+  readSave,
+  readSettings,
+  saveScriptMatches,
+  writeSave,
+  writeSettings,
+  type SaveData,
+  type SaveStorage,
+  type Settings,
+} from "../engine/storage";
 import type { GameState, Pos, Story } from "../engine/types";
 
-type Look = { background: string; outfit?: Record<string, string>; shift?: { includes: string; background: string } };
-type Settings = { speed: "slow" | "mid" | "fast" | "instant"; scale: "small" | "mid" | "large" };
+type Look = { background: string; shift?: { includes: string; background: string } };
 
 const cast = new Map(characters.map((person) => [person.name, person]));
 const looks = presentation as Record<string, Look>;
-const script = story as Story;
+const script = compiled as Story;
+const scriptVersion = compiled.version;
 const cues: Record<string, string> = {};
 for (const [key, look] of Object.entries(looks)) {
   if (look.shift) cues[key] = look.shift.includes;
@@ -29,27 +39,28 @@ const speeds = [
 export function mount(root: ParentNode, storage: SaveStorage = browserStorage()): void {
   const stage = el("div", "stage");
   root.append(stage);
-  let mode: "title" | "settings" | "saves" | "log" | "play" = "title";
+  let mode: "title" | "settings" | "saves" | "log" | "play" | "version" = "title";
   let backTo: "title" | "play" = "title";
   let saveMode: "load" | "save" = "load";
   let renderToken = 0;
   let player = Player.start(script, createState(initial.vars), schedule.totalDays, cues);
-  let settings = loadSettings();
+  let settings: Settings = { speed: "mid", scale: "mid" };
   let auto = false;
   let error = "";
+  let banner = "";
+  let pending: SaveData | null = null;
   const backlog: { speaker: string | null; text: string }[] = [];
   let seenLine = "";
   let reveal = { full: "", shown: "", done: true, timer: 0 };
 
   const asset = (rel: string) => `${import.meta.env.BASE_URL}${rel}`;
 
-  function portraitOf(name: string | null, sourceDay: number, scene: string): string | null {
+  function portraitOf(name: string | null, expr: string | null): string | null {
     if (!name) return null;
     const person = cast.get(name);
     if (!person?.id) return null;
-    const outfit = looks[`${sourceDay}:${scene}`]?.outfit?.[name];
-    const file = outfit ? `${person.id}_${outfit}_normal` : `${person.id}_normal`;
-    return asset(`assets/portraits/${person.id}/${file}.png`);
+    const tag = expr || "normal";
+    return asset(`assets/portraits/${person.id}/${person.id}_${tag}.png`);
   }
 
   function backgroundOf(view: View): string {
@@ -86,6 +97,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     const chapter = "chapter" in view ? view.chapter : "";
     return {
       v: 1,
+      scriptVersion,
       savedAt: new Date().toISOString(),
       pos: structuredClone(player.pos) as Pos,
       state: structuredClone(player.state) as GameState,
@@ -115,6 +127,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       });
     }
     if (mode === "log") stage.append(logCard());
+    if (mode === "version") stage.append(versionCard());
     if (mode === "play" && auto) kickAuto();
   }
 
@@ -124,8 +137,8 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       view.kind === "line" || (view.kind === "choice" && view.id !== schedule.genderChoiceId && !schedule.mapChoiceIds.includes(view.id)) || view.kind === "minigame"
         ? view.portrait
         : null;
-    if (portraitName && "sourceDay" in view) {
-      const src = portraitOf(portraitName, view.sourceDay, view.scene);
+    if (portraitName && "expr" in view) {
+      const src = portraitOf(portraitName, view.expr);
       if (src) appendPortrait(layer, src);
     }
     layer.append(hud(view));
@@ -329,6 +342,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     const card = overlay();
     const box = el("div", "overlay-card");
     box.append(el("h1", "", "汐湾咖啡馆"), el("p", "sub", "序章与第一章。这一轮没有声音。"));
+    if (banner) box.append(el("p", "notice", banner));
     const stack = el("div", "stack");
     stack.append(
       button("开始游戏", "solid", () => {
@@ -336,6 +350,8 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
         backlog.length = 0;
         seenLine = "";
         error = "";
+        banner = "";
+        pending = null;
         mode = "play";
         render();
       }),
@@ -365,7 +381,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     for (const [id, label] of speeds) {
       const node = button(`文字${label}`, settings.speed === id ? "solid" : "choice", () => {
         settings.speed = id;
-        saveSettings();
+        void writeSettings(storage, settings);
         render();
       });
       speedRow.append(node);
@@ -374,7 +390,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     for (const [id, label] of [["small", "小"], ["mid", "中"], ["large", "大"]] as const) {
       scaleRow.append(button(`字号${label}`, settings.scale === id ? "solid" : "choice", () => {
         settings.scale = id;
-        saveSettings();
+        void writeSettings(storage, settings);
         render();
       }));
     }
@@ -395,8 +411,9 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     for (const slot of slots) {
       const data = await readSave(storage, slot).catch(() => null);
       const label = slot === "auto" ? "自动" : `档位 ${slot}`;
+      const mismatch = data ? !saveScriptMatches(data.scriptVersion, scriptVersion) : false;
       const detail = data
-        ? `${label} · 第 ${data.summary.day} 天 · ${data.summary.name || "未命名"} · ${data.summary.gender === "女" ? "女主" : data.summary.gender === "男" ? "男主" : "未选"}`
+        ? `${label} · 第 ${data.summary.day} 天 · ${data.summary.name || "未命名"} · ${data.summary.gender === "女" ? "女主" : data.summary.gender === "男" ? "男主" : "未选"}${mismatch ? " · 剧本版本不同" : ""}`
         : `${label} · 空`;
       stack.append(button(detail, "choice", () => void onSlot(slot, data)));
     }
@@ -418,19 +435,72 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       return;
     }
     if (!data) return;
-    player = new Player(script, data.state, data.pos, schedule.totalDays, cues);
+    openLoaded(data);
+  }
+
+  async function resume(slot: string) {
+    const data = await readSave(storage, slot).catch(() => null);
+    if (!data) return;
+    openLoaded(data);
+  }
+
+  function openLoaded(data: SaveData) {
+    if (!saveScriptMatches(data.scriptVersion, scriptVersion)) {
+      pending = data;
+      mode = "version";
+      render();
+      return;
+    }
+    adoptSave(data);
+  }
+
+  function adoptSave(data: SaveData) {
+    try {
+      player = new Player(script, data.state, data.pos, schedule.totalDays, cues);
+    } catch {
+      pending = null;
+      banner = "这份存档和当前剧本对不上，已经回到标题。";
+      backlog.length = 0;
+      seenLine = "";
+      mode = "title";
+      render();
+      return;
+    }
+    pending = null;
+    banner = "";
     backlog.length = 0;
     seenLine = "";
     mode = "play";
     render();
   }
 
-  async function resume(slot: string) {
-    const data = await readSave(storage, slot).catch(() => null);
-    if (!data) return;
-    player = new Player(script, data.state, data.pos, schedule.totalDays, cues);
-    mode = "play";
-    render();
+  function versionCard(): HTMLElement {
+    const card = overlay();
+    const box = el("div", "overlay-card");
+    box.append(
+      el("h2", "", "剧本版本不一样"),
+      el("p", "sub", "这份存档写下时的剧本和现在不是同一版。可以试着接着读；进度对不上的话，会回到标题。也可以先不读。"),
+    );
+    const stack = el("div", "stack");
+    stack.append(
+      button("仍要读取", "solid", () => {
+        const data = pending;
+        if (!data) {
+          mode = "title";
+          render();
+          return;
+        }
+        adoptSave(data);
+      }),
+      button("回到标题", "solid", () => {
+        pending = null;
+        mode = "title";
+        render();
+      }),
+    );
+    box.append(stack);
+    card.append(box);
+    return card;
   }
 
   function logCard(): HTMLElement {
@@ -525,22 +595,10 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     }
   });
 
-  render();
-
-  function loadSettings(): Settings {
-    try {
-      const raw = localStorage.getItem("sc/settings");
-      if (!raw) return { speed: "mid", scale: "mid" };
-      const parsed = JSON.parse(raw) as Settings;
-      return { speed: parsed.speed ?? "mid", scale: parsed.scale ?? "mid" };
-    } catch {
-      return { speed: "mid", scale: "mid" };
-    }
-  }
-
-  function saveSettings() {
-    localStorage.setItem("sc/settings", JSON.stringify(settings));
-  }
+  void readSettings(storage).then((loaded) => {
+    settings = loaded;
+    render();
+  });
 }
 
 function overlay(): HTMLElement {

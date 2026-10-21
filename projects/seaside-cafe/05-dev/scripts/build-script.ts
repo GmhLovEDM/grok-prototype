@@ -3,7 +3,9 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import characters from "../src/data/characters.json";
 import presentation from "../src/data/presentation.json";
+import { ScriptError } from "../src/engine/effects";
 import { parseStory } from "../src/engine/parse";
+import { scriptVersionOf } from "../src/engine/script-version";
 import type { Block, Line, Story } from "../src/engine/types";
 
 const devRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
@@ -17,8 +19,17 @@ const files = fs
   .sort()
   .map((filename) => ({ filename, markdown: fs.readFileSync(path.join(scriptDir, filename), "utf8") }));
 
-const story = parseStory(files);
 const cast = new Map(characters.map((person) => [person.name, person]));
+const story = parseStory(files, {
+  onExpression(filename, line, speaker, expr) {
+    const person = cast.get(speaker);
+    const portrait = person?.id ? `${person.id}_${expr}.png` : "";
+    const file = person?.id ? path.join(assetsRoot, "portraits", person.id, portrait) : "";
+    if (!portrait || !fs.existsSync(file)) {
+      throw new ScriptError(filename, line, `「${speaker}」没有立绘 ${portrait || expr}。台词若要以方括号开头，请改用全角［］。`);
+    }
+  },
+});
 const speakers = new Set<string>();
 
 for (const day of story.days) {
@@ -31,14 +42,6 @@ for (const day of story.days) {
     if ("shift" in look && look.shift) {
       const shifted = path.join(assetsRoot, "backgrounds", look.shift.background, `${look.shift.background}.png`);
       if (!fs.existsSync(shifted)) throw new Error(`背景文件不存在：${look.shift.background}`);
-    }
-    if ("outfit" in look && look.outfit) {
-      for (const [name, outfit] of Object.entries(look.outfit)) {
-        const person = cast.get(name);
-        if (!person?.id) throw new Error(`换装对不上人物：${name}`);
-        const file = path.join(assetsRoot, "portraits", person.id, `${person.id}_${outfit}_normal.png`);
-        if (!fs.existsSync(file)) throw new Error(`换装立绘不存在：${file}`);
-      }
     }
     for (const line of linesOf(scene.blocks)) {
       if (line.type === "dialogue") speakers.add(line.speaker);
@@ -64,10 +67,13 @@ const manifest = {
   portraits: characters.filter((person) => person.id).map((person) => person.id),
 };
 
+const version = scriptVersionOf(story.days);
 fs.mkdirSync(outDir, { recursive: true });
-fs.writeFileSync(path.join(outDir, "story.json"), `${JSON.stringify(story, null, 2)}\n`);
+fs.writeFileSync(path.join(outDir, "story.json"), `${JSON.stringify({ version, days: story.days }, null, 2)}\n`);
 fs.writeFileSync(path.join(outDir, "assets.json"), `${JSON.stringify(manifest, null, 2)}\n`);
-console.log(`剧本 ${story.days.length} 天，场景 ${story.days.reduce((sum, day) => sum + day.scenes.length, 0)} 场`);
+console.log(
+  `剧本 ${story.days.length} 天，场景 ${story.days.reduce((sum, day) => sum + day.scenes.length, 0)} 场，版本 ${version.slice(0, 12)}`,
+);
 
 function linesOf(blocks: Block[]): Line[] {
   const out: Line[] = [];

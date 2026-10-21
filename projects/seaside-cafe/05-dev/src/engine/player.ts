@@ -17,6 +17,7 @@ export type View =
       lineKind: Line["type"];
       speaker: string | null;
       portrait: string | null;
+      expr: string | null;
       fast: boolean;
       cueHit: boolean;
     }
@@ -31,6 +32,7 @@ export type View =
       options: { label: string }[];
       cueHit: boolean;
       portrait: string | null;
+      expr: string | null;
     }
   | { kind: "input"; day: number; chapter: string; scene: string; sourceDay: number; id: string }
   | {
@@ -46,6 +48,7 @@ export type View =
       fail: string | null;
       notice: string | null;
       portrait: string | null;
+      expr: string | null;
     };
 
 const startPos = (): Pos => ({
@@ -91,7 +94,8 @@ export class Player {
     const block = scene.blocks[this.cursor().blockIndex];
     if (!block) throw new Error(`场景没有可显示的内容：${scene.id}`);
     const cueHit = this.cueHit(source.day, scene);
-    const portrait = this.portraitOf(scene);
+    const face = this.face(scene);
+    const name = this.state.playerName;
     if (block.type === "lines" || block.type === "replace" || block.type === "branch") {
       const items = this.lineItems(block);
       const line = items?.[this.cursor().lineIndex];
@@ -102,10 +106,11 @@ export class Player {
         chapter: calendar.chapter,
         scene: scene.id,
         sourceDay: source.day,
-        text: line.text,
+        text: applyPlayerName(line.text, name),
         lineKind: line.type,
         speaker: line.type === "dialogue" ? line.speaker : null,
-        portrait,
+        portrait: face.speaker,
+        expr: face.expr,
         fast: scene.fast,
         cueHit,
       };
@@ -119,9 +124,10 @@ export class Player {
         sourceDay: source.day,
         id: block.id,
         choiceType: block.choiceType,
-        options: block.options.map((option) => ({ label: option.label })),
+        options: block.options.map((option) => ({ label: applyPlayerName(option.label, name) })),
         cueHit,
-        portrait,
+        portrait: face.speaker,
+        expr: face.expr,
       };
     }
     if (block.type === "input") {
@@ -135,12 +141,13 @@ export class Player {
         scene: scene.id,
         sourceDay: source.day,
         id: block.id,
-        instructions: block.instructions,
-        options: block.choice.options.map((option) => ({ label: option.label })),
+        instructions: block.instructions.map((line) => applyPlayerName(line, name)),
+        options: block.choice.options.map((option) => ({ label: applyPlayerName(option.label, name) })),
         normalIndex: block.normalIndex,
-        fail: block.fail,
+        fail: block.fail ? applyPlayerName(block.fail, name) : null,
         notice: this.notice,
-        portrait,
+        portrait: face.speaker,
+        expr: face.expr,
       };
     }
     throw new Error(`效果不该停在画面上：${scene.id}`);
@@ -371,13 +378,23 @@ export class Player {
     return this.shownLines(scene).some((line) => line.text.includes(cue));
   }
 
-  private portraitOf(scene: Scene): string | null {
+  private face(scene: Scene): { speaker: string | null; expr: string | null } {
+    const last = new Map<string, string>();
     let speaker: string | null = null;
     for (const line of this.shownLines(scene)) {
-      if (line.type === "dialogue") speaker = line.speaker;
+      if (line.type !== "dialogue") continue;
+      speaker = line.speaker;
+      const expr = line.expr ?? last.get(speaker) ?? "normal";
+      last.set(speaker, expr);
     }
-    return speaker;
+    if (!speaker) return { speaker: null, expr: null };
+    return { speaker, expr: last.get(speaker) ?? "normal" };
   }
+}
+
+export function applyPlayerName(text: string, name: string): string {
+  if (!name || !text.includes("{主角}")) return text;
+  return text.replaceAll("{主角}", name);
 }
 
 function choiceOf(block: Block | undefined): ChoiceBlock | null {

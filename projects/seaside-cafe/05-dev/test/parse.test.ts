@@ -3,9 +3,12 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import presentation from "../src/data/presentation.json";
 import schedule from "../src/data/schedule.json";
+import { evalCond } from "../src/engine/conditions";
 import { ScriptError } from "../src/engine/effects";
 import { parseDay, parseStory } from "../src/engine/parse";
-import type { Block, Line } from "../src/engine/types";
+import { scriptVersionOf } from "../src/engine/script-version";
+import { createState } from "../src/engine/state";
+import type { Block, Cond, Line } from "../src/engine/types";
 
 const scriptDir = path.resolve(process.cwd(), "../03-script");
 
@@ -19,6 +22,12 @@ function loadStory() {
 }
 
 const story = loadStory();
+
+function collectOps(cond: Cond | null, ops: Set<string>) {
+  if (!cond) return;
+  ops.add(cond.op);
+  if (cond.op === "all") for (const arg of cond.args) collectOps(arg, ops);
+}
 
 function linesIn(blocks: Block[]): Line[] {
   const out: Line[] = [];
@@ -88,6 +97,88 @@ describe("剧本解析", () => {
     if (block.type !== "branch") return;
     expect(block.arms).toHaveLength(2);
     expect(block.arms[0].condition).toEqual({ op: "eq", key: "饮品", value: "汽水" });
+  });
+
+  it("对不上标记的未看过会指出文件和行，并要求改写", () => {
+    const markdown = ["# 第 1 天", "", "> 章节：序章", "", "## 场景：独自", "", "条件：地点=礁石滩且已看过", "", "一句。", ""].join("\n");
+    const line = markdown.split(/\n/).findIndex((item) => item.startsWith("条件：")) + 1;
+    expect(() => parseDay(markdown, "day-01.md")).toThrow(ScriptError);
+    try {
+      parseDay(markdown, "day-01.md");
+    } catch (error) {
+      expect(error).toBeInstanceOf(ScriptError);
+      expect((error as Error).message).toContain(`day-01.md:${line}`);
+      expect((error as Error).message).toContain("已看过");
+      expect((error as Error).message).toContain("改写");
+      expect((error as Error).message).toContain("看过修网=是");
+    }
+  });
+
+  it("能对上的未看过会收成标记，带名字的未看过不用这场标记", () => {
+    const paired = parseDay(
+      ["# 第 7 天", "", "> 章节：第一章", "", "## 场景：修网", "", "条件：未看过", "", "一句。", "", "> 效果：标记：看过修网", "", "## 场景：修网已看", "", "条件：已看过", "", "一句。", ""].join("\n"),
+      "day-07.md",
+    );
+    expect(paired.scenes[0].condition).toEqual({ op: "flag", key: "看过修网", on: false });
+    expect(paired.scenes[1].condition).toEqual({ op: "flag", key: "看过修网", on: true });
+
+    const named = parseDay(
+      ["# 第 8 天", "", "> 章节：第一章", "", "## 场景：深夜消息", "", "条件：沈若消息未看过", "", "一句。", ""].join("\n"),
+      "day-08.md",
+    );
+    expect(named.scenes[0].condition).toEqual({ op: "flag", key: "看过沈若消息", on: false });
+  });
+
+  it("正文里的未看过都绑成了标记", () => {
+    const day = story.days.find((item) => item.day === 7);
+    const fresh = day?.scenes.find((item) => item.id === "修网");
+    const again = day?.scenes.find((item) => item.id === "修网已看");
+    const light = day?.scenes.find((item) => item.id === "灯塔");
+    expect(fresh?.condition).toEqual({
+      op: "all",
+      args: [
+        { op: "eq", key: "傍晚", value: "修网" },
+        { op: "flag", key: "看过修网", on: false },
+      ],
+    });
+    expect(again?.condition).toEqual({
+      op: "all",
+      args: [
+        { op: "eq", key: "傍晚", value: "修网" },
+        { op: "flag", key: "看过修网", on: true },
+      ],
+    });
+    expect(JSON.stringify(light?.condition)).toContain("看过读报");
+    const ops = new Set<string>();
+    for (const item of story.days) {
+      for (const scene of item.scenes) {
+        collectOps(scene.condition, ops);
+        for (const block of scene.blocks) {
+          if (block.type === "branch") for (const arm of block.arms) collectOps(arm.condition, ops);
+        }
+      }
+    }
+    expect(ops.has("seenWord")).toBe(false);
+  });
+
+  it("漏进播放器的未看过不再抛错", () => {
+    expect(evalCond(createState({}), { op: "seenWord", on: false } as unknown as Cond)).toBe(false);
+  });
+
+  it("行前方括号和占位符不会把解析打断", () => {
+    const markdown = ["# 第 1 天", "", "> 章节：序章", "", "## 场景：试", "", "[smile]", "陆屿：你好", "[smile]陆屿：再一句", "今天的客人是{主角}。", ""].join("\n");
+    expect(() => parseDay(markdown, "fixture.md")).not.toThrow();
+    const day = parseDay(markdown, "fixture.md");
+    expect(linesIn(day.scenes[0].blocks).length).toBeGreaterThan(0);
+  });
+
+  it("剧本版本是编译结果的内容哈希", () => {
+    const version = scriptVersionOf(story.days);
+    expect(version).toMatch(/^[a-f0-9]{64}$/);
+    expect(scriptVersionOf(story.days)).toBe(version);
+    const tweaked = structuredClone(story.days);
+    tweaked[0].chapter += "改";
+    expect(scriptVersionOf(tweaked)).not.toBe(version);
   });
 
   it("傍晚地图只出现在日程允许的日子", () => {

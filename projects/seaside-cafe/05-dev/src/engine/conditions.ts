@@ -25,6 +25,9 @@ export function fireworksWinner(
 
 export function evalCond(state: GameState, cond: Cond | null): boolean {
   if (!cond) return true;
+  // 裸的「未看过 / 已看过」在构建时就要绑成标记，或者直接报错让作者改写。
+  // 漏进播放器的不再抛错，当成条件不成立。
+  if ((cond as { op: string }).op === "seenWord") return false;
   switch (cond.op) {
     case "all":
       return cond.args.every((arg) => evalCond(state, arg));
@@ -41,8 +44,6 @@ export function evalCond(state: GameState, cond: Cond | null): boolean {
       const people = cond.present[state.gender];
       return people.every((person) => readStat(state, person.name, "romance") < cond.threshold);
     }
-    case "seenWord":
-      throw new Error("未看过还没有绑定到标记");
     default: {
       const never: never = cond;
       throw new Error(`未知条件：${JSON.stringify(never)}`);
