@@ -4,7 +4,7 @@
 
 - 29 张场景：`../backgrounds/<id>/<id>.png`，1920×1080，不透明 RGB PNG。
 - 63 张新增立绘：`../portraits/<id>/`。人物为 1536×2304 RGBA PNG；拿铁为 1024×1024 RGBA PNG，均含真实透明通道。
-- 4 张母版修正：唐棠、叶帆、陆屿、江叙白，分别另存为对应目录的 `*_normal-v2.png`。本轮表情派生使用这些修正版；旧 `*_normal.png` 保留，不覆盖。
+- 4 张母版修正：唐棠、叶帆、陆屿、江叙白。定稿后正式文件是各目录的 `*_normal.png`。旧母版仍在 `../portraits/_generation/original-masters/`。对照见 [v2 定稿](../_reviews/v2-selection.md)。
 
 总计 96 张本轮交付图。最终文件清单、实际生成提示词、原始生成文件路径、原生尺寸、输出尺寸、字节数、SHA-256 和透明像素统计见 [delivery-manifest.json](delivery-manifest.json)。本地可视索引见 [gallery.html](gallery.html)，浏览器打开后点击图片可查看完整 PNG。
 
@@ -12,7 +12,7 @@
 
 生成原图保留在 Codex 的 `generated_images` 目录。本地交付 PNG 用 Lanczos 重采样到文档规定尺寸，不把原生输出冒充为原生 1920×1080 或 1536×2304；各文件原生尺寸记录在清单中。真实透明通道在保存过程中保留，没有使用棋盘格替代透明。
 
-场景修正版已放回规定的 `<id>.png` 路径，同时保留 `-v2.png`；首图留在 `drafts/`。苏念外套难过版恢复了基准版的灰丝巾与蓝色牛仔外套，首图同样保留。
+12 张场景和苏念 `su-nian_night_sad` 的 `-v2` 与当时的正式文件是同一张图。定稿保留正式文件名，重复的一份在 `../backgrounds/_generation/alternates/` 与 `../portraits/_generation/alternates/`。首图仍在 `drafts/`。苏念外套难过版恢复了基准版的灰丝巾与蓝色牛仔外套。
 
 ## 本轮调整及复核范围
 
@@ -24,4 +24,4 @@
 
 `prompts/` 保留实际发送的提示词；`art-progress.jsonl` 按完成保存的先后顺序追加记录，包含首轮及修正版。`delivery-manifest.json` 按当前交付文件 SHA-256 匹配实际生成记录。原始母版备份位于 `../portraits/_generation/original-masters/`。
 
-没有提交 Git，没有修改原型代码，没有覆盖现有角色母版。
+出图当时没有提交 Git，没有修改原型代码，也没有覆盖当时已有的角色母版。唐棠、叶帆、陆屿、江叙白四张母版是在后来的定稿里才被修正版替换的，见 [v2 定稿](../_reviews/v2-selection.md)。
