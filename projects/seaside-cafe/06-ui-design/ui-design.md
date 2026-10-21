@@ -3,7 +3,7 @@
 > 状态：给 Him 的界面稿。静态页用浏览器直接打开，不用构建。
 > 不改 `assets/` 里的定稿，也不改原型和剧本。游戏叠图时，人物和猫仍用立绘，不画进背景。
 
-Figma 设计稿链接：（待设计师补上）
+Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 依据：
 
