@@ -60,7 +60,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 ### 字体和字号
 
-界面用思源黑体。文件是 [`mock/fonts/SourceHanSansCN-Regular-subset.woff2`](mock/fonts/SourceHanSansCN-Regular-subset.woff2)，家族名 `Source Han Sans CN`（思源黑体 CN）。许可是 SIL Open Font License 1.1，全文在 [`mock/fonts/OFL.txt`](mock/fonts/OFL.txt)。Copyright 2014-2025 Adobe，Reserved Font Name 是 Source。子集只收界面和 `03-script/` 里出现的字，字形没有改。缺字时回退到苹方、思源黑体、微软雅黑、文泉驿微米黑。
+界面用思源黑体子集。文件是 [`mock/fonts/SourceHanSansCN-Regular-subset.woff2`](mock/fonts/SourceHanSansCN-Regular-subset.woff2)。许可是 SIL Open Font License 1.1，全文在 [`mock/fonts/OFL.txt`](mock/fonts/OFL.txt)。Copyright 2014-2025 Adobe，Reserved Font Name 是 Source。子集裁过字，不能再用保留名，`@font-face` 的家族名是 `XiwanUI`。缺字时回退到苹方、微软雅黑、文泉驿微米黑。
 
 | 令牌 | 桌面 | 手机 | 用在 |
 | --- | --- | --- | --- |

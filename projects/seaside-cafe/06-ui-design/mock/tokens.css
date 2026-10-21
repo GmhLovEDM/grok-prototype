@@ -3,10 +3,11 @@
    思源黑体子集：fonts/SourceHanSansCN-Regular-subset.woff2
    许可：SIL Open Font License 1.1，全文在 fonts/OFL.txt。
    Copyright 2014-2025 Adobe. Reserved Font Name「Source」。
+   子集是裁过的字体，不能再用保留名，所以 @font-face 家族名是 XiwanUI。
    只收界面和 03-script 里出现的字，字形没有改。 */
 
 @font-face {
-  font-family: "Source Han Sans CN";
+  font-family: "XiwanUI";
   src: url("fonts/SourceHanSansCN-Regular-subset.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
@@ -39,7 +40,7 @@
   --scrim: rgba(42, 30, 22, 0.46);
   --scrim-soft: rgba(42, 30, 22, 0.28);
 
-  --font-ui: "Source Han Sans CN", "思源黑体 CN", "PingFang SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+  --font-ui: "XiwanUI", "PingFang SC", "Noto Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
 
   --fs-title: 60px;
   --fs-h2: 26px;

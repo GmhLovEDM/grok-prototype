@@ -1,0 +1,9 @@
+/* 只给静态稿用。游戏构建不引用这份，避免把三张大图打进包。 */
+
+.page-title .bg { background-image: url("../../assets/backgrounds/bg-old-street-day/bg-old-street-day.png"); }
+.page-dialogue .bg,
+.page-choices .bg,
+.page-quick .bg,
+.page-save .bg,
+.page-settings .bg { background-image: url("../../assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png"); }
+.page-narration .bg { background-image: url("../../assets/backgrounds/bg-chaoxi-dusty-afternoon/bg-chaoxi-dusty-afternoon.png"); }

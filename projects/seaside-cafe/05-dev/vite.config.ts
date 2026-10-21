@@ -57,7 +57,13 @@ function serveAssets(): Plugin {
     },
     closeBundle() {
       const outDir = path.resolve(root, "dist");
-      if (fs.existsSync(outDir)) copyAssets(outDir);
+      if (!fs.existsSync(outDir)) return;
+      copyAssets(outDir);
+      const assetsDir = path.join(outDir, "assets");
+      const fonts = fs.existsSync(assetsDir) ? fs.readdirSync(assetsDir).filter((name) => name.endsWith(".woff2")) : [];
+      if (fonts.length !== 1) throw new Error(`字体应该只打进一份，实际 ${fonts.length} 份`);
+      const ofl = path.resolve(root, "../06-ui-design/mock/fonts/OFL.txt");
+      fs.copyFileSync(ofl, path.join(assetsDir, "OFL.txt"));
     },
   };
 }

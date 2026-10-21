@@ -58,12 +58,26 @@ describe("剧本解析", () => {
     expect([...speakers].sort()).toEqual(["叶帆", "周总", "唐棠", "夏栀", "老唐", "老护士", "许之言", "电话", "秀姨", "陆屿", "沈若"].sort());
   });
 
-  it("每个场景都有背景", () => {
+  it("每个场景都标明地名，开局显式不显示", () => {
+    const blank: string[] = [];
     for (const day of story.days) {
       for (const scene of day.scenes) {
-        expect(presentation[`${day.day}:${scene.id}` as keyof typeof presentation], `${day.day}:${scene.id}`).toBeTruthy();
+        const key = `${day.day}:${scene.id}` as keyof typeof presentation;
+        const look = presentation[key];
+        expect(look, key).toBeTruthy();
+        expect(look && "place" in look, key).toBe(true);
+        if (!look || !("place" in look)) continue;
+        if (look.place === null) {
+          blank.push(key);
+          continue;
+        }
+        expect(typeof look.place, key).toBe("string");
+        expect(look.place.trim(), key).toBeTruthy();
       }
     }
+    expect(blank).toEqual(["1:开局"]);
+    expect(presentation["1:开局"].place).toBeNull();
+    expect(presentation["1:潮汐"].place).toBe("潮汐");
   });
 
   it("不认识的块会失败", () => {

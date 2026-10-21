@@ -5,6 +5,7 @@ import characters from "../src/data/characters.json";
 import presentation from "../src/data/presentation.json";
 import { ScriptError } from "../src/engine/effects";
 import { parseStory } from "../src/engine/parse";
+import { readPlace } from "../src/engine/place-name";
 import { scriptVersionOf } from "../src/engine/script-version";
 import type { Block, Line, Story } from "../src/engine/types";
 
@@ -37,6 +38,12 @@ for (const day of story.days) {
     const key = `${day.day}:${scene.id}`;
     const look = presentation[key as keyof typeof presentation];
     if (!look) throw new Error(`缺少背景对照：${key}`);
+    try {
+      readPlace("place" in look ? look.place : undefined);
+    } catch (error) {
+      const reason = error instanceof Error ? error.message : "缺少给玩家看的地名";
+      throw new Error(`${reason}：${key}`);
+    }
     const bg = path.join(assetsRoot, "backgrounds", look.background, `${look.background}.png`);
     if (!fs.existsSync(bg)) throw new Error(`背景文件不存在：${look.background}`);
     if ("shift" in look && look.shift) {

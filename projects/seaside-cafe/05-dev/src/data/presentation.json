@@ -1,100 +1,386 @@
 {
-  "1:开局": { "background": "bg-chaoxi-dusty-afternoon" },
-  "1:写字楼": { "background": "bg-office-night" },
-  "1:回程": { "background": "bg-coach-day" },
-  "1:车站": { "background": "bg-station-day" },
-  "1:老街": { "background": "bg-old-street-day" },
-  "1:潮汐": { "background": "bg-chaoxi-dusty-afternoon" },
-  "2:潮汐": { "background": "bg-chaoxi-day" },
-  "3:潮汐": { "background": "bg-chaoxi-day" },
-  "3:夜里": { "background": "bg-chaoxi-night" },
-  "4:潮汐": { "background": "bg-chaoxi-day" },
-  "4:汽水": { "background": "bg-chaoxi-day" },
-  "4:淡咖": { "background": "bg-chaoxi-day" },
-  "4:手冲": { "background": "bg-chaoxi-day" },
-  "5:潮汐": { "background": "bg-chaoxi-noon" },
-  "5:卫生所": { "background": "bg-clinic-day" },
-  "6:电话": { "background": "bg-chaoxi-day" },
-  "6:选地点": { "background": "bg-chaoxi-day" },
-  "6:码头入口": { "background": "bg-dock-entrance-dusk" },
-  "6:修网": { "background": "bg-dock-nets-dusk" },
-  "6:练刀": { "background": "bg-tangji-kitchen-night" },
-  "6:灯塔": { "background": "bg-lighthouse-dusk" },
-  "6:礁石滩": { "background": "bg-reef-dusk" },
-  "7:潮汐": { "background": "bg-chaoxi-day" },
-  "7:拉成": { "background": "bg-chaoxi-day" },
-  "7:拉花跳过": { "background": "bg-chaoxi-day" },
-  "7:秀姨走后": { "background": "bg-chaoxi-day" },
-  "7:选地点": { "background": "bg-chaoxi-day" },
-  "7:码头入口": { "background": "bg-dock-entrance-dusk" },
-  "7:修网": { "background": "bg-dock-nets-dusk" },
-  "7:修网已看": { "background": "bg-dock-no-boat-dusk" },
-  "7:练刀": { "background": "bg-tangji-kitchen-night" },
-  "7:练刀已看": { "background": "bg-tangji-kitchen-dark" },
-  "7:灯塔": { "background": "bg-lighthouse-dusk" },
-  "7:灯塔已看": { "background": "bg-lighthouse-papers-dusk" },
-  "7:礁石滩": { "background": "bg-reef-dusk" },
-  "8:白天": { "background": "bg-chaoxi-day" },
-  "8:选地点": { "background": "bg-chaoxi-day" },
-  "8:码头入口": { "background": "bg-dock-entrance-dusk" },
-  "8:修网": { "background": "bg-dock-nets-dusk" },
-  "8:修网已看": { "background": "bg-dock-no-boat-dusk" },
-  "8:练刀": { "background": "bg-tangji-kitchen-night" },
-  "8:练刀已看": { "background": "bg-tangji-kitchen-dark" },
-  "8:灯塔": { "background": "bg-lighthouse-dusk" },
-  "8:灯塔已看": { "background": "bg-lighthouse-papers-dusk" },
-  "8:礁石滩": { "background": "bg-reef-dusk" },
-  "8:深夜消息": { "background": "bg-chaoxi-night" },
-  "8:回了": { "background": "bg-chaoxi-night" },
-  "8:没回": { "background": "bg-chaoxi-night" },
-  "9:钉窗": { "background": "bg-chaoxi-typhoon-night" },
-  "9:留下陆屿": { "background": "bg-chaoxi-typhoon-night" },
-  "9:留下夏栀": { "background": "bg-chaoxi-typhoon-night" },
-  "9:留下唐棠": { "background": "bg-chaoxi-typhoon-night" },
-  "9:留下许之言": { "background": "bg-chaoxi-typhoon-night" },
-  "10:潮汐": { "background": "bg-chaoxi-after-storm" },
-  "10:选地点": { "background": "bg-chaoxi-after-storm" },
-  "10:礁石滩": { "background": "bg-reef-wet-night" },
-  "10:码头空": { "background": "bg-dock-empty-night" },
-  "10:灯塔空": { "background": "bg-lighthouse-distant-night" },
-  "10:卫生所": { "background": "bg-clinic-steps-night" },
-  "10:卫生所已看": { "background": "bg-clinic-steps-night" },
-  "11:潮汐": { "background": "bg-chaoxi-after-storm" },
-  "11:选地点": { "background": "bg-chaoxi-after-storm" },
-  "11:码头空": { "background": "bg-dock-empty-night" },
-  "11:灯塔空": { "background": "bg-lighthouse-distant-night" },
-  "11:礁石滩": { "background": "bg-reef-night" },
-  "11:邮局空": { "background": "bg-post-closed-dusk" },
-  "11:卫生所": { "background": "bg-clinic-steps-night" },
-  "11:卫生所已看": { "background": "bg-clinic-steps-night" },
-  "12:邮局": { "background": "bg-post-interior-day" },
-  "12:猜谜": { "background": "bg-chaoxi-day" },
-  "12:猜谜做成": { "background": "bg-chaoxi-day" },
-  "12:选地点": { "background": "bg-chaoxi-day" },
-  "12:泡面": { "background": "bg-clinic-steps-night" },
-  "12:坐下": { "background": "bg-clinic-steps-night" },
-  "12:站着": { "background": "bg-clinic-steps-night" },
-  "12:面吃完": { "background": "bg-clinic-steps-night" },
-  "12:卫生所已看": { "background": "bg-clinic-steps-night" },
-  "12:码头空": { "background": "bg-dock-empty-night" },
-  "12:灯塔空": { "background": "bg-lighthouse-distant-night" },
-  "12:礁石滩": { "background": "bg-reef-night" },
-  "12:邮局空": { "background": "bg-post-closed-dusk" },
-  "13:码头广场": { "background": "bg-plaza-day" },
-  "13:陆屿": { "background": "bg-plaza-day" },
-  "13:夏栀": { "background": "bg-plaza-day" },
-  "13:唐棠": { "background": "bg-plaza-day" },
-  "13:许之言": { "background": "bg-plaza-day" },
-  "13:叶帆": { "background": "bg-plaza-day" },
-  "14:广场": { "background": "bg-plaza-fireworks" },
-  "14:烟花陆屿": { "background": "bg-plaza-fireworks" },
-  "14:烟花许之言": { "background": "bg-plaza-fireworks" },
-  "14:烟花夏栀": { "background": "bg-plaza-fireworks" },
-  "14:烟花唐棠": { "background": "bg-plaza-fireworks" },
-  "14:烟花叶帆": { "background": "bg-plaza-fireworks" },
-  "14:烟花很低": { "background": "bg-plaza-fireworks" },
+  "1:开局": {
+    "background": "bg-chaoxi-dusty-afternoon",
+    "place": null
+  },
+  "1:写字楼": {
+    "background": "bg-office-night",
+    "place": "写字楼"
+  },
+  "1:回程": {
+    "background": "bg-coach-day",
+    "place": "车上"
+  },
+  "1:车站": {
+    "background": "bg-station-day",
+    "place": "车站"
+  },
+  "1:老街": {
+    "background": "bg-old-street-day",
+    "place": "老街"
+  },
+  "1:潮汐": {
+    "background": "bg-chaoxi-dusty-afternoon",
+    "place": "潮汐"
+  },
+  "2:潮汐": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "3:潮汐": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "3:夜里": {
+    "background": "bg-chaoxi-night",
+    "place": "潮汐"
+  },
+  "4:潮汐": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "4:汽水": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "4:淡咖": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "4:手冲": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "5:潮汐": {
+    "background": "bg-chaoxi-noon",
+    "place": "潮汐"
+  },
+  "5:卫生所": {
+    "background": "bg-clinic-day",
+    "place": "卫生所"
+  },
+  "6:电话": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "6:选地点": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "6:码头入口": {
+    "background": "bg-dock-entrance-dusk",
+    "place": "码头"
+  },
+  "6:修网": {
+    "background": "bg-dock-nets-dusk",
+    "place": "码头"
+  },
+  "6:练刀": {
+    "background": "bg-tangji-kitchen-night",
+    "place": "唐记"
+  },
+  "6:灯塔": {
+    "background": "bg-lighthouse-dusk",
+    "place": "灯塔"
+  },
+  "6:礁石滩": {
+    "background": "bg-reef-dusk",
+    "place": "礁石滩"
+  },
+  "7:潮汐": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "7:拉成": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "7:拉花跳过": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "7:秀姨走后": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "7:选地点": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "7:码头入口": {
+    "background": "bg-dock-entrance-dusk",
+    "place": "码头"
+  },
+  "7:修网": {
+    "background": "bg-dock-nets-dusk",
+    "place": "码头"
+  },
+  "7:修网已看": {
+    "background": "bg-dock-no-boat-dusk",
+    "place": "码头"
+  },
+  "7:练刀": {
+    "background": "bg-tangji-kitchen-night",
+    "place": "唐记"
+  },
+  "7:练刀已看": {
+    "background": "bg-tangji-kitchen-dark",
+    "place": "唐记"
+  },
+  "7:灯塔": {
+    "background": "bg-lighthouse-dusk",
+    "place": "灯塔"
+  },
+  "7:灯塔已看": {
+    "background": "bg-lighthouse-papers-dusk",
+    "place": "灯塔"
+  },
+  "7:礁石滩": {
+    "background": "bg-reef-dusk",
+    "place": "礁石滩"
+  },
+  "8:白天": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "8:选地点": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "8:码头入口": {
+    "background": "bg-dock-entrance-dusk",
+    "place": "码头"
+  },
+  "8:修网": {
+    "background": "bg-dock-nets-dusk",
+    "place": "码头"
+  },
+  "8:修网已看": {
+    "background": "bg-dock-no-boat-dusk",
+    "place": "码头"
+  },
+  "8:练刀": {
+    "background": "bg-tangji-kitchen-night",
+    "place": "唐记"
+  },
+  "8:练刀已看": {
+    "background": "bg-tangji-kitchen-dark",
+    "place": "唐记"
+  },
+  "8:灯塔": {
+    "background": "bg-lighthouse-dusk",
+    "place": "灯塔"
+  },
+  "8:灯塔已看": {
+    "background": "bg-lighthouse-papers-dusk",
+    "place": "灯塔"
+  },
+  "8:礁石滩": {
+    "background": "bg-reef-dusk",
+    "place": "礁石滩"
+  },
+  "8:深夜消息": {
+    "background": "bg-chaoxi-night",
+    "place": "潮汐"
+  },
+  "8:回了": {
+    "background": "bg-chaoxi-night",
+    "place": "潮汐"
+  },
+  "8:没回": {
+    "background": "bg-chaoxi-night",
+    "place": "潮汐"
+  },
+  "9:钉窗": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
+  "9:留下陆屿": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
+  "9:留下夏栀": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
+  "9:留下唐棠": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
+  "9:留下许之言": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
+  "10:潮汐": {
+    "background": "bg-chaoxi-after-storm",
+    "place": "潮汐"
+  },
+  "10:选地点": {
+    "background": "bg-chaoxi-after-storm",
+    "place": "潮汐"
+  },
+  "10:礁石滩": {
+    "background": "bg-reef-wet-night",
+    "place": "礁石滩"
+  },
+  "10:码头空": {
+    "background": "bg-dock-empty-night",
+    "place": "码头"
+  },
+  "10:灯塔空": {
+    "background": "bg-lighthouse-distant-night",
+    "place": "灯塔"
+  },
+  "10:卫生所": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "10:卫生所已看": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "11:潮汐": {
+    "background": "bg-chaoxi-after-storm",
+    "place": "潮汐"
+  },
+  "11:选地点": {
+    "background": "bg-chaoxi-after-storm",
+    "place": "潮汐"
+  },
+  "11:码头空": {
+    "background": "bg-dock-empty-night",
+    "place": "码头"
+  },
+  "11:灯塔空": {
+    "background": "bg-lighthouse-distant-night",
+    "place": "灯塔"
+  },
+  "11:礁石滩": {
+    "background": "bg-reef-night",
+    "place": "礁石滩"
+  },
+  "11:邮局空": {
+    "background": "bg-post-closed-dusk",
+    "place": "邮局"
+  },
+  "11:卫生所": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "11:卫生所已看": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:邮局": {
+    "background": "bg-post-interior-day",
+    "place": "邮局"
+  },
+  "12:猜谜": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "12:猜谜做成": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "12:选地点": {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "12:泡面": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:坐下": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:站着": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:面吃完": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:卫生所已看": {
+    "background": "bg-clinic-steps-night",
+    "place": "卫生所"
+  },
+  "12:码头空": {
+    "background": "bg-dock-empty-night",
+    "place": "码头"
+  },
+  "12:灯塔空": {
+    "background": "bg-lighthouse-distant-night",
+    "place": "灯塔"
+  },
+  "12:礁石滩": {
+    "background": "bg-reef-night",
+    "place": "礁石滩"
+  },
+  "12:邮局空": {
+    "background": "bg-post-closed-dusk",
+    "place": "邮局"
+  },
+  "13:码头广场": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:陆屿": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:夏栀": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:唐棠": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:许之言": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:叶帆": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "14:广场": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花陆屿": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花许之言": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花夏栀": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花唐棠": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花叶帆": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
+  "14:烟花很低": {
+    "background": "bg-plaza-fireworks",
+    "place": "广场"
+  },
   "14:来电": {
     "background": "bg-chaoxi-door-night",
-    "shift": { "includes": "你打开门", "background": "bg-chaoxi-night" }
+    "shift": {
+      "includes": "你打开门",
+      "background": "bg-chaoxi-night"
+    },
+    "place": "潮汐"
   }
 }
