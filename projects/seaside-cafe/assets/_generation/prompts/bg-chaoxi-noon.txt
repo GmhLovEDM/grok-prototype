@@ -1,0 +1,22 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-chaoxi-noon/bg-chaoxi-noon.png`
+- ���ڣ��� 5 �졸��ϫ���������ڵ��
+- ʱ�䣺���磬��ֱ����¥�����ȴ��ϡ�
+- ��ͼ��ͬһ��ꡣ
+- �ο�ͼ���� `bg-chaoxi-day`��ֻ�ѹ�ĳ�����ֱ�䡣���ӻ�û���ꡣ
+- ���գ��ȵù�ͷ��
+- ���ȼ���P1
+
+���ģ�ͬһ�䡸��ϫ��������ֱ�䣬������������û���ꡣû���ˡ�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Same caf�� interior at harsh noon. Hard sun on the upper sea window, cups not finished being set out. Narrow stair and loft sill stay. No people. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+�������è�����룬ˮӡ����Ƭ��3D��Q �档
+
+

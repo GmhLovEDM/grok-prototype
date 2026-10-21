@@ -1,0 +1,22 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png`
+- ���ڣ��� 2��3��4��6��7��8��12 ��ĵ��ڰ��졣������ 11 �졣�� 4 ����ˮ����ʽ���ֳ���ͬһ�š�
+- ʱ�䣺������졣
+- ��ͼ��һ��Ӫҵ�ӽǡ�խ¥�ݺ��������ڣ��մ�̨����¥�ϡ�
+- ����������ˡ����ӿ������š�ˮ���޹������Ρ��䷽��������֣��Ǻ��ϵġ���Ҫ�˵���
+- ���գ��������ˡ�
+- ���ȼ���P0
+
+���ģ���ɨ֮��ġ���ϫ�����졣ͬһ��꣬խ¥�ݣ������Ϸ��Ŀմ�̨��ˮ�ܲ��Ρ�û���ˣ�û��è����Ҫ�˵������Ų����ڵ� 11 �졣
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. ����ϫ�� by day after cleaning. Same narrow stair and loft void, empty upper sill toward the sea, less dust, repaired pipe not dripping. No people, no cat, no menu text. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+�������è���˵���˺�����䷽ҳ�����룬ˮӡ����Ƭ��3D��Q �档
+
+

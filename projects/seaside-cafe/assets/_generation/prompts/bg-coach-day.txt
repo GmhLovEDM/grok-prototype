@@ -1,0 +1,20 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-coach-day/bg-coach-day.png`
+- ���ڣ��� 1 �졸�س̡�
+- ʱ�䣺�ڶ�����졣������֮�󣬴��⿪ʼ�к���
+- ��ͼ����;���ڣ�����λ���򳵴�����λ�ǿյġ����ʹ������м䣬�����ǿ�����������û�г˿͡�
+- �����������һֻ���ڵ�ˮ�ĺ������ϴ�����������Ҫ����һ���������ⷿ�ӱ䰫�����߸������ˡ�Ʊ��������
+- ���գ��ȣ��̣���û����
+- ���ȼ���P0
+
+���ģ�����ĳ�;�����ڲ�������λ��������һֻ��ˮ�ĺ������ϴ��������ǰ����ӡ����߸˺ͺ���û�г˿͡����ұ�Ե���Բá�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Daytime coach interior on the road back to a Chinese seaside town. Empty seats, a dripping plastic bag of seafood on the aisle floor, no passengers. Outside the central window: low houses, utility poles, sea light after a bridge. Side tenths may be cropped. No faces in the glass, no ticket text, no watermark. Not a photo, not 3D, not chibi.
+```
+
+������������ɶ�Ʊ�棬���룬ˮӡ����Ƭ��3D��Q �档
+
+

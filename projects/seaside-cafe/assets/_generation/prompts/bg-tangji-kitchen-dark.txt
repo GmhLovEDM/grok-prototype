@@ -1,0 +1,21 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-tangji-kitchen-dark/bg-tangji-kitchen-dark.png`
+- ���ڣ��� 7 �졸�����ѿ������ƹ��ˣ�����Ǹɵģ����� 8 �졸�����ѿ�����������ˣ�������ֻʣ�����̣���
+- ʱ�䣺����֮��
+- �ο�ͼ���� `bg-tangji-kitchen-night`���ѵƹص���
+- ������� 7 ���ſ��������ڣ�����ڣ����ɡ��� 8 ���������ϵģ������ӿ���ȥ�Ǻڵġ���һ��ʱ�Թ��ŵƵĺ��Ϊ׼���Ź��ϻ�ֻ��һ���ڷ졣��Ҫ���ŵĹ����ơ�
+- ���գ����Ѿ����ˡ�
+- ���ȼ���P1
+
+���ģ�ͬһ�������ƹ��ˡ����ɡ��Ź��Ż�ֻ���ڷ졣û���ˣ�û�е���
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. The same stall kitchen with the lights off. Dry chopping block, dark room, door shut or a black gap only. No work lamp. No people, no knife. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+����������ƣ��������룬ˮӡ����Ƭ��3D��Q �档
+

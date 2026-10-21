@@ -1,0 +1,11 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: THIS CHARACTER'S OWN identity master and edit target. Preserve exact identity, facial geometry, eye/hair color, proportions, pose, framing, lighting and all costume details EXCEPT what is explicitly changed below. Expression-only means only face changes. Never substitute anyone else's face.
+
+碎花裙和人字拖。人字拖在腰以下，不画。墨镜是刚来时的配饰，这一套不戴。不拿手机，不拿日程本。平常仍审视，但衣服是别扭的松。
+
+```text
+Use case: precise-object-edit. Same 沈若 identity in a floral dress from the town shop. Waist-up only; a little of the dress waist may show, no flip-flops, no heels. No sunglasses, no phone, no planner. Shoulder-length inward-curling hair. Appraising, unsmiling. Real alpha. Output 1536×2304 PNG.
+```
+
+No sunglasses, no phone.
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.

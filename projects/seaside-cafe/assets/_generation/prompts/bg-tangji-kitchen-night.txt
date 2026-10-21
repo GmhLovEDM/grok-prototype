@@ -1,0 +1,20 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-tangji-kitchen-night/bg-tangji-kitchen-night.png`
+- ���ڣ��� 6 �� 8 ���һ�Ρ���������
+- ʱ�䣺���Ⱥ�ֻ��һյ�����ƣ�������塣�����ڡ�
+- ��ͼ��������ƺ�������м䡣
+- ��������壬������Ǧ���ߣ��ֲ�Ҫ�ɶ���ˮ�ء������Ź��š���Ҫ�����ŵĵ�����Ҫ��ֽ����
+- ���գ��ƺܽ���
+- ���ȼ���P0
+
+���ģ����Ƽǡ������һյ��������壬�����ڡ�û���ˣ�û�����ŵĵ���
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. After-hours kitchen, one work lamp on the chopping block, door ajar. Sink, closed cold-room door deeper in. No people, no knife in a hand, no newspaper wrap, no menu. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+��������֣��������룬ˮӡ����Ƭ��3D��Q �档
+
+

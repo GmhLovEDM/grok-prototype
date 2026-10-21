@@ -1,0 +1,22 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-chaoxi-after-storm/bg-chaoxi-after-storm.png`
+- ���ڣ��� 10 ����������ʱ���Լ��� 11 ����ʰ�ꡢ����˺ҳ���ǳ���˺ҳ�Ƿ���֮���֪���ģ�������Ҫ�Ȼ�������
+- ʱ�䣺̨���İ��졣ľͷ��ʪ�ġ�
+- ��ͼ��ͬһ��ꡣխ¥�����ڣ����ܿ������ǽ�¥��Ҫ�ܿ�������¥���Ź��š��մ�̨�������Ϸ���
+- ��������Ϻ��ż���Ҷ�ӡ�ʪľͷ�������ж����ĺۼ����䷽�����ϣ����ڼ��ӻ��̨�ϣ�������ȱҳ����Ҫ̯������Ҫ��˺�ڡ�
+- ���գ�ϴ������ 11 ��ķ�������̨�ʣ�������ͼ�ϡ�
+- ���ȼ���P0
+
+���ģ�̨���ġ���ϫ�����졣ʪľͷ��Ҷ�ӣ������ж��ۡ�խ¥�ݣ�¥�ϵ��Ź��ţ��մ�̨��������䷽���Ǻ��ϵģ����򿪣���¶˺�ڡ�û���ˡ��� 10 ��͵� 11 ������һ�š�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. ����ϫ�� the day after the typhoon. Wet wood, leaves at the threshold, nail marks on the window. Narrow staircase visible from the counter, second-floor door shut, empty sea sill up in the loft void. A worn recipe book closed on the counter or shelf, no open pages and no torn edge visible. No people. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+�������è���򿪵��䷽����ȱҳ��˺�ڣ��ɶ����ף����룬ˮӡ����Ƭ��3D��Q �档
+
+

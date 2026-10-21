@@ -1,0 +1,22 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-clinic-steps-night/bg-clinic-steps-night.png`
+- ���ڣ��� 10 �� 12 ��������̨�ס�������������棬�����������ڳ�����ˡ�
+- ʱ�䣺ҹ��ŷ�һ��խ�⡣
+- ��ͼ������ϫ�����ڵ�̨�ס�խ�����м䡣
+- �������̨�ס���Ҫ�����档
+- ���գ��ƻ��ڡ�
+- ���ȼ���P0
+
+���ģ�ҹ���������̨�ס��ŷ�һ��խ�⡣û���ˡ���Ҫ����֡�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Night steps of the clinic next to the caf��. A narrow strip of light from the door, centered. Empty steps. Side tenths may be cropped. No people, no ad text. Not a photo, not 3D, not chibi.
+```
+
+�����������֣�����Ͱ�����룬ˮӡ����Ƭ��3D��Q �档
+
+

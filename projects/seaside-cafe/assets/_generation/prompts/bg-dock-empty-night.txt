@@ -1,0 +1,22 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+Input image: reference for SAME location architecture and spatial arrangement, preserve distinctive shapes, layout and illustration style. Change only the time/weather/props/viewpoint specified below. Never copy any people.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-dock-empty-night/bg-dock-empty-night.png`
+- ���ڣ��� 10��11��12 �졸��ͷ�ա���
+- ʱ�䣺ҹ��� 10 �촬���ţ����Ǹɵģ�����ĵƴ����濴�ǹصġ��� 11 ����ͷ�еƣ�ˮ�Ǻڵġ��� 12 �촬���ڣ�׮�ϵĵ���һ�¡�
+- �ο�ͼ���� `bg-dock-entrance-dusk` ����ͷλ�á���Ҫ���̿���ʪ����Ҳ��Ҫ�Ѵ�ȥ����
+- ��ͼ�����ڣ�����ſ��ǰ��ģ��ܿ����ڴ��ڡ�������ˮ�档
+- ���գ�û����������Ҳû����������
+- ���ȼ���P1
+
+���ģ�ҹ�����ͷ�������ţ���������������濴û�еơ�ˮ��ڡ�û���ˡ�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Night dock. A boat moored, dry nets, the stall's back kitchen dark when seen from outside, black water, a few pile lamps. No people. Side tenths may be cropped. Not a photo, not 3D, not chibi.
+```
+
+�������ʪ���̿����ƻ�ͨ���ĺ�������룬ˮӡ����Ƭ��3D��Q �档
+
+

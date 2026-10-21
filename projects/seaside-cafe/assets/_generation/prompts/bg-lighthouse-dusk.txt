@@ -1,0 +1,20 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-lighthouse-dusk/bg-lighthouse-dusk.png`
+- ���ڣ��� 6 �� 8 ���һ���ϵ����¡��������棬������ͼ��
+- ʱ�䣺��������󡣵��Զ�ת��
+- ��ͼ�����Ѿ��ߵ�С���ſ���һ�㡣ʯ�ס��ſ��ڻ����м䡣
+- �����ʯ���Ǹɵģ������Ű�����¡������Σ���̺��һ�ű�ֽ����Ҫ�ɶ����⣬��Ҫ����һ������û���ϡ��������Ź��ţ��˲������ҡ�
+- ���գ���󣬵��Լ�ת��
+- ���ȼ���P0
+
+���ģ��򱱵����������Ѿ���С���ſڡ��Զ��ƣ���ʯ�ף������Σ���̺��һ�ſ������ֵı�ֽ����û���ϡ�û���ˡ�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Dusk at the automatic lighthouse cottage door, at the top of the dry stone steps. Empty wheelchair, thin blanket, one newspaper with no readable headline, window not fully shut. The lamp turns by itself. Cottage and steps centered. Side tenths may be cropped. No people. Not a photo, not 3D, not chibi.
+```
+
+��������ɶ���ֽ��һ����ֽ�����룬ˮӡ����Ƭ��3D��Q �档
+
+

@@ -1,0 +1,3 @@
+Use case: precise-object-edit. Edit ONLY the skin on the bridge of Ҷ�� Ye Fan's nose. Add a light scattering of small sun-exposed freckles across the nose bridge, sparse and natural, not a full-face freckle mask and not face paint. Preserve her amber eyes, chestnut high ponytail, faded green postal cap, uniform, mail satchel, slight non-laughing expression, pose, lighting, framing, and real alpha transparency. Output 1536��2304 PNG.
+
+ONE localized edit on the supplied character's OWN identity reference, not a new person. True alpha-transparent PNG. Keep same semi-realistic hand-drawn style. No background, no checkerboard painting.

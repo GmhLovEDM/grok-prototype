@@ -1,0 +1,15 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: THIS CHARACTER'S OWN identity master and edit target. Preserve exact identity, facial geometry, eye/hair color, proportions, pose, framing, lighting and all costume details EXCEPT what is explicitly changed below. Expression-only means only face changes. Never substitute anyone else's face.
+
+灯塔上的旧藏青工作外套。第 6 到 8 天读报，以及后来上塔。袖子挽两道。里面仍是浅色衬衫。
+
+可选，不挡住这套外套：派生时下装可以按长裙对齐，只在底边露出裙腰。当前母版的长裤裤腰不用重画。不做也可以。
+
+中文：在同一人身上加一件旧的藏青工作外套，袖子挽两道。木簪、钥匙、脸保持。底边若要改，改成裙腰，不要画到裙摆。平常不笑。
+
+```text
+Use case: precise-object-edit. Same 夏栀 identity. Add her grandfather's old navy work coat over the pale shirt, sleeves rolled twice. Keep the wooden hairpin and the brass key. Unsmiling calm. Optional, not required: a long-skirt waistband at the bottom edge rather than trousers; do not show the skirt below the waist. The current trouser waistband may stay. No sugar tin. Real alpha. Output 1536×2304 PNG.
+```
+
+
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.

@@ -1,0 +1,21 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-post-closed-dusk/bg-post-closed-dusk.png`
+- ���ڣ��� 11 �졸�ʾֿա��������ڵ� 1 �졣�� 1 ��·�����ʾ��� `bg-old-street-day` ��Զ����
+- ʱ�䣺�������ƹ��ˡ�
+- ��ͼ���ʾ����棬��һ�㡣�����ڻ����м䡣
+- ������Ź��š����ϵ����ӷ��������ա���ֻ���������֡����г����ڡ�
+- �� 12 ��������ʾֿա�������һ�š��ο�ͼ������һ�š�ͬһ���ţ���ɫ���г������ſڡ��������ǡ����ա���
+- ���գ��������ȥ��
+- ���ȼ���P1
+
+���ģ����ŵ�ϫ���ʾ֡����ϵ������ڻ����м䣬ֻд�����ա����ƹ��ˡ�û�����г���û���ˡ�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Closed Xiw��n post office at dusk, lights off. A door sign centered and flipped so it reads only ����. No bicycle. Side tenths may be cropped. No people, no other text. Not a photo, not 3D, not chibi.
+```
+
+����������г�������֣����룬ˮӡ����Ƭ��3D��Q �档
+
+

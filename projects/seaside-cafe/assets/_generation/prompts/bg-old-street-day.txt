@@ -1,0 +1,19 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-old-street-day/bg-old-street-day.png`
+- ���ڣ��� 1 �죬��վ���Ͻ��ߡ��� 1 ����ʾ�ֻ�����ŵ�Զ������Ҫ�� `bg-post-closed-dusk`��
+- ʱ�䣺�������硣����ӽֿ�ֱ����
+- ��ͼ��խ�֣��ӳ�վ��һͷ���򺣡��������м������������ǽ�����������Բá�
+- ������ӻ��̾�������һ�롣Զ���ʾ��Ź��ţ������ϵ�Ӫҵʱ����ɫ�������壬��Ҫд�ɡ����ա����������ĵ�û�����־�ͷ�к��������Ͻ�ʮ�ߺŵ������������ȹ����š�
+- ���գ��ɣ����ڡ�
+- ���ȼ���P0
+
+���ģ�ϫ���Ͻְ��졣խ���ӻ��̾����뿪��Զ���ʾֹ��ţ�Ӫҵʱ�俴���塣������û�еơ�û���ˣ�û��è����Ҫ�ɶ���������Ҫ�����ա���
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Daytime old street in Xiw��n, looking toward the sea. Narrow lane, a general-store shutter stopped halfway, a distant closed post office whose hours are worn away and do not read ����, a dark unlit clinic. Sea light at the end. Side tenths may be cropped. No people, no cat, no readable shop names. Not a photo, not 3D, not chibi.
+```
+
+�������è���ɶ����ƣ������ա������룬ˮӡ����Ƭ��3D��Q �档
+

@@ -1,0 +1,3 @@
+Use case: precise-object-edit. Edit ONLY the two marks on the chest of ���� Tang Tang's dark red apron. Replace them with exactly two clearly legible Chinese characters ���Ƽǡ�, modest cream-colored print, clean strokes, no extra characters, no Latin letters, no garbled glyphs. Preserve her face, expression, red hairband, hair, white shirt, denim straps, apron shape, arms, pose, lighting, framing, and real alpha transparency. Output 1536��2304 PNG.
+
+ONE localized edit on the supplied character's OWN identity reference, not a new person. True alpha-transparent PNG. Keep same semi-realistic hand-drawn style. No background, no checkerboard painting.

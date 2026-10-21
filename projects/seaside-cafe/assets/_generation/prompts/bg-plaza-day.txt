@@ -1,0 +1,20 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-plaza-day/bg-plaza-day.png`
+- ���ڣ��� 13 �졸��ͷ�㳡���͸�������̯�ĳ���Ҷ���ĵ�����Ҫ�������š�
+- ʱ�䣺���հ��졣���ݻ�û��ʽ����
+- ��ͼ����ͷ�ߵĹ㳡��̯�����м䣬��������ﲼ�Ͷ������Ӷ������� 80% �
+- �������ҹ��������ͬһ��̯�ӡ��������Ѿ�֧�ϣ��ﲼ��һ�Ǵ��š�û���ĵ��ݴ������ü���˿���������ӣ����Ų����Ӳֽ�塣һ�ű��ӡ����������������£����ֲ�������ǩ�ǿյģ�������ѹס�������ͷ����
+- ���գ����ڲ��á����Ѿ��ڡ�
+- ���ȼ���P0
+
+���ģ���ͷ�㳡���졣ͬһ��̯�ӣ���������֧��һ���ﲼ���š�û���ĵ��ݣ��������ӵ���ֽ�壬һ�ű��ӣ��ռ�ǩ��û���ˣ�û�м۸�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Daytime dock plaza. The caf�� stall under a canvas awning, one corner of the cloth hanging down. Unlit string bulbs with visible filaments, a short-legged table shimmed with rough cardboard, a row of cups, a blank price card under a cup, a cloth-wrapped pitcher under the table. Keep the awning and table centered. Wind off the dock. Side tenths may be cropped. No people, no prices, no bicycle. Not a photo, not 3D, not chibi.
+```
+
+��������۸����룬������û����Ĺ����ӣ�ˮӡ����Ƭ��3D��Q �档
+
+

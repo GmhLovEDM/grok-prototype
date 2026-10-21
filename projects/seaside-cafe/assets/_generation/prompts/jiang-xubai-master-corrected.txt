@@ -1,0 +1,3 @@
+Use case: precise-object-edit. Add ONE light straw hat on ����� Jiang Xubai. Brim tilted up so it does not cover his eyes or face. Keep the small tied tuft behind his head and the loose strands at his neck visible. Do not add a sketchbook, brush, or easel. Optionally relax the mouth to closed and unsmiling while keeping a mild listening expression. Preserve his face, dark-brown eyes, linen shirt, dried paint on cuffs and fingers, slim build, hanging arms, lighting, framing, and real alpha transparency. Output 1536��2304 PNG.
+
+ONE localized edit on the supplied character's OWN identity reference, not a new person. True alpha-transparent PNG. Keep same semi-realistic hand-drawn style. No background, no checkerboard painting.

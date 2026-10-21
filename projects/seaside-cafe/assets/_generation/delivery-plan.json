@@ -1,0 +1,578 @@
+[
+  {
+    "file": "backgrounds/bg-office-night/bg-office-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/prologue",
+    "id": "bg-office-night"
+  },
+  {
+    "file": "backgrounds/bg-coach-day/bg-coach-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-coach-day"
+  },
+  {
+    "file": "backgrounds/bg-station-day/bg-station-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-station-day"
+  },
+  {
+    "file": "backgrounds/bg-old-street-day/bg-old-street-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-old-street-day"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-dusty-afternoon/bg-chaoxi-dusty-afternoon.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-dusty-afternoon"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-day/bg-chaoxi-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-day"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-night/bg-chaoxi-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-night"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-typhoon-night/bg-chaoxi-typhoon-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-typhoon-night"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-after-storm/bg-chaoxi-after-storm.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-after-storm"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-door-night/bg-chaoxi-door-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-door-night"
+  },
+  {
+    "file": "backgrounds/bg-dock-entrance-dusk/bg-dock-entrance-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-dock-entrance-dusk"
+  },
+  {
+    "file": "backgrounds/bg-dock-nets-dusk/bg-dock-nets-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-dock-nets-dusk"
+  },
+  {
+    "file": "backgrounds/bg-tangji-kitchen-night/bg-tangji-kitchen-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-tangji-kitchen-night"
+  },
+  {
+    "file": "backgrounds/bg-lighthouse-dusk/bg-lighthouse-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-lighthouse-dusk"
+  },
+  {
+    "file": "backgrounds/bg-reef-dusk/bg-reef-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-reef-dusk"
+  },
+  {
+    "file": "backgrounds/bg-clinic-day/bg-clinic-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-clinic-day"
+  },
+  {
+    "file": "backgrounds/bg-clinic-steps-night/bg-clinic-steps-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-clinic-steps-night"
+  },
+  {
+    "file": "backgrounds/bg-post-interior-day/bg-post-interior-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-post-interior-day"
+  },
+  {
+    "file": "backgrounds/bg-plaza-day/bg-plaza-day.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-plaza-day"
+  },
+  {
+    "file": "backgrounds/bg-plaza-fireworks/bg-plaza-fireworks.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-plaza-fireworks"
+  },
+  {
+    "file": "backgrounds/bg-chaoxi-noon/bg-chaoxi-noon.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-chaoxi-noon"
+  },
+  {
+    "file": "backgrounds/bg-dock-no-boat-dusk/bg-dock-no-boat-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-dock-no-boat-dusk"
+  },
+  {
+    "file": "backgrounds/bg-dock-empty-night/bg-dock-empty-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-dock-empty-night"
+  },
+  {
+    "file": "backgrounds/bg-tangji-kitchen-dark/bg-tangji-kitchen-dark.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-tangji-kitchen-dark"
+  },
+  {
+    "file": "backgrounds/bg-lighthouse-papers-dusk/bg-lighthouse-papers-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-lighthouse-papers-dusk"
+  },
+  {
+    "file": "backgrounds/bg-lighthouse-distant-night/bg-lighthouse-distant-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-lighthouse-distant-night"
+  },
+  {
+    "file": "backgrounds/bg-reef-wet-night/bg-reef-wet-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-reef-wet-night"
+  },
+  {
+    "file": "backgrounds/bg-reef-night/bg-reef-night.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-reef-night"
+  },
+  {
+    "file": "backgrounds/bg-post-closed-dusk/bg-post-closed-dusk.png",
+    "kind": "background",
+    "prompt_source": "scenes/",
+    "id": "bg-post-closed-dusk"
+  },
+  {
+    "file": "portraits/xiu-yi/xiu-yi_normal.png",
+    "kind": "portrait",
+    "id": "xiu-yi_normal",
+    "prompt_source": "characters/xiu-yi.md"
+  },
+  {
+    "file": "portraits/xiu-yi/xiu-yi_smile.png",
+    "kind": "portrait",
+    "id": "xiu-yi_smile",
+    "prompt_source": "characters/xiu-yi.md"
+  },
+  {
+    "file": "portraits/xiu-yi/xiu-yi_serious.png",
+    "kind": "portrait",
+    "id": "xiu-yi_serious",
+    "prompt_source": "characters/xiu-yi.md"
+  },
+  {
+    "file": "portraits/xiu-yi/xiu-yi_sad.png",
+    "kind": "portrait",
+    "id": "xiu-yi_sad",
+    "prompt_source": "characters/xiu-yi.md"
+  },
+  {
+    "file": "portraits/lao-tang/lao-tang_normal.png",
+    "kind": "portrait",
+    "id": "lao-tang_normal",
+    "prompt_source": "characters/lao-tang.md"
+  },
+  {
+    "file": "portraits/lao-tang/lao-tang_angry.png",
+    "kind": "portrait",
+    "id": "lao-tang_angry",
+    "prompt_source": "characters/lao-tang.md"
+  },
+  {
+    "file": "portraits/lao-tang/lao-tang_serious.png",
+    "kind": "portrait",
+    "id": "lao-tang_serious",
+    "prompt_source": "characters/lao-tang.md"
+  },
+  {
+    "file": "portraits/lao-tang/lao-tang_smile.png",
+    "kind": "portrait",
+    "id": "lao-tang_smile",
+    "prompt_source": "characters/lao-tang.md"
+  },
+  {
+    "file": "portraits/zhou-zong/zhou-zong_normal.png",
+    "kind": "portrait",
+    "id": "zhou-zong_normal",
+    "prompt_source": "characters/zhou-zong.md"
+  },
+  {
+    "file": "portraits/zhou-zong/zhou-zong_smile.png",
+    "kind": "portrait",
+    "id": "zhou-zong_smile",
+    "prompt_source": "characters/zhou-zong.md"
+  },
+  {
+    "file": "portraits/zhou-zong/zhou-zong_serious.png",
+    "kind": "portrait",
+    "id": "zhou-zong_serious",
+    "prompt_source": "characters/zhou-zong.md"
+  },
+  {
+    "file": "portraits/zhou-zong/zhou-zong_sad.png",
+    "kind": "portrait",
+    "id": "zhou-zong_sad",
+    "prompt_source": "characters/zhou-zong.md"
+  },
+  {
+    "file": "portraits/lao-hushi/lao-hushi_normal.png",
+    "kind": "portrait",
+    "id": "lao-hushi_normal",
+    "prompt_source": "characters/lao-hushi.md"
+  },
+  {
+    "file": "portraits/lao-hushi/lao-hushi_serious.png",
+    "kind": "portrait",
+    "id": "lao-hushi_serious",
+    "prompt_source": "characters/lao-hushi.md"
+  },
+  {
+    "file": "portraits/lao-xia/lao-xia_normal.png",
+    "kind": "portrait",
+    "id": "lao-xia_normal",
+    "prompt_source": "characters/lao-xia.md"
+  },
+  {
+    "file": "portraits/lao-xia/lao-xia_sad.png",
+    "kind": "portrait",
+    "id": "lao-xia_sad",
+    "prompt_source": "characters/lao-xia.md"
+  },
+  {
+    "file": "portraits/lao-xia/lao-xia_smile.png",
+    "kind": "portrait",
+    "id": "lao-xia_smile",
+    "prompt_source": "characters/lao-xia.md"
+  },
+  {
+    "file": "portraits/na-tie/na-tie_normal.png",
+    "kind": "cat",
+    "id": "na-tie_normal",
+    "prompt_source": "characters/na-tie.md"
+  },
+  {
+    "file": "portraits/xia-zhi/xia-zhi_smile.png",
+    "kind": "portrait",
+    "id": "xia-zhi_smile",
+    "prompt_source": "characters/xia-zhi.md"
+  },
+  {
+    "file": "portraits/xia-zhi/xia-zhi_sad.png",
+    "kind": "portrait",
+    "id": "xia-zhi_sad",
+    "prompt_source": "characters/xia-zhi.md"
+  },
+  {
+    "file": "portraits/xia-zhi/xia-zhi_coat_normal.png",
+    "kind": "portrait",
+    "id": "xia-zhi_coat_normal",
+    "prompt_source": "characters/xia-zhi.md"
+  },
+  {
+    "file": "portraits/xia-zhi/xia-zhi_coat_smile.png",
+    "kind": "portrait",
+    "id": "xia-zhi_coat_smile",
+    "prompt_source": "characters/xia-zhi.md"
+  },
+  {
+    "file": "portraits/xia-zhi/xia-zhi_coat_sad.png",
+    "kind": "portrait",
+    "id": "xia-zhi_coat_sad",
+    "prompt_source": "characters/xia-zhi.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_smile.png",
+    "kind": "portrait",
+    "id": "tang-tang_smile",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_angry.png",
+    "kind": "portrait",
+    "id": "tang-tang_angry",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_shy.png",
+    "kind": "portrait",
+    "id": "tang-tang_shy",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_worried.png",
+    "kind": "portrait",
+    "id": "tang-tang_worried",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_sad.png",
+    "kind": "portrait",
+    "id": "tang-tang_sad",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/ye-fan/ye-fan_smile.png",
+    "kind": "portrait",
+    "id": "ye-fan_smile",
+    "prompt_source": "characters/ye-fan.md"
+  },
+  {
+    "file": "portraits/ye-fan/ye-fan_surprised.png",
+    "kind": "portrait",
+    "id": "ye-fan_surprised",
+    "prompt_source": "characters/ye-fan.md"
+  },
+  {
+    "file": "portraits/ye-fan/ye-fan_shy.png",
+    "kind": "portrait",
+    "id": "ye-fan_shy",
+    "prompt_source": "characters/ye-fan.md"
+  },
+  {
+    "file": "portraits/ye-fan/ye-fan_sad.png",
+    "kind": "portrait",
+    "id": "ye-fan_sad",
+    "prompt_source": "characters/ye-fan.md"
+  },
+  {
+    "file": "portraits/lu-yu/lu-yu_smile.png",
+    "kind": "portrait",
+    "id": "lu-yu_smile",
+    "prompt_source": "characters/lu-yu.md"
+  },
+  {
+    "file": "portraits/lu-yu/lu-yu_shy.png",
+    "kind": "portrait",
+    "id": "lu-yu_shy",
+    "prompt_source": "characters/lu-yu.md"
+  },
+  {
+    "file": "portraits/lu-yu/lu-yu_sad.png",
+    "kind": "portrait",
+    "id": "lu-yu_sad",
+    "prompt_source": "characters/lu-yu.md"
+  },
+  {
+    "file": "portraits/xu-zhiyan/xu-zhiyan_tired.png",
+    "kind": "portrait",
+    "id": "xu-zhiyan_tired",
+    "prompt_source": "characters/xu-zhiyan.md"
+  },
+  {
+    "file": "portraits/xu-zhiyan/xu-zhiyan_sad.png",
+    "kind": "portrait",
+    "id": "xu-zhiyan_sad",
+    "prompt_source": "characters/xu-zhiyan.md"
+  },
+  {
+    "file": "portraits/xu-zhiyan/xu-zhiyan_shirt_normal.png",
+    "kind": "portrait",
+    "id": "xu-zhiyan_shirt_normal",
+    "prompt_source": "characters/xu-zhiyan.md"
+  },
+  {
+    "file": "portraits/xu-zhiyan/xu-zhiyan_shirt_sad.png",
+    "kind": "portrait",
+    "id": "xu-zhiyan_shirt_sad",
+    "prompt_source": "characters/xu-zhiyan.md"
+  },
+  {
+    "file": "portraits/su-nian/su-nian_sad.png",
+    "kind": "portrait",
+    "id": "su-nian_sad",
+    "prompt_source": "characters/su-nian.md"
+  },
+  {
+    "file": "portraits/su-nian/su-nian_angry.png",
+    "kind": "portrait",
+    "id": "su-nian_angry",
+    "prompt_source": "characters/su-nian.md"
+  },
+  {
+    "file": "portraits/su-nian/su-nian_night_normal.png",
+    "kind": "portrait",
+    "id": "su-nian_night_normal",
+    "prompt_source": "characters/su-nian.md"
+  },
+  {
+    "file": "portraits/su-nian/su-nian_night_sad.png",
+    "kind": "portrait",
+    "id": "su-nian_night_sad",
+    "prompt_source": "characters/su-nian.md"
+  },
+  {
+    "file": "portraits/su-nian/su-nian_night_smile.png",
+    "kind": "portrait",
+    "id": "su-nian_night_smile",
+    "prompt_source": "characters/su-nian.md"
+  },
+  {
+    "file": "portraits/cheng-lu/cheng-lu_smile.png",
+    "kind": "portrait",
+    "id": "cheng-lu_smile",
+    "prompt_source": "characters/cheng-lu.md"
+  },
+  {
+    "file": "portraits/cheng-lu/cheng-lu_sad.png",
+    "kind": "portrait",
+    "id": "cheng-lu_sad",
+    "prompt_source": "characters/cheng-lu.md"
+  },
+  {
+    "file": "portraits/cheng-lu/cheng-lu_serious.png",
+    "kind": "portrait",
+    "id": "cheng-lu_serious",
+    "prompt_source": "characters/cheng-lu.md"
+  },
+  {
+    "file": "portraits/cheng-lu/cheng-lu_wetsuit_normal.png",
+    "kind": "portrait",
+    "id": "cheng-lu_wetsuit_normal",
+    "prompt_source": "characters/cheng-lu.md"
+  },
+  {
+    "file": "portraits/cheng-lu/cheng-lu_wetsuit_angry.png",
+    "kind": "portrait",
+    "id": "cheng-lu_wetsuit_angry",
+    "prompt_source": "characters/cheng-lu.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_angry.png",
+    "kind": "portrait",
+    "id": "shen-ruo_angry",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_tired.png",
+    "kind": "portrait",
+    "id": "shen-ruo_tired",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_sad.png",
+    "kind": "portrait",
+    "id": "shen-ruo_sad",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_floral_normal.png",
+    "kind": "portrait",
+    "id": "shen-ruo_floral_normal",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_floral_shy.png",
+    "kind": "portrait",
+    "id": "shen-ruo_floral_shy",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/shen-ruo/shen-ruo_floral_smile.png",
+    "kind": "portrait",
+    "id": "shen-ruo_floral_smile",
+    "prompt_source": "characters/shen-ruo.md"
+  },
+  {
+    "file": "portraits/jiang-xubai/jiang-xubai_smile.png",
+    "kind": "portrait",
+    "id": "jiang-xubai_smile",
+    "prompt_source": "characters/jiang-xubai.md"
+  },
+  {
+    "file": "portraits/jiang-xubai/jiang-xubai_blank.png",
+    "kind": "portrait",
+    "id": "jiang-xubai_blank",
+    "prompt_source": "characters/jiang-xubai.md"
+  },
+  {
+    "file": "portraits/jiang-xubai/jiang-xubai_sad.png",
+    "kind": "portrait",
+    "id": "jiang-xubai_sad",
+    "prompt_source": "characters/jiang-xubai.md"
+  },
+  {
+    "file": "portraits/song-zhiyuan/song-zhiyuan_smile.png",
+    "kind": "portrait",
+    "id": "song-zhiyuan_smile",
+    "prompt_source": "characters/song-zhiyuan.md"
+  },
+  {
+    "file": "portraits/song-zhiyuan/song-zhiyuan_serious.png",
+    "kind": "portrait",
+    "id": "song-zhiyuan_serious",
+    "prompt_source": "characters/song-zhiyuan.md"
+  },
+  {
+    "file": "portraits/song-zhiyuan/song-zhiyuan_sad.png",
+    "kind": "portrait",
+    "id": "song-zhiyuan_sad",
+    "prompt_source": "characters/song-zhiyuan.md"
+  },
+  {
+    "file": "portraits/song-zhiyuan/song-zhiyuan_wetsuit_normal.png",
+    "kind": "portrait",
+    "id": "song-zhiyuan_wetsuit_normal",
+    "prompt_source": "characters/song-zhiyuan.md"
+  },
+  {
+    "file": "portraits/song-zhiyuan/song-zhiyuan_wetsuit_smile.png",
+    "kind": "portrait",
+    "id": "song-zhiyuan_wetsuit_smile",
+    "prompt_source": "characters/song-zhiyuan.md"
+  },
+  {
+    "file": "portraits/tang-tang/tang-tang_normal-v2.png",
+    "kind": "portrait",
+    "id": "tang-tang_normal-v2",
+    "prompt_source": "characters/tang-tang.md"
+  },
+  {
+    "file": "portraits/ye-fan/ye-fan_normal-v2.png",
+    "kind": "portrait",
+    "id": "ye-fan_normal-v2",
+    "prompt_source": "characters/ye-fan.md"
+  },
+  {
+    "file": "portraits/lu-yu/lu-yu_normal-v2.png",
+    "kind": "portrait",
+    "id": "lu-yu_normal-v2",
+    "prompt_source": "characters/lu-yu.md"
+  },
+  {
+    "file": "portraits/jiang-xubai/jiang-xubai_normal-v2.png",
+    "kind": "portrait",
+    "id": "jiang-xubai_normal-v2",
+    "prompt_source": "characters/jiang-xubai.md"
+  }
+]

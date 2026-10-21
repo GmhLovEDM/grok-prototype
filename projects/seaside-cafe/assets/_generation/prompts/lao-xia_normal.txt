@@ -1,0 +1,19 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: STYLE AND LIGHTING REFERENCE ONLY. Create the NEW DISTINCT person/cat described below, do not reuse reference woman's face/body/clothes.
+
+1536×2304，PNG，真实透明。坐着，腰以上。不是站姿。
+
+固定身份：夏栀的爷爷，灯塔原来的守塔人。建议七十五岁上下，瘦。建议白发稀疏。建议深棕眼睛，眼皮松。藏青工作服，和夏栀灯塔外套是同一类旧衣服。平常是点头、眼睛可以闭上。记性差，脸上不紧张。
+
+共同负向：报纸，站立，风景，灯塔背景，棋盘格，照片，3D，Q 版，水印，乱码，多指，全身，小腿，鞋，别人的脸。
+
+
+
+中文：老夏的基准半身，坐在轮椅上。建议七十五岁上下的瘦老人。建议稀疏白发，深棕眼睛，眼皮松。藏青旧工作服。薄毯只盖到画的下沿。轮椅扶手可以看见。眼睛可以闭着，或刚点过头。不拿报纸。透明背景，1536×2304。半写实，傍晚的自然光。
+
+```text
+Use case: illustration-story. Master waist-up portrait of 老夏, the former lighthouse keeper, seated in a wheelchair. Suggested: about seventy-five, thin, sparse white hair, dark-brown eyes with loose lids. Old navy work clothes. A thin blanket may reach the bottom edge; no shins, no shoes. Wheelchair armrests may show. Eyes closed or just after a nod. No newspaper. Semi-realistic, late-day light, real alpha, 1536×2304 PNG. Not standing.
+```
+
+
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.

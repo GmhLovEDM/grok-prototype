@@ -1,0 +1,20 @@
+Use case: illustration-story. ONE empty environment background for Chinese coastal visual novel 《汐湾咖啡馆》, landscape 1920×1080, 16:9 opaque PNG. Finely finished SEMI-REALISTIC HAND-DRAWN illustration with clean subtle linework, restrained delicate painterly shading, believable material textures. NOT a photograph or 3D render, not anime/chibi. Daytime uses warm-neutral upper-left sunlight and cool sky fill unless the individual prompt specifies otherwise. All important story props, signs and character standing areas must be inside the CENTRAL 80%: outer left/right 10% only expendable continuation of wall/sea/ground/sky. No characters or animals anywhere: no people, faces, hands, feet, cats, dogs or bird closeups. No watermarks, border, neon, invented signage or garbled text. Readable writing ONLY if expressly required below; otherwise NO readable text. Keep foreground space for later separate portrait overlays. Follow the scene specification below exactly, including Chinese narrative constraints.
+
+
+- ·����`projects/seaside-cafe/assets/backgrounds/bg-post-interior-day/bg-post-interior-day.png`
+- ���ڣ��� 12 ����졸�ʾ֡���
+- ʱ�䣺���졣����Ĺ�ܰס�
+- ��ͼ���߹�̨���档�Ǽǲ����м䡣
+- �����ֽ�ơ���װ���߽�ĥԲ�ĵǼǲ�̯����һ�о��ֿ����壬���漸�п��š���Ҫд���������²��ľ�䣬��ǩ����һ�룬�ײ�һȦ�ң��м�ɾ���ǽ����ɫ�����г������ǿյġ��������壬��Ҫ���ְ��š�
+- ���գ���¼�ڣ���ֽ���ڡ�
+- ���ȼ���P0
+
+���ģ��ʾֹ�̨�󡣻�ֽ��װ�Ǽǲ�̯�����ֿ����塣�²��ľ�䣬��Ȧ�м��Ǹɾ��ġ�ǽ�߿տ����ɫ���г���û���ˡ�
+
+```text
+Polished semi-realistic hand-drawn 1920��1080 background. Behind a high post-office counter, bright daylight outside. An open yellowed thread-bound register centered, one old line not legible, empty lines after. An empty crate below, label half fallen, a ring of dust with a clean center. A green bicycle against the wall, empty basket. Side tenths may be cropped. No people, no readable names. Not a photo, not 3D, not chibi.
+```
+
+�������������������½Զ���������룬ˮӡ����Ƭ��3D��Q �档
+
+

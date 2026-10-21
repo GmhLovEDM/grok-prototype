@@ -1,0 +1,19 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: STYLE AND LIGHTING REFERENCE ONLY. Create the NEW DISTINCT person/cat described below, do not reuse reference woman's face/body/clothes.
+
+1536×2304，PNG，真实透明。腰以上。制服下摆的腰带可以露一点。
+
+固定身份：卫生所的护士，只有她和许之言。建议六十岁上下，不高。建议灰发盘起。建议深棕眼睛。卫生所白制服，不要红十字，不要名牌。平常是递过水之后的平静，不多问。
+
+共同负向：字条，杯子，伞，红十字，名牌，风景，棋盘格，照片，3D，Q 版，水印，乱码，多指，全身，大腿，别人的脸。
+
+
+
+中文：老护士的基准半身。建议六十岁上下的中国妇女，不高。建议灰发盘起，深棕眼睛。白制服，没有标志，没有名牌。神情平，话少。双手垂下，不拿杯子和字条。透明背景，1536×2304。半写实，室内自然光。
+
+```text
+Use case: illustration-story. Master waist-up portrait of the unnamed clinic nurse in 《汐湾咖啡馆》. Suggested: about sixty, not tall, grey hair pinned up, dark-brown eyes. Plain white clinic uniform, no red cross, no nametag. Quiet face, few words. Arms down, no mug, no note, no umbrella. Semi-realistic, natural light, real alpha, 1536×2304 PNG.
+```
+
+
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.

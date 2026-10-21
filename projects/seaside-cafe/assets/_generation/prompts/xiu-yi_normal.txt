@@ -1,0 +1,19 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: STYLE AND LIGHTING REFERENCE ONLY. Create the NEW DISTINCT person/cat described below, do not reuse reference woman's face/body/clothes.
+
+1536×2304，PNG，真实透明。腰以上。裤腰或围裙上沿可以露一点，再往下不画。手臂自然向下。钥匙串不画。红绳不是她一直戴着的。
+
+固定身份：老街杂货铺老板娘。建议五十多岁，个子不高，肩背是日常干活的，不是瘦高模特。建议黑发里夹银丝，盘在脑后。建议深棕眼睛。家常短袖，外面一条杂货铺围裙，围裙上不要写字。平常是看着人说话的脸，不夸张笑。
+
+共同负向：钥匙，红绳，风景，棋盘格，照片，3D，Q 版，大眼，水印，乱码，围裙文字，多指，全身，大腿，别人的脸。
+
+
+
+中文：汐湾杂货铺老板娘秀姨的基准半身。建议五十多岁的中国妇女，个子不高。建议黑发夹银丝，盘在脑后。建议深棕色眼睛。家常短袖，无字杂货铺围裙。神情平常，嘴不是大笑。双手垂下，不拿钥匙。透明背景，1536×2304。海边夏天的自然光，左上方来。半写实，不要 Q 版。
+
+```text
+Use case: illustration-story. Master waist-up portrait of 秀姨, the general-store keeper in the Chinese seaside visual novel 《汐湾咖啡馆》. Suggested, not locked canon: a woman in her fifties, short stature, black hair streaked with silver pinned up, dark-brown eyes. Everyday short sleeves and a plain general-store apron with no text. Calm everyday expression, not a big smile. Arms hanging, no keys, no red cord. Semi-realistic adult proportions, clean lines, seaside summer daylight from the upper left. Real alpha, no scenery. 1536×2304 PNG. A little of the waistband may show; nothing below it.
+```
+
+
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.

@@ -1,0 +1,19 @@
+Asset type: visual novel character sprite, ONE character per image. Polished semi-realistic hand-drawn Chinese adult illustration, realistic anatomy and realistic-size eyes, refined lines and restrained delicate shading, believable skin and fabric. Match existing cast's warm-neutral seaside summer sunlight from upper left with subtle cool sky fill, neutral white balance. 1536x2304 portrait 2:3 PNG with genuine alpha transparency: NO visible backdrop, NO glow or shadow plate, NO ground or scenery, NO painted checkerboard, NO photo, 3D, chibi, watermark or border. Waist-up, entire head/hair/hat visible with modest top margin, almost front-facing with slight three-quarter turn; arms relaxed down, no handheld objects. Only a small strip of waistband at bottom, no thighs, no full body. Preserve real alpha edges.
+Input image role: STYLE AND LIGHTING REFERENCE ONLY. Create the NEW DISTINCT person/cat described below, do not reuse reference woman's face/body/clothes.
+
+1536×2304，PNG，真实透明。腰以上。西装下摆的皮带可以露一点。不要满脸凶相。
+
+固定身份：度假村的代表，程鹭的父亲，这一章不点破。建议五十岁上下，身板端正。建议短发梳齐，两鬓略白。建议深棕眼睛。西装没有皱。鞋是干的，鞋不入画。平常是谈价钱的脸，不笑。
+
+共同负向：文件夹，文件文字，风景，棋盘格，照片，3D，Q 版，水印，乱码，名牌，多指，全身，大腿，别人的脸，凶神。
+
+
+
+中文：周总的基准半身。建议五十岁上下的中国男人，身板端正。建议短发梳齐，两鬓略白，深棕眼睛。西装平整，没有皱。不笑。双手垂下，不拿文件夹。透明背景，1536×2304。半写实，店里的自然光即可，不要舞台光。
+
+```text
+Use case: illustration-story. Master waist-up portrait of 周总, the resort representative in 《汐湾咖啡馆》. Suggested: about fifty, upright build, neat short hair with grey at the temples, dark-brown eyes. An unwrinkled suit. Calm bargaining expression, not smiling, not fierce. Arms down, no folder. Semi-realistic, natural daylight, real alpha, 1536×2304 PNG. A little of the belt may show.
+```
+
+
+FINAL REQUIREMENT: isolated sprite with genuine alpha transparency outside the silhouette, no gradient background, no glow. Follow the target expression/outfit above.
