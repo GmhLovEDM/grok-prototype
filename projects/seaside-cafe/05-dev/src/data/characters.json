@@ -1,0 +1,19 @@
+[
+  { "name": "夏栀", "id": "xia-zhi", "affection": true },
+  { "name": "唐棠", "id": "tang-tang", "affection": true },
+  { "name": "叶帆", "id": "ye-fan", "affection": true },
+  { "name": "苏念", "id": "su-nian", "affection": true },
+  { "name": "程鹭", "id": "cheng-lu", "affection": true },
+  { "name": "沈若", "id": "shen-ruo", "affection": true },
+  { "name": "陆屿", "id": "lu-yu", "affection": true },
+  { "name": "江叙白", "id": "jiang-xubai", "affection": true },
+  { "name": "许之言", "id": "xu-zhiyan", "affection": true },
+  { "name": "宋知远", "id": "song-zhiyuan", "affection": true },
+  { "name": "秀姨", "id": "xiu-yi", "affection": false },
+  { "name": "老唐", "id": "lao-tang", "affection": false },
+  { "name": "周总", "id": "zhou-zong", "affection": false },
+  { "name": "老护士", "id": "lao-hushi", "affection": false },
+  { "name": "老夏", "id": "lao-xia", "affection": false },
+  { "name": "拿铁", "id": "na-tie", "affection": false },
+  { "name": "电话", "id": null, "affection": false }
+]

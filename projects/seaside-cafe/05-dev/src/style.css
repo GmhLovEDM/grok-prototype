@@ -1,0 +1,207 @@
+:root {
+  color-scheme: light;
+  --ink: #241c16;
+  --paper: rgba(247, 241, 230, 0.94);
+  --sea: #1e4e55;
+  --line: #cbbba6;
+  font-size: 18px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  background: #0c1014;
+  color: var(--ink);
+  font-family: "WenQuanYi Micro Hei", "Droid Sans Fallback", "PingFang SC", "Noto Sans SC", sans-serif;
+}
+
+button, input { font: inherit; }
+
+.stage {
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  position: relative;
+  overflow: hidden;
+  background: #142028;
+}
+
+.stage[data-scale="small"] { font-size: 16px; }
+.stage[data-scale="large"] { font-size: 21px; }
+
+.bg {
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.portrait {
+  position: absolute;
+  left: 50%;
+  bottom: 24%;
+  height: 78%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  filter: drop-shadow(0 16px 18px rgba(0, 0, 0, 0.28));
+}
+
+.hud {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  z-index: 3;
+  color: #f7f1e6;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.45);
+}
+
+.hud-actions { display: flex; gap: 8px; }
+
+.ghost, .solid, .choice, .map-board button {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+}
+
+.ghost {
+  background: rgba(20, 24, 28, 0.45);
+  color: #f7f1e6;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.ghost[aria-pressed="true"] { background: var(--sea); }
+
+.panel, .sheet, .overlay-card {
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.panel {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  bottom: 3.5%;
+  z-index: 2;
+  min-height: 24%;
+  padding: 22px 22px 16px;
+}
+
+.nameplate {
+  position: absolute;
+  top: -13px;
+  left: 18px;
+  background: var(--sea);
+  color: #f6f1e7;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 0.85rem;
+}
+
+.panel p { margin: 0; line-height: 1.7; }
+
+.narration { color: #3d4b55; font-style: italic; }
+.letter { color: #5c4632; }
+.fast-tag {
+  display: inline-block;
+  margin-bottom: 6px;
+  color: #8a5a32;
+  font-size: 0.8rem;
+}
+
+.hint {
+  margin-top: 10px;
+  color: #8d8172;
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.choices, .stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.choice, .solid {
+  background: #fffaf3;
+  border-color: var(--line);
+  color: var(--ink);
+  text-align: left;
+}
+
+.choice:hover, .solid:hover, .map-board button:hover { border-color: var(--sea); }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(180deg, rgba(12, 18, 22, 0.25), rgba(12, 18, 22, 0.55));
+  padding: 24px;
+}
+
+.overlay-card, .sheet {
+  width: min(440px, 100%);
+  padding: 28px 24px;
+}
+
+.overlay-card h1, .sheet h2 { margin: 0 0 8px; font-weight: 500; }
+.sub { margin: 0 0 18px; color: #5e675f; }
+
+.map-board {
+  position: relative;
+  height: min(46vh, 420px);
+  border-radius: 16px;
+  background:
+    radial-gradient(circle at 70% 60%, rgba(120, 176, 184, 0.45), transparent 42%),
+    linear-gradient(#d7e4df, #efe6d4);
+  margin-bottom: 8px;
+}
+
+.map-board button { position: absolute; background: #fffaf3; border: 1px solid var(--line); }
+
+.notice { color: #8d3d32; margin: 0 0 8px; }
+
+label { display: block; margin-bottom: 8px; }
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: #fffaf3;
+}
+
+.log {
+  max-height: 50vh;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.log p { margin: 0; }
+.log .who { color: var(--sea); }
+
+@media (max-aspect-ratio: 3/4) {
+  .stage { width: 100vw; height: 100vh; }
+  .bg {
+    width: 125%;
+    height: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .portrait { height: 50%; bottom: 36%; }
+  .panel { min-height: 30%; }
+}
