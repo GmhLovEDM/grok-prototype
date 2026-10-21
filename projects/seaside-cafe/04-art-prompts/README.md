@@ -29,7 +29,7 @@
 | `bg-office-night` | `assets/backgrounds/bg-office-night/bg-office-night.png` | P0 | 第 1 天「写字楼」 |
 | `bg-coach-day` | `assets/backgrounds/bg-coach-day/bg-coach-day.png` | P0 | 第 1 天「回程」 |
 | `bg-station-day` | `assets/backgrounds/bg-station-day/bg-station-day.png` | P0 | 第 1 天「车站」 |
-| `bg-old-street-day` | `assets/backgrounds/bg-old-street-day/bg-old-street-day.png` | P0 | 第 1 天离站往老街。邮局只是远处关着的门 |
+| `bg-old-street-day` | `assets/backgrounds/bg-old-street-day/bg-old-street-day.png` | P0 | 第 1 天「老街」。邮局只是远处关着的门 |
 | `bg-chaoxi-dusty-afternoon` | `assets/backgrounds/bg-chaoxi-dusty-afternoon/bg-chaoxi-dusty-afternoon.png` | P0 | 第 1 天「潮汐」 |
 | `bg-chaoxi-day` | `assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png` | P0 | 第 2、3、4、6、7、8、12 天店内白天。不含第 11 天。第 4 天三种饮品同一张 |
 | `bg-chaoxi-night` | `assets/backgrounds/bg-chaoxi-night/bg-chaoxi-night.png` | P0 | 第 3 天「夜里」，第 8 天「深夜消息」，第 14 天「来电」开门之后的店内 |

@@ -61,7 +61,7 @@ Polished semi-realistic hand-drawn 1920×1080 background. The only station of a 
 ## bg-old-street-day
 
 - 路径：`projects/seaside-cafe/assets/backgrounds/bg-old-street-day/bg-old-street-day.png`
-- 用于：第 1 天，出站往老街走。第 1 天的邮局只在这张的远处，不要用 `bg-post-closed-dusk`。
+- 用于：第 1 天「老街」。出站之后、进「潮汐」之前。第 1 天的邮局只在这张的远处，不要用 `bg-post-closed-dusk`。
 - 时间：夏日下午。海风从街口直吹。
 - 构图：窄街，从车站这一头望向海。店面在中间纵深里。左右是墙的延续，可以裁。
 - 物件：杂货铺卷帘拉到一半。远处邮局门关着，玻璃上的营业时间褪色到看不清，不要写成「翌日」。卫生所的灯没开。街尽头有海的亮。老街十七号的门牌留给咖啡馆那张。
