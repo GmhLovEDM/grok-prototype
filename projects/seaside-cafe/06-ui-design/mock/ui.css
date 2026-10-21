@@ -327,8 +327,9 @@ img { display: block; max-width: none; }
 
 .line.is-narration {
   color: var(--ink-soft);
-  font-style: italic;
-  font-synthesis: style;
+  font-style: normal;
+  padding-left: 14px;
+  box-shadow: inset 3px 0 0 var(--sea);
 }
 
 .line.is-typed {
@@ -566,7 +567,7 @@ img { display: block; max-width: none; }
   box-shadow: var(--shadow-float);
 }
 
-.settings-panel { width: min(640px, calc(100% - 2 * var(--safe-x) - 64px)); }
+.settings-panel { width: min(800px, calc(100% - 2 * var(--safe-x) - 64px)); }
 
 .panel-head {
   display: flex;
@@ -800,11 +801,11 @@ img { display: block; max-width: none; }
   font-style: normal;
   color: var(--ink-faint);
   font-size: var(--fs-fine);
-  width: 28px;
+  width: 32px;
 }
 
 .slider-line b {
-  width: 42px;
+  width: 52px;
   text-align: right;
   font-weight: 500;
   color: var(--wood-deep);
@@ -896,12 +897,17 @@ select.lang {
 
 @media (max-width: 700px) {
   .portrait {
-    top: 40px;
-    height: 58%;
+    top: calc(var(--hud-h) + 10px);
+    height: calc(100% - var(--hud-h) + 28px);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 96%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 70%, transparent 96%);
   }
 
-  .page-choices .portrait { height: 32%; }
-  .page-quick .portrait { height: 34%; top: 8px; }
+  .page-choices .portrait { height: 42%; }
+  .page-quick .portrait {
+    top: calc(var(--hud-h) + 10px);
+    height: calc(100% - var(--hud-h) + 8px);
+  }
 
   .cat {
     width: 210px;
@@ -977,6 +983,40 @@ select.lang {
   .thumb, .slot-auto .thumb { height: 54px; }
   .slot-grid { grid-template-columns: 1fr; gap: 8px; }
   .slot-copy b { font-size: 15px; }
+
+  .btn-ghost,
+  .seg button,
+  .hud-btn,
+  select.lang {
+    min-height: 44px;
+  }
+
+  .switch {
+    width: 88px;
+    height: 44px;
+  }
+
+  .switch-knob {
+    width: 28px;
+    height: 28px;
+  }
+
+  input[type="range"] {
+    height: 44px;
+    background: transparent;
+  }
+
+  input[type="range"]::-webkit-slider-runnable-track {
+    height: 8px;
+    border-radius: var(--radius-pill);
+    background: linear-gradient(90deg, var(--wood) var(--val, 50%), var(--line) var(--val, 50%));
+  }
+
+  input[type="range"]::-webkit-slider-thumb {
+    width: 28px;
+    height: 28px;
+    margin-top: -10px;
+  }
 
   .quick-card {
     left: 16px;

@@ -48,11 +48,11 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 | `--wood` | `#8d5a38` | 对话框上沿、滑条已走过的一段 |
 | `--wood-deep` | `#6b432c` | 主按钮 |
 | `--wood-dark` | `#4a3022` | 标题、名牌字 |
-| `--sea` | `#6e9aa3` | 名牌上的细标记、自动档徽记 |
+| `--sea` | `#6e9aa3` | 只做装饰：名牌细条、旁白左侧竖线。不能用作纸色背景上的文字色 |
 | `--sea-deep` | `#2c6670` | 继续提示、开着的字、焦点环 |
 | `--sea-soft` | `#e6f3f4` | 开着、已选过的底 |
 | `--sand` | `#f6e6cf` | 很少用的暖高光 |
-| `--sunset` | `#e09156` | 只作点缀，不拿来做字 |
+| `--sunset` | `#e09156` | 只做装饰。不能用作纸色背景上的文字色 |
 | `--scrim` | `rgba(42, 30, 22, 0.46)` | 存档、设置背后 |
 | `--scrim-soft` | `rgba(42, 30, 22, 0.28)` | 弹窗、快捷菜单背后 |
 
@@ -60,7 +60,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 ### 字体和字号
 
-界面用无衬线：`"PingFang SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei"`。稿里第一顺位是环境里有的文泉驿微米黑，好让截图能印出字。游戏里可以把它放到回退的后面。
+界面用思源黑体。文件是 [`mock/fonts/SourceHanSansCN-Regular-subset.woff2`](mock/fonts/SourceHanSansCN-Regular-subset.woff2)，家族名 `Source Han Sans CN`（思源黑体 CN）。许可是 SIL Open Font License 1.1，全文在 [`mock/fonts/OFL.txt`](mock/fonts/OFL.txt)。Copyright 2014-2025 Adobe，Reserved Font Name 是 Source。子集只收界面和 `03-script/` 里出现的字，字形没有改。缺字时回退到苹方、思源黑体、微软雅黑、文泉驿微米黑。
 
 | 令牌 | 桌面 | 手机 | 用在 |
 | --- | --- | --- | --- |
@@ -69,10 +69,10 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 | `--fs-name` | 18px | 16px | 名牌 |
 | `--fs-body` | 24px | 18px | 对白和旁白，行高 1.75 |
 | `--fs-ui` | 16px | 16px | 按钮、选项 |
-| `--fs-small` | 13px | 13px | 继续提示、章节地点 |
-| `--fs-fine` | 12px | 12px | 存档时间、状态小字 |
+| `--fs-small` | 16px | 16px | 继续提示、章节地点 |
+| `--fs-fine` | 14px | 14px | 存档时间、设置里的「慢 / 快」、面板底部说明 |
 
-旁白在 `--ink-soft` 上再加斜体。没有斜体字库时，浏览器合成斜体即可，浅色仍然在。
+旁白不用斜体。颜色用 `--ink-soft`，句子左侧一条 3px 的 `--sea` 竖线，只作装饰。
 
 ### 圆角
 
@@ -131,7 +131,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 3. 句子完整之后，点纸面、按 Enter 或空格，进入下一句。
 4. 自动：和快进互斥。打完后等待 `--duration-auto`，再进入下一句。再按一次关掉。打开菜单、选项、日志时先暂停，关掉之后若原来开着，再恢复。
 5. 快进：句子直接显示完整，大约 80ms 后进入下一句。点屏幕或再按一次就停。和自动互斥。
-6. 继续提示在纸的右下，13px，颜色 `--sea-deep`，旁边一个向下的小三角，1.1 秒轻轻动一次。
+6. 继续提示在纸的右下，16px，颜色 `--sea-deep`，旁边一个向下的小三角，1.1 秒轻轻动一次。
 
 ### 名牌
 
@@ -148,7 +148,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 ### 旁白
 
-无名牌。句子用斜体，颜色 `--ink-soft`。纸的上内边距可以收到 28px，最小高度仍和对白一样。稿子见 [`mock/narration.html`](mock/narration.html)，用的是第 1 天的句子和落灰的店，猫是拿铁，不挂名字。
+无名牌。句子不斜，颜色 `--ink-soft`，左侧一条竖线。纸的上内边距可以收到 28px，最小高度仍和对白一样。稿子见 [`mock/narration.html`](mock/narration.html)，用的是第 1 天的句子和落灰的店，猫是拿铁，不挂名字。
 
 ## 选项按钮
 
@@ -176,7 +176,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 | --- | --- | --- |
 | 纸按钮 | `.btn` | 继续、读档、设置、菜单项、弹窗里的「留下」 |
 | 主按钮 | `.btn.btn-primary` | 开始游戏、继续游戏、弹窗里往前走的那一颗（覆盖、回去） |
-| 浅按钮 | `.btn.btn-ghost` | 面板上的「返回」，快捷菜单底部的「回到标题」 |
+| 浅按钮 | `.btn.btn-ghost` | 面板上的「返回」，快捷菜单底部的「回到标题」。桌面高 36px，手机高 44px |
 | 开着 | `.btn.is-on` | 自动或快进当前是开的。底 `--sea-soft`，字和图标色 `--sea-deep` |
 | 禁用 | `.is-disabled` 或 `disabled` | 没有存档时的「继续」，还没解锁的「图鉴」 |
 
@@ -186,14 +186,14 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 ## 顶部菜单
 
-读文时一直在。高 56px，手机 48px。条本身可以通栏，字和按钮必须落在安全区里：`.hud-inner` 的左右内边距是 `safe-x + gutter`。
+读文时一直在。高 56px。条本身可以通栏，字和按钮必须落在安全区里：`.hud-inner` 的左右内边距是 `safe-x + gutter`。手机上每一个可点控件的命中区至少 44px，顶栏因此保持 56px 高，四个字钮用 `--hit-sm`（44px）。
 
 左侧日子胶囊：
 
 - 桌面：`第 2 天` `/ 60` `第一章` `潮汐`
 - 手机：只留 `第 2 天` 和地点。`/ 60` 和章节收起，避免和四个按钮抢宽度。
 
-右侧四个字钮，高 36px，胶囊形：自动、快进、日志、菜单。
+右侧四个字钮，胶囊形：自动、快进、日志、菜单。桌面高 36px。手机高 44px。
 
 | 状态 | 样子 |
 | --- | --- |
@@ -210,7 +210,7 @@ Figma 设计稿链接：https://www.figma.com/design/KXZRk5tEsWqTOlCoRkFkyW
 
 桌面：宽 320px 的纸卡，贴在安全区右侧（`right: safe-x + 36px`），垂直居中。立绘略向左（`left: 44%`），脸留在卡片左边。顶栏留在遮罩之上，遮罩从顶栏下沿开始，这样还能看见自动是否开着。
 
-手机：卡片贴底，左右 16px。立绘只留上半，头在卡片上方。
+手机：卡片贴底，左右 16px。立绘头顶离顶栏 10px，身子延伸到卡片后面，下缘渐隐，不在腰上截断。头留在卡片上方。
 
 条目，自上而下：
 
@@ -270,7 +270,7 @@ Efe 原型里还有人物图鉴和手机。图鉴从标题进，手机是玩法�
 
 ## 设置
 
-基础一项一行，纸面板最宽 640px。见 [`mock/settings.html`](mock/settings.html)。
+基础一项一行，纸面板最宽 800px。见 [`mock/settings.html`](mock/settings.html)。
 
 | 行 | 控件 | 玩家看见的 | 内部 |
 | --- | --- | --- | --- |
@@ -281,9 +281,11 @@ Efe 原型里还有人物图鉴和手机。图鉴从标题进，手机是玩法�
 | 全屏 | 开关 | 开 / 关 | 默认关 |
 | 语言 | 下拉 | 简体中文 | 这一版只有这一项 |
 
-滑条已走过的一段用 `--wood`，圆钮是纸色、深木描边，直径 22px。手机上标签改到滑条上面，避免 96px 的标签把滑条挤没。
+滑条已走过的一段用 `--wood`，圆钮是纸色、深木描边。桌面圆钮直径 22px，轨道 4px。手机轨道加到 8px，圆钮 28px，整条滑条的命中高度 44px。手机上标签改到滑条上面，避免 96px 的标签把滑条挤没。
 
-玩家看见的是慢和快，不看见毫秒。说明文字放在面板底部，用 `--fs-fine`。
+「慢 / 快」和面板底部的说明用 `--fs-fine`（14px）。玩家看见的是慢和快，不看见毫秒。
+
+手机上这些控件的命中区都不小于 44px：顶栏四个字钮、返回、回到标题、存档 / 读档切换、全屏开关、语言下拉、音量和速度滑条。
 
 ## 标题页
 
@@ -304,13 +306,13 @@ Efe 原型里还有人物图鉴和手机。图鉴从标题进，手机是玩法�
 | 页面 | 打开 | 桌面导出 | 手机导出 |
 | --- | --- | --- | --- |
 | 目录 | [`mock/index.html`](mock/index.html) |  |  |
-| 标题 | [`mock/title.html`](mock/title.html) | `exports/title-1920x1080.png` | `exports/title-390x844.png` |
-| 对白 | [`mock/dialogue.html`](mock/dialogue.html) | `exports/dialogue-1920x1080.png` | `exports/dialogue-390x844.png` |
-| 旁白 | [`mock/narration.html`](mock/narration.html) | `exports/narration-1920x1080.png` | `exports/narration-390x844.png` |
-| 选项五态 | [`mock/choices.html`](mock/choices.html) | `exports/choices-1920x1080.png` | `exports/choices-390x844.png` |
-| 存档 / 读档 | [`mock/save.html`](mock/save.html) | `exports/save-1920x1080.png` | `exports/save-390x844.png` |
-| 设置 | [`mock/settings.html`](mock/settings.html) | `exports/settings-1920x1080.png` | `exports/settings-390x844.png` |
-| 快捷菜单 | [`mock/quick-menu.html`](mock/quick-menu.html) | `exports/quick-menu-1920x1080.png` | `exports/quick-menu-390x844.png` |
+| 标题 | [`mock/title.html`](mock/title.html) | `exports/title-1920x1080.webp` | `exports/title-390x844.webp` |
+| 对白 | [`mock/dialogue.html`](mock/dialogue.html) | `exports/dialogue-1920x1080.webp` | `exports/dialogue-390x844.webp` |
+| 旁白 | [`mock/narration.html`](mock/narration.html) | `exports/narration-1920x1080.webp` | `exports/narration-390x844.webp` |
+| 选项五态 | [`mock/choices.html`](mock/choices.html) | `exports/choices-1920x1080.webp` | `exports/choices-390x844.webp` |
+| 存档 / 读档 | [`mock/save.html`](mock/save.html) | `exports/save-1920x1080.webp` | `exports/save-390x844.webp` |
+| 设置 | [`mock/settings.html`](mock/settings.html) | `exports/settings-1920x1080.webp` | `exports/settings-390x844.webp` |
+| 快捷菜单 | [`mock/quick-menu.html`](mock/quick-menu.html) | `exports/quick-menu-1920x1080.webp` | `exports/quick-menu-390x844.webp` |
 
 对白页是第 2 天，「潮汐」，陆屿，句子用剧本里的「啧，你别动，我来。」旁白页是第 1 天落灰的店，拿铁在纸的左侧，句子是「你把靠墙的桌子擦到能看见木纹。」
 
@@ -318,7 +320,7 @@ Efe 原型里还有人物图鉴和手机。图鉴从标题进，手机是玩法�
 
 ## 层
 
-从下到上：背景、立绘、对话框或选项、顶栏、遮罩、弹窗或快捷菜单。快捷菜单打开时，顶栏留在遮罩上面。对话框的纸盖住立绘的下半身，不盖脸。
+从下到上：背景、立绘、对话框或选项、顶栏、遮罩、弹窗或快捷菜单。快捷菜单打开时，顶栏留在遮罩上面。对话框的纸盖住立绘的下半身，不盖脸。手机上立绘头顶离顶栏 10px，下半截伸进对话框或菜单卡片后面，并用渐隐收边，避免在大腿或腰上出现一条硬边。
 
 ## 给开发
 
@@ -327,3 +329,5 @@ Efe 原型里还有人物图鉴和手机。图鉴从标题进，手机是玩法�
 - `design-only` 的状态标注不要做进游戏。
 - 悬停在真机上可以不出现，按下和禁用必须在。
 - 打包 Electron / Capacitor 时，桌面按 1920×1080 的安全区排，手机竖屏走 700px 以下的那一套。宽屏手机若是把 16:9 左右裁掉，裁的是背景，不是按钮。
+- 手机可点区域至少 44px。`--sea` 和 `--sunset` 只做装饰，纸上的字用 `--ink`、`--ink-soft`、`--wood-dark`，短提示可以用压暗后的 `--sea-deep`。
+- 思源黑体子集和 OFL 全文放在 `mock/fonts/`。
