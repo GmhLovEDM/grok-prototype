@@ -22,7 +22,7 @@ import {
 } from "../engine/storage";
 import type { GameState, Pos, Story } from "../engine/types";
 
-type Look = { background: string; place: string; shift?: { includes: string; background: string } };
+type Look = { background: string; place: string | null; shift?: { includes: string; background: string } };
 type Mode = "title" | "settings" | "saves" | "log" | "play" | "version" | "menu";
 type Back = "title" | "menu" | "play";
 
@@ -90,17 +90,22 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     return { src: asset(`assets/portraits/${person.id}/${person.id}_${tag}.png`), cat: person.id === "na-tie" };
   }
 
+  function placeText(place: string | null | undefined): string {
+    return typeof place === "string" ? place.trim() : "";
+  }
+
   function placeName(view: View): string {
     if (!("scene" in view)) return "";
-    return looks[`${view.sourceDay}:${view.scene}`]?.place?.trim() ?? "";
+    return placeText(looks[`${view.sourceDay}:${view.scene}`]?.place);
   }
 
   function shownPlace(saved: string | undefined): string {
     const raw = saved?.trim() ?? "";
     if (!raw) return "";
     const hits = Object.entries(looks).filter(([key]) => key.endsWith(`:${raw}`));
-    const place = hits[0]?.[1].place?.trim() ?? "";
-    if (place && hits.every(([, look]) => look.place.trim() === place)) return place;
+    if (!hits.length) return raw;
+    const names = hits.map(([, look]) => placeText(look.place));
+    if (names.every((name) => name === names[0])) return names[0];
     return raw;
   }
 

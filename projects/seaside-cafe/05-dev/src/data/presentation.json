@@ -1,7 +1,7 @@
 {
   "1:开局": {
     "background": "bg-chaoxi-dusty-afternoon",
-    "place": "潮汐"
+    "place": null
   },
   "1:写字楼": {
     "background": "bg-office-night",
