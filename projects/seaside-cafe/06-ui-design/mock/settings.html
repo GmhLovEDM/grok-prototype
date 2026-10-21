@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>汐湾咖啡馆 · 设置</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="page-settings">
+  <div class="stage">
+    <div class="bg" aria-hidden="true"></div>
+    <section class="panel settings-panel" aria-label="设置">
+      <header class="panel-head">
+        <button class="btn btn-ghost" type="button">返回</button>
+        <h2>设置</h2>
+      </header>
+      <form class="settings-form">
+        <label class="set-row">
+          <span>文字速度</span>
+          <span class="slider-line">
+            <i>慢</i>
+            <input type="range" min="0" max="100" value="50" style="--val: 50%" aria-valuetext="中">
+            <i>快</i>
+            <b>中</b>
+          </span>
+        </label>
+        <label class="set-row">
+          <span>自动速度</span>
+          <span class="slider-line">
+            <i>慢</i>
+            <input type="range" min="0" max="100" value="38" style="--val: 38%" aria-valuetext="稍慢">
+            <i>快</i>
+            <b>稍慢</b>
+          </span>
+        </label>
+        <label class="set-row">
+          <span>音乐</span>
+          <span class="slider-line">
+            <i>关</i>
+            <input type="range" min="0" max="100" value="70" style="--val: 70%">
+            <i>满</i>
+            <b>70</b>
+          </span>
+        </label>
+        <label class="set-row">
+          <span>音效</span>
+          <span class="slider-line">
+            <i>关</i>
+            <input type="range" min="0" max="100" value="80" style="--val: 80%">
+            <i>满</i>
+            <b>80</b>
+          </span>
+        </label>
+        <div class="set-row">
+          <span>全屏</span>
+          <span>
+            <button class="switch" type="button" role="switch" aria-checked="false">
+              <span class="switch-knob" aria-hidden="true"></span>
+              <span>关</span>
+            </button>
+          </span>
+        </div>
+        <label class="set-row">
+          <span>语言</span>
+          <select class="lang" aria-label="语言">
+            <option>简体中文</option>
+          </select>
+        </label>
+      </form>
+      <p class="fine">这一版界面只有简体中文。文字速度和自动速度的毫秒数见设计说明，玩家只看见慢和快。</p>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+/* 《汐湾咖啡馆》界面变量。Him 做游戏时把 :root 这一段拿去用。
+   颜色从定稿背景里取：潮汐的木头、老街的天、礁石的夕照。
+   思源黑体子集：fonts/SourceHanSansCN-Regular-subset.woff2
+   许可：SIL Open Font License 1.1，全文在 fonts/OFL.txt。
+   Copyright 2014-2025 Adobe. Reserved Font Name「Source」。
+   只收界面和 03-script 里出现的字，字形没有改。 */
+
+@font-face {
+  font-family: "Source Han Sans CN";
+  src: url("fonts/SourceHanSansCN-Regular-subset.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --ink: #3a2e26;
+  --ink-soft: #5c4e44;
+  --ink-faint: #7a6c60;
+  --paper: #fbf7f0;
+  --paper-2: #f4ecdf;
+  --paper-deep: #e8dccb;
+  --line: #e3d5c4;
+  --line-strong: #cbb396;
+
+  --wood: #8d5a38;
+  --wood-deep: #6b432c;
+  --wood-dark: #4a3022;
+
+  /* 海蓝。只做装饰：细条、徽记描边。不能用作纸色背景上的文字色。 */
+  --sea: #6e9aa3;
+  --sea-deep: #2c6670;
+  --sea-soft: #e6f3f4;
+
+  --sand: #f6e6cf;
+  /* 夕照。只做装饰，不能用作纸色背景上的文字色。 */
+  --sunset: #e09156;
+
+  --scrim: rgba(42, 30, 22, 0.46);
+  --scrim-soft: rgba(42, 30, 22, 0.28);
+
+  --font-ui: "Source Han Sans CN", "思源黑体 CN", "PingFang SC", "Noto Sans SC", "Source Han Sans SC", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+
+  --fs-title: 60px;
+  --fs-h2: 26px;
+  --fs-name: 18px;
+  --fs-body: 24px;
+  --fs-ui: 16px;
+  --fs-small: 16px;
+  --fs-fine: 14px;
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-pill: 999px;
+
+  --shadow-paper: 0 10px 28px rgba(62, 41, 26, 0.12);
+  --shadow-float: 0 18px 44px rgba(48, 32, 22, 0.22);
+  --shadow-press: inset 0 1px 0 rgba(74, 48, 34, 0.18);
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 320ms;
+  --duration-type: 48ms;
+  --duration-auto: 1600ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* 1920 宽画面左右各 10% 会裁掉。窄屏改成 0，见文件末尾。 */
+  --safe-x: 10%;
+  --gutter: 20px;
+  --hud-h: 56px;
+  --hit: 48px;
+  --hit-sm: 36px;
+}
+
+@media (max-width: 700px) {
+  :root {
+    --safe-x: 0px;
+    --gutter: 16px;
+    --fs-title: 40px;
+    --fs-h2: 22px;
+    --fs-name: 16px;
+    --fs-body: 18px;
+    --fs-ui: 16px;
+    --hud-h: 56px;
+    --hit: 48px;
+    --hit-sm: 44px;
+  }
+}
