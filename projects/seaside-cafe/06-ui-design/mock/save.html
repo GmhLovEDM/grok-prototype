@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>汐湾咖啡馆 · 存档</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="page-save">
+  <div class="stage">
+    <div class="bg" aria-hidden="true"></div>
+    <section class="panel save-panel" aria-label="存档">
+      <header class="panel-head">
+        <button class="btn btn-ghost" type="button">返回</button>
+        <h2>存档</h2>
+        <div class="seg" role="tablist" aria-label="存档或读档">
+          <button class="is-on" type="button" role="tab" aria-selected="true">存档</button>
+          <button type="button" role="tab" aria-selected="false">读档</button>
+        </div>
+      </header>
+      <p class="fine save-note">自动存档自己写，点它不能覆盖。</p>
+      <button class="slot slot-auto" type="button">
+        <span class="thumb" style="background-image: url('../../assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png')"></span>
+        <span class="slot-copy">
+          <b>第 2 天<em class="badge">自动</em></b>
+          <span class="where">第一章 · 潮汐</span>
+          <span class="fine">2026-07-02 07:41</span>
+        </span>
+      </button>
+      <div class="slot-grid">
+        <button class="slot" type="button">
+          <span class="thumb" style="background-image: url('../../assets/backgrounds/bg-station-day/bg-station-day.png')"></span>
+          <span class="slot-copy">
+            <b>栏位 1 · 第 1 天</b>
+            <span class="where">序章 · 车站</span>
+            <span class="fine">2026-07-01 18:06</span>
+          </span>
+        </button>
+        <button class="slot is-target" type="button">
+          <span class="thumb" style="background-image: url('../../assets/backgrounds/bg-chaoxi-day/bg-chaoxi-day.png')"></span>
+          <span class="slot-copy">
+            <b>栏位 2 · 第 3 天</b>
+            <span class="where">第一章 · 潮汐</span>
+            <span class="fine">2026-07-03 21:15</span>
+          </span>
+        </button>
+        <button class="slot is-empty" type="button">
+          <span class="thumb thumb-empty"></span>
+          <span class="slot-copy">
+            <b>栏位 3</b>
+            <span class="where">空栏位</span>
+            <span class="fine">点这里记下现在</span>
+          </span>
+        </button>
+        <button class="slot" type="button">
+          <span class="thumb" style="background-image: url('../../assets/backgrounds/bg-clinic-day/bg-clinic-day.png')"></span>
+          <span class="slot-copy">
+            <b>栏位 4 · 第 5 天</b>
+            <span class="where">第一章 · 卫生所</span>
+            <span class="fine">2026-07-05 15:20</span>
+          </span>
+        </button>
+        <button class="slot is-empty" type="button">
+          <span class="thumb thumb-empty"></span>
+          <span class="slot-copy">
+            <b>栏位 5</b>
+            <span class="where">空栏位</span>
+            <span class="fine">点这里记下现在</span>
+          </span>
+        </button>
+        <button class="slot" type="button">
+          <span class="thumb" style="background-image: url('../../assets/backgrounds/bg-plaza-fireworks/bg-plaza-fireworks.png')"></span>
+          <span class="slot-copy">
+            <b>栏位 6 · 第 14 天</b>
+            <span class="where">第一章 · 码头广场</span>
+            <span class="fine">2026-07-14 21:08</span>
+          </span>
+        </button>
+      </div>
+    </section>
+    <div class="overlay">
+      <div class="backdrop" aria-hidden="true"></div>
+      <div class="modal" role="dialog" aria-modal="true" aria-labelledby="overwrite-title">
+        <h3 id="overwrite-title">覆盖这个存档？</h3>
+        <p>第 3 天 · 第一章 · 潮汐</p>
+        <p class="fine">2026-07-03 21:15 写下的。盖掉就找不回来了。</p>
+        <div class="modal-actions">
+          <button class="btn" type="button">留下</button>
+          <button class="btn btn-primary" type="button">覆盖</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

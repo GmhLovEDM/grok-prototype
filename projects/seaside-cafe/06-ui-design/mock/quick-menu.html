@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>汐湾咖啡馆 · 快捷菜单</title>
+  <link rel="stylesheet" href="tokens.css">
+  <link rel="stylesheet" href="ui.css">
+</head>
+<body class="page-quick">
+  <div class="stage">
+    <div class="bg" aria-hidden="true"></div>
+    <img class="portrait" alt="" src="../../assets/portraits/lu-yu/lu-yu_normal.png">
+    <header class="hud">
+      <div class="hud-inner">
+        <p class="hud-day"><b>第 2 天</b><span class="hud-total">/ 60</span><span class="hud-chapter">第一章</span><span>潮汐</span></p>
+        <nav class="hud-actions" aria-label="顶部菜单">
+          <button class="hud-btn is-on" type="button" aria-pressed="true">自动</button>
+          <button class="hud-btn" type="button">快进</button>
+          <button class="hud-btn" type="button">日志</button>
+          <button class="hud-btn is-pressed" type="button">菜单</button>
+        </nav>
+      </div>
+    </header>
+    <section class="dialogue" aria-hidden="true">
+      <h2 class="nameplate">陆屿</h2>
+      <p class="line">啧，你别动，我来。</p>
+    </section>
+    <div class="overlay">
+      <button class="backdrop" type="button" aria-label="关闭菜单"></button>
+      <section class="quick-card" aria-label="快捷菜单">
+        <h2>菜单</h2>
+        <div class="quick-list">
+          <button class="btn btn-primary" type="button">继续游戏</button>
+          <button class="btn" type="button">存档</button>
+          <button class="btn" type="button">读档</button>
+          <button class="btn is-on" type="button" aria-pressed="true">自动<em>开</em></button>
+          <button class="btn" type="button" aria-pressed="false">快进<em>关</em></button>
+          <button class="btn" type="button">日志</button>
+          <button class="btn" type="button">设置</button>
+        </div>
+        <div class="quick-list leave">
+          <button class="btn btn-ghost" type="button">回到标题</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
