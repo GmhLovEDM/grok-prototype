@@ -17,13 +17,12 @@ export type Cond =
   | { op: "eq"; key: string; value: string }
   | { op: "flag"; key: string; on: boolean }
   | { op: "winner"; who: string; threshold: number; present: PersonRef[] }
-  | { op: "belowAll"; threshold: number; present: Record<Gender, PersonRef[]> }
-  | { op: "seenWord"; on: boolean };
+  | { op: "belowAll"; threshold: number; present: Record<Gender, PersonRef[]> };
 
 export type Line =
   | { type: "narration"; text: string }
   | { type: "letter"; text: string }
-  | { type: "dialogue"; speaker: string; text: string };
+  | { type: "dialogue"; speaker: string; text: string; expr: string | null };
 
 export type ChoiceOption = { label: string; effects: Effect[] };
 

@@ -23,8 +23,13 @@ type Frame =
 
 const BLOCKS = new Set(["替换", "选择", "小游戏", "分支", "输入"]);
 
-export function parseStory(files: { filename: string; markdown: string }[]): Story {
-  const days = files.map((file) => parseDay(file.markdown, file.filename));
+export type ParseOptions = {
+  /** 冒号后的表情。构建时用来核对 `<拼音>_<表情>.png` 在不在。 */
+  onExpression?: (filename: string, line: number, speaker: string, expr: string) => void;
+};
+
+export function parseStory(files: { filename: string; markdown: string }[], options?: ParseOptions): Story {
+  const days = files.map((file) => parseDay(file.markdown, file.filename, options));
   days.sort((a, b) => a.day - b.day);
   const seen = new Set<number>();
   for (const day of days) {
@@ -47,7 +52,7 @@ export function parseStory(files: { filename: string; markdown: string }[]): Sto
   return { days };
 }
 
-export function parseDay(markdown: string, filename: string): Day {
+export function parseDay(markdown: string, filename: string, options?: ParseOptions): Day {
   const lines = markdown.split(/\r?\n/);
   const day: Day = { day: 0, chapter: "", notes: [], fireworks: null, scenes: [] };
   let scene: Scene | null = null;
@@ -171,13 +176,13 @@ export function parseDay(markdown: string, filename: string): Day {
       if (stack.length) {
         const top = stack[stack.length - 1];
         if (top.kind !== "branch") fail(lineNo, "条件不能写在这个块里");
-        top.arms.push({ condition: parseCondition(line.slice("条件：".length).trim(), day, fail, lineNo), items: [] });
+        top.arms.push({ condition: hold(parseCondition(line.slice("条件：".length).trim(), day, fail, lineNo)), items: [] });
         continue;
       }
       const here = currentScene(lineNo);
       if (here.condition) fail(lineNo, "一场只能有一个条件");
       if (here.blocks.length || here.jumps.length) fail(lineNo, "条件要写在正文前面");
-      here.condition = parseCondition(line.slice("条件：".length).trim(), day, fail, lineNo);
+      here.condition = hold(parseCondition(line.slice("条件：".length).trim(), day, fail, lineNo));
       continue;
     }
 
@@ -197,7 +202,7 @@ export function parseDay(markdown: string, filename: string): Day {
     if (!top) {
       const here = currentScene(lineNo);
       if (here.jumps.length) fail(lineNo, "去向和正文写在同一场");
-      addLine(here, asLine(line, filename, lineNo));
+      addLine(here, asLine(line, filename, lineNo, options));
       continue;
     }
     if (top.kind === "replace") {
@@ -209,7 +214,7 @@ export function parseDay(markdown: string, filename: string): Day {
         continue;
       }
       if (!top.current) fail(lineNo, "替换还没写女主或男主");
-      top.byGender[top.current].push(asLine(line, filename, lineNo));
+      top.byGender[top.current].push(asLine(line, filename, lineNo, options));
       continue;
     }
     if (top.kind === "choice") {
@@ -242,7 +247,7 @@ export function parseDay(markdown: string, filename: string): Day {
     if (top.kind === "branch") {
       const arm = top.arms[top.arms.length - 1];
       if (!arm) fail(lineNo, "分支还没有条件");
-      arm.items.push(asLine(line, filename, lineNo));
+      arm.items.push(asLine(line, filename, lineNo, options));
       continue;
     }
     fail(lineNo, `输入块里不写正文：${line}`);
@@ -328,7 +333,11 @@ function addLine(scene: Scene, line: Line) {
   else scene.blocks.push({ type: "lines", items: [line] });
 }
 
-function asLine(text: string, filename: string, lineNo: number): Line {
+function asLine(text: string, filename: string, lineNo: number, options?: ParseOptions): Line {
+  return classifyBodyLine(text, filename, lineNo, options);
+}
+
+function classifyBodyLine(text: string, filename: string, lineNo: number, options?: ParseOptions): Line {
   if (text.startsWith("「")) return { type: "letter", text };
   const dialogue = text.match(/^([\u4e00-\u9fff]{1,4})：(.+)$/);
   if (!dialogue) return { type: "narration", text };
@@ -336,7 +345,31 @@ function asLine(text: string, filename: string, lineNo: number): Line {
   if (["条件", "选项", "类型", "失败", "效果", "标记", "去向", "占额", "章节"].includes(speaker)) {
     throw new ScriptError(filename, lineNo, `这行看起来像标记：${text}`);
   }
-  return { type: "dialogue", speaker, text: dialogue[2].trim() };
+  const spoken = splitExpression(dialogue[2], filename, lineNo, speaker, options);
+  return { type: "dialogue", speaker, text: spoken.text, expr: spoken.expr };
+}
+
+/** 全角冒号紧后面的半角方括号是表情。字面括号用全角［］。 `{主角}` 留到播放时再换。 */
+function splitExpression(
+  raw: string,
+  filename: string,
+  lineNo: number,
+  speaker: string,
+  options?: ParseOptions,
+): { text: string; expr: string | null } {
+  const text = raw.trim();
+  if (!text.startsWith("[")) return { text, expr: null };
+  const matched = text.match(/^\[([^\]]*)\]([\s\S]*)$/);
+  if (!matched || !/^[a-z0-9_]+$/.test(matched[1])) {
+    const shown = matched ? matched[1] : text;
+    throw new ScriptError(
+      filename,
+      lineNo,
+      `「${speaker}」的 [${shown}] 不是已有立绘。台词若要以方括号开头，请改用全角［］。`,
+    );
+  }
+  options?.onExpression?.(filename, lineNo, speaker, matched[1]);
+  return { text: matched[2], expr: matched[1] };
 }
 
 function parseOption(line: string, filename: string, lineNo: number): ChoiceOption {
@@ -390,12 +423,19 @@ function parseTie(body: string, fail: (line: number, message: string) => never, 
   }
 }
 
+type SeenWord = { op: "seenWord"; on: boolean; line: number };
+type UnresolvedCond = { op: "all"; args: UnresolvedCond[] } | SeenWord | Exclude<Cond, { op: "all" }>;
+
+function hold(cond: UnresolvedCond): Cond {
+  return cond as Cond;
+}
+
 function parseCondition(
   raw: string,
   day: Day,
   fail: (line: number, message: string) => never,
   lineNo: number,
-): Cond {
+): UnresolvedCond {
   const winner = raw.match(/^(女主|男主)且([\u4e00-\u9fff]{2,4})恋≥(\d+)且\2恋为在场最高；([\s\S]+)$/);
   if (raw.includes("恋为在场最高") && !winner) fail(lineNo, `看不懂的最高比较：${raw}`);
   if (winner) {
@@ -441,9 +481,9 @@ function parseCondition(
   return args.length === 1 ? args[0] : { op: "all", args };
 }
 
-function parseAtom(atom: string, fail: (line: number, message: string) => never, lineNo: number): Cond {
+function parseAtom(atom: string, fail: (line: number, message: string) => never, lineNo: number): UnresolvedCond {
   if (atom === "女主" || atom === "男主") return { op: "gender", gender: atom === "男主" ? "男" : "女" };
-  if (atom === "未看过" || atom === "已看过") return { op: "seenWord", on: atom === "已看过" };
+  if (atom === "未看过" || atom === "已看过") return { op: "seenWord", on: atom === "已看过", line: lineNo };
   const seen = atom.match(/^([\u4e00-\u9fff]{1,12})(未看过|已看过)$/);
   if (seen) {
     const key = seen[1].startsWith("看过") ? seen[1] : `看过${seen[1]}`;
@@ -482,12 +522,30 @@ function bindSeen(day: Day, filename: string) {
 
 function bindCond(cond: Cond | null, key: string | undefined, filename: string, sceneId: string): Cond | null {
   if (!cond) return null;
-  if (cond.op === "seenWord") {
-    if (!key) throw new ScriptError(filename, 0, `场景「${sceneId}」的未看过对不上标记`);
-    return { op: "flag", key, on: cond.on };
+  const unresolved = cond as UnresolvedCond;
+  if (unresolved.op === "seenWord") {
+    const word = unresolved.on ? "已看过" : "未看过";
+    const written = unresolved.on ? "是" : "否";
+    if (!key) {
+      throw new ScriptError(
+        filename,
+        unresolved.line,
+        `「${word}」对不上场景「${sceneId}」的看过标记。请改写成明确条件，例如「看过修网=${written}」。`,
+      );
+    }
+    return { op: "flag", key, on: unresolved.on };
   }
-  if (cond.op === "all") return { op: "all", args: cond.args.map((arg) => bindCond(arg, key, filename, sceneId) as Cond) };
-  return cond;
+  if (unresolved.op === "all") {
+    return {
+      op: "all",
+      args: unresolved.args.map((arg) => {
+        const bound = bindCond(hold(arg), key, filename, sceneId);
+        if (!bound) throw new ScriptError(filename, 0, `场景「${sceneId}」的条件是空的`);
+        return bound;
+      }),
+    };
+  }
+  return unresolved;
 }
 
 function seenFlags(scene: Scene): string[] {
