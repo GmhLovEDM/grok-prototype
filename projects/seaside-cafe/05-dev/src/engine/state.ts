@@ -10,7 +10,7 @@ export function createState(initialVars: Record<string, string>): GameState {
     vars: { ...initialVars },
     romance: {},
     friendship: {},
-    reputation: 0,
+    reputation: 50,
     recentFree: null,
     freeCounts: {},
   };

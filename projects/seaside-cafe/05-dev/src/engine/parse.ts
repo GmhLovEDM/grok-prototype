@@ -495,6 +495,16 @@ function parseAtom(atom: string, fail: (line: number, message: string) => never,
   if (reputation) {
     return { op: "reputation", cmp: reputation[1] === "≥" ? ">=" : "<", value: Number(reputation[2]) };
   }
+  const stat = atom.match(/^([\u4e00-\u9fff]{2,4})(恋|友)(≥|<)(\d+)$/);
+  if (stat) {
+    return {
+      op: "stat",
+      who: stat[1],
+      stat: stat[2] === "恋" ? "romance" : "friendship",
+      cmp: stat[3] === "≥" ? ">=" : "<",
+      value: Number(stat[4]),
+    };
+  }
   fail(lineNo, `看不懂的条件：${atom}`);
 }
 

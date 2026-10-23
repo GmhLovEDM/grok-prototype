@@ -1115,6 +1115,46 @@
     "background": "bg-old-street-day",
     "place": "浪花里"
   },
+  "60:不足夏栀":   {
+    "background": "bg-lighthouse-dusk",
+    "place": "灯塔"
+  },
+  "60:不足唐棠":   {
+    "background": "bg-tangji-kitchen-night",
+    "place": "唐记"
+  },
+  "60:不足叶帆":   {
+    "background": "bg-post-interior-day",
+    "place": "邮局"
+  },
+  "60:不足苏念":   {
+    "background": "bg-chaoxi-night",
+    "place": "潮汐"
+  },
+  "60:不足程鹭":   {
+    "background": "bg-reef-dusk",
+    "place": "研究站"
+  },
+  "60:不足沈若":   {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "60:不足陆屿":   {
+    "background": "bg-dock-entrance-dusk",
+    "place": "码头"
+  },
+  "60:不足江叙白":   {
+    "background": "bg-chaoxi-night",
+    "place": "阁楼"
+  },
+  "60:不足许之言":   {
+    "background": "bg-clinic-day",
+    "place": "卫生所"
+  },
+  "60:不足宋知远":   {
+    "background": "bg-old-street-day",
+    "place": "浪花里"
+  },
   "60:通用":   {
     "background": "bg-chaoxi-day",
     "place": "潮汐"

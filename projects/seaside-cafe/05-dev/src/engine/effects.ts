@@ -40,8 +40,11 @@ function parseStats(who: string, when: Gender | undefined, body: string): Effect
 function parseClause(part: string, carryName: string | null): { effects: Effect[]; carryName: string | null } {
   if (part === "返回本选择") return { effects: [{ op: "retry" }], carryName };
   if (part === "口碑不加") return { effects: [{ op: "reputation", delta: 0 }], carryName };
-  const rep = part.match(/^口碑\+(\d+)$/);
-  if (rep) return { effects: [{ op: "reputation", delta: Number(rep[1]) }], carryName };
+  const rep = part.match(/^口碑([+\-＋－])(\d+)$/);
+  if (rep) {
+    const sign = rep[1] === "-" || rep[1] === "－" ? -1 : 1;
+    return { effects: [{ op: "reputation", delta: sign * Number(rep[2]) }], carryName };
+  }
   if (/好感\+0$/.test(part) && !/[恋友=]/.test(part.replace(/好感\+0$/, ""))) {
     return { effects: [], carryName };
   }
