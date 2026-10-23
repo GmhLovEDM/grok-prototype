@@ -138,6 +138,12 @@ const maleXia: Picker = (view) => {
 
 const maleFirst: Picker = () => 0;
 
+/** 女主也全走第一项。性别单独选女生，避免第一项「我是男生」。 */
+const femaleFirst: Picker = (view) => {
+  if (view.id === "性别") return option(view, "女生");
+  return 0;
+};
+
 function band(rep: number): "保住" | "改建" | "收购" {
   if (rep >= 70) return "保住";
   if (rep >= 40) return "改建";
@@ -163,14 +169,16 @@ function randomPick(seed: number, gender: "男" | "女"): Picker {
   };
 }
 
+const penalties = ["早早收摊", "再看看", "今晚先不说", "低头不接话", "提前打烊", "收进抽屉", "走正门", "说已经收了", "当没听见"];
+
 function directed(mode: "penalties" | "bonuses"): Picker {
   return (view) => {
     if (view.id === "性别") return option(view, "男生");
     if (mode === "penalties") {
-      const hit = prefer(view, ["早早收摊", "再看看", "提前打烊", "收进抽屉", "走前门", "当没听见"]);
+      const hit = prefer(view, penalties);
       if (hit !== null) return hit;
     } else {
-      const hit = prefer(view, ["摆到散席", "去敲门", "照常接待", "贴出来", "后门", "把话说开"]);
+      const hit = prefer(view, positive);
       if (hit !== null) return hit;
     }
     return 0;
@@ -180,18 +188,35 @@ function directed(mode: "penalties" | "bonuses"): Picker {
 function summarize(title: string, rows: ReturnType<typeof play>[]) {
   const bands = { 保住: 0, 改建: 0, 收购: 0 };
   const locks: Record<string, number> = {};
+  const goods: Record<string, number> = {};
   let generic = 0;
+  let minCh3 = Number.POSITIVE_INFINITY;
   for (const row of rows) {
     bands[band(row.reputation)] += 1;
-    locks[row.lock || "（空）"] = (locks[row.lock || "（空）"] ?? 0) + 1;
+    const who = row.lock || "（空）";
+    locks[who] = (locks[who] ?? 0) + 1;
     if (row.lock === "无") generic += 1;
+    if (row.ending.startsWith("好")) goods[who] = (goods[who] ?? 0) + 1;
+    minCh3 = Math.min(minCh3, row.counts["第三章"] ?? 0);
   }
   const pct = ((generic / rows.length) * 100).toFixed(1);
-  console.log(`\n${title} n=${rows.length} 通用=${generic} (${pct}%) 口碑 ${JSON.stringify(bands)}`);
+  console.log(`\n${title} n=${rows.length} 通用=${generic} (${pct}%) 口碑 ${JSON.stringify(bands)} 第三章最少 ${minCh3}`);
   console.log("  锁定", JSON.stringify(locks));
+  console.log("  好结局", JSON.stringify(goods));
+  return { bands, locks, goods, minCh3 };
 }
 
-const positive = ["摆到散席", "去敲门", "照常接待", "把纸条贴出来", "从后门送他", "把话说开"];
+const positive = [
+  "摆到散席",
+  "去敲门",
+  "照常接待",
+  "把纸条贴出来",
+  "从后门送他",
+  "把话说开",
+  "去告诉没到的人",
+  "说店站在这边",
+  "请他尝一口",
+];
 
 const femaleXuyan: Picker = (view) => {
   if (view.id === "性别") return option(view, "女生");
@@ -215,7 +240,7 @@ const femaleSong: Picker = (view) => {
   if (view.id === "回复") return 0;
   if (view.id === "猜谜") return option(view, "干叶");
   if (view.id === "赞助") return option(view, "靠自己");
-  return prefer(view, ["去海边烧烤", "去上体验课", "去岸边看浪", ...positive]) ?? stay(view);
+  return prefer(view, ["去海边烧烤", "去上体验课", "去岸边看浪", "去岸边等他", ...positive]) ?? stay(view);
 };
 
 const femaleJiang: Picker = (view) => {
@@ -228,7 +253,7 @@ const femaleJiang: Picker = (view) => {
   if (view.id === "回复") return 0;
   if (view.id === "猜谜") return option(view, "干叶");
   if (view.id === "画布") return option(view, "现在想画");
-  return prefer(view, ["上楼看看画", "再上一次阁楼", "上阁楼看画", ...positive]) ?? stay(view);
+  return prefer(view, ["上楼看看画", "再上一次阁楼", "再去阁楼坐坐", "上阁楼看画", ...positive]) ?? stay(view);
 };
 
 const maleTang: Picker = (view) => {
@@ -312,9 +337,55 @@ const routes: { name: string; pick: Picker }[] = [
   { name: "女主·通用", pick: femaleGeneric },
 ];
 
+const expectLock: Record<string, string> = {
+  "女主·陆屿": "陆屿",
+  "女主·许之言": "许之言",
+  "女主·宋知远": "宋知远",
+  "女主·江叙白": "江叙白",
+  "男主·夏栀": "夏栀",
+  "男主·唐棠": "唐棠",
+  "男主·叶帆": "叶帆",
+  "男主·程鹭": "程鹭",
+  "男主·沈若": "沈若",
+  "男主·苏念": "苏念",
+  "男主·通用": "无",
+  "女主·通用": "无",
+};
+
+/** 顶针：下一句用上一句末尾开头，并且紧跟逗号。第一章为 0。跨行也算。 */
+function countPivots(): { total: number; byChapter: Record<string, number> } {
+  const comma = /([\u4e00-\u9fff]{1,6})。\s*\1，/g;
+  const particle = /([\u4e00-\u9fff]{1,4})[的了着]。\s*\1[着了]?，/g;
+  const byChapter: Record<string, number> = { 第一章: 0, 第二章: 0, 第三章: 0 };
+  let total = 0;
+  for (const file of files) {
+    const day = Number(file.filename.match(/\d+/)?.[0] ?? 0);
+    const chapter = day <= 14 ? "第一章" : day <= 40 ? "第二章" : "第三章";
+    const found = new Set<string>();
+    for (const pattern of [comma, particle]) {
+      pattern.lastIndex = 0;
+      for (const match of file.markdown.matchAll(pattern)) {
+        found.add(`${match.index}:${match[0]}`);
+      }
+    }
+    byChapter[chapter] += found.size;
+    total += found.size;
+  }
+  return { total, byChapter };
+}
+
+const pivots = countPivots();
+console.log("顶针", pivots.total, JSON.stringify(pivots.byChapter));
+
+const problems: string[] = [];
+if (pivots.total > 0) problems.push(`顶针句式还剩 ${pivots.total} 处，应为 0`);
+
 console.log("—— 字数（播放器）——");
+const played: { name: string; row: ReturnType<typeof play> }[] = [];
 for (const route of routes) {
   const row = play(route.pick);
+  played.push({ name: route.name, row });
+  const love = row.romance[row.lock] ?? 0;
   console.log(
     route.name,
     "锁定",
@@ -323,22 +394,58 @@ for (const route of routes) {
     row.ending,
     "口碑",
     row.reputation,
+    "结局恋",
+    row.lock === "无" ? "—" : love,
     "恋",
     JSON.stringify(row.romance),
     "字",
     JSON.stringify(row.counts),
   );
+  const ch2 = row.counts["第二章"] ?? 0;
+  const ch3 = row.counts["第三章"] ?? 0;
+  if (ch2 < 12000 || ch2 > 15000) problems.push(`${route.name} 第二章 ${ch2}，应在 12000–15000`);
+  if (ch3 < 9000 || ch3 > 11000) problems.push(`${route.name} 第三章 ${ch3}，应在 9000–11000`);
+  const wanted = expectLock[route.name];
+  if (row.lock !== wanted) problems.push(`${route.name} 锁定 ${row.lock || "（空）"}，应是 ${wanted}`);
+  if (wanted !== "无") {
+    if (love < 38) problems.push(`${route.name} 结局恋爱 ${love}，应至少 38`);
+    if (!row.ending.startsWith("好")) problems.push(`${route.name} 结局 ${row.ending}，设计路径应是好结局`);
+  } else if (row.ending !== "通用") {
+    problems.push(`${route.name} 结局 ${row.ending}，通用路线应进通用`);
+  }
 }
 
 const first = play(maleFirst);
+const firstFemale = play(femaleFirst);
 console.log("\n男主全选第一项", "锁定", first.lock, "口碑", first.reputation, "恋", JSON.stringify(first.romance), "结局", first.ending);
+console.log("女主全选第一项", "锁定", firstFemale.lock, "口碑", firstFemale.reputation, "恋", JSON.stringify(firstFemale.romance), "结局", firstFemale.ending);
+if (first.lock !== "无") problems.push(`男主全选第一项锁定 ${first.lock}，应是无`);
+if (firstFemale.lock !== "无") problems.push(`女主全选第一项锁定 ${firstFemale.lock}，不应落到可攻略角色`);
 
 const pen = play(directed("penalties"));
 const bon = play(directed("bonuses"));
 console.log("全扣分", pen.reputation, band(pen.reputation), "锁定", pen.lock);
 console.log("全加分（其余第一项）", bon.reputation, band(bon.reputation), "锁定", bon.lock);
+if (band(pen.reputation) !== "收购") problems.push(`全扣分口碑 ${pen.reputation}，应进收购`);
+if (band(bon.reputation) !== "保住") problems.push(`全加分口碑 ${bon.reputation}，应进保住`);
 
 const maleRows = Array.from({ length: 300 }, (_, i) => play(randomPick(1000 + i, "男")));
 const femaleRows = Array.from({ length: 300 }, (_, i) => play(randomPick(5000 + i, "女")));
-summarize("男主随机", maleRows);
-summarize("女主随机", femaleRows);
+const maleSum = summarize("男主随机", maleRows);
+const femaleSum = summarize("女主随机", femaleRows);
+for (const [title, sum] of [
+  ["男主随机", maleSum],
+  ["女主随机", femaleSum],
+] as const) {
+  for (const name of ["保住", "改建", "收购"] as const) {
+    if (sum.bands[name] <= 0) problems.push(`${title} 口碑「${name}」是 0`);
+  }
+  if (sum.minCh3 < 9000) problems.push(`${title} 第三章最少 ${sum.minCh3}，应至少 9000`);
+}
+
+if (problems.length) {
+  console.error("\n不达标：");
+  for (const problem of problems) console.error(`- ${problem}`);
+  process.exit(1);
+}
+console.log("\n字数、好感余量、顶针、口碑三档都过线。");

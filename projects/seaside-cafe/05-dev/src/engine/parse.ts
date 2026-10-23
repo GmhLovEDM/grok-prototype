@@ -436,31 +436,36 @@ function parseCondition(
   fail: (line: number, message: string) => never,
   lineNo: number,
 ): UnresolvedCond {
-  const winner = raw.match(/^(女主|男主)且([\u4e00-\u9fff]{2,4})恋≥(\d+)且\2恋为在场最高；([\s\S]+)$/);
+  const winner = raw.match(
+    /^(女主|男主)且([\u4e00-\u9fff]{2,4})恋≥(\d+)(?:且(选过\2))?且\2恋为在场最高；([\s\S]+)$/,
+  );
   if (raw.includes("恋为在场最高") && !winner) fail(lineNo, `看不懂的最高比较：${raw}`);
   if (winner) {
     if (!day.fireworks || day.fireworks.threshold <= 0) fail(lineNo, "最高比较前面没有完整的在场规则");
     const gender: Gender = winner[1] === "男主" ? "男" : "女";
     const who = winner[2];
     const threshold = Number(winner[3]);
+    const picked = winner[4];
     if (threshold !== day.fireworks.threshold) fail(lineNo, `恋≥${threshold}和低于 ${day.fireworks.threshold} 不一致`);
     const present = day.fireworks.present[gender];
     if (!present.some((person) => person.name === who)) fail(lineNo, `${who}不在这一性别的在场名单里`);
+    if (who === "沈若" && picked !== "选过沈若") fail(lineNo, "沈若的条件要写且选过沈若");
+    if (picked && who !== "沈若") fail(lineNo, `只有沈若要写选过：${raw}`);
+    const tailText = winner[5];
     const tail = `并列时先最近自由=${who}，否则自由次数更多，否则`;
-    if (!winner[4].startsWith(tail)) fail(lineNo, `看不懂的同分写法：${winner[4]}`);
-    const ending = winner[4].slice(tail.length);
+    if (!tailText.startsWith(tail)) fail(lineNo, `看不懂的同分写法：${tailText}`);
+    const ending = tailText.slice(tail.length);
     const endingOk =
       /^不胜（[^）]*）$/.test(ending) ||
       /^登场更晚由[他她]胜出$/.test(ending) ||
       /^只胜[\u4e00-\u9fff]{2,4}（[^）]*）$/.test(ending);
     if (!endingOk) fail(lineNo, `看不懂的同分收束：${ending}`);
-    return {
-      op: "all",
-      args: [
-        { op: "gender", gender },
-        { op: "winner", who, threshold, present: present.map((person) => ({ ...person })) },
-      ],
-    };
+    const args: UnresolvedCond[] = [
+      { op: "gender", gender },
+      { op: "winner", who, threshold, present: present.map((person) => ({ ...person })) },
+    ];
+    if (picked) args.push({ op: "flag", key: picked, on: true });
+    return { op: "all", args };
   }
   const below = raw.match(/^当前性别在场可攻略角色的恋爱都低于(\d+)$/);
   if (below) {

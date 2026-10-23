@@ -211,6 +211,10 @@
     "background": "bg-chaoxi-typhoon-night",
     "place": "潮汐"
   },
+  "9:自己守夜": {
+    "background": "bg-chaoxi-typhoon-night",
+    "place": "潮汐"
+  },
   "10:潮汐": {
     "background": "bg-chaoxi-after-storm",
     "place": "潮汐"
@@ -344,6 +348,10 @@
     "place": "广场"
   },
   "13:叶帆": {
+    "background": "bg-plaza-day",
+    "place": "广场"
+  },
+  "13:自己摆摊": {
     "background": "bg-plaza-day",
     "place": "广场"
   },
@@ -699,6 +707,14 @@
     "background": "bg-chaoxi-door-night",
     "place": "潮汐"
   },
+  "31:等浪":   {
+    "background": "bg-reef-night",
+    "place": "礁石滩"
+  },
+  "31:阁楼坐":   {
+    "background": "bg-chaoxi-night",
+    "place": "阁楼"
+  },
   "32:锁定陆屿":   {
     "background": "bg-chaoxi-night",
     "place": "潮汐"
@@ -907,6 +923,10 @@
     "background": "bg-chaoxi-day",
     "place": "潮汐"
   },
+  "45:路过":   {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
   "46:进门":   {
     "background": "bg-chaoxi-day",
     "place": "潮汐"
@@ -928,6 +948,10 @@
     "place": "潮汐"
   },
   "49:白天":   {
+    "background": "bg-chaoxi-day",
+    "place": "潮汐"
+  },
+  "49:早市":   {
     "background": "bg-chaoxi-day",
     "place": "潮汐"
   },
