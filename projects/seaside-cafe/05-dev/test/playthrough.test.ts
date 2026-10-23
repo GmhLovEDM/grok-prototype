@@ -57,7 +57,7 @@ async function run(seed: number, lead: "女生" | "男生"): Promise<void> {
     const view = player.view();
     if (view.kind === "end") {
       if (!saved) throw new Error("还没存读档就结束了");
-      if (view.day !== schedule.chapter1.end || view.chapter !== "第一章") {
+      if (view.day !== 60 || view.chapter !== "第三章") {
         throw new Error(`停在第 ${view.day} 天 ${view.chapter}`);
       }
       if (player.state.gender !== (lead === "女生" ? "女" : "男")) throw new Error("性别不对");
@@ -117,7 +117,7 @@ async function run(seed: number, lead: "女生" | "男生"): Promise<void> {
 }
 
 describe("随机周目", () => {
-  it("男女主各 200 次都能读完第一章，中途存读档也不卡住", async () => {
+  it("男女主各 200 次都能读完到第 60 天，中途存读档也不卡住", async () => {
     const runs = 200;
     for (const lead of ["女生", "男生"] as const) {
       for (let n = 0; n < runs; n += 1) {

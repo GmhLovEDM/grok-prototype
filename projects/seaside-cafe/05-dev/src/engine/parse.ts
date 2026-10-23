@@ -491,6 +491,10 @@ function parseAtom(atom: string, fail: (line: number, message: string) => never,
   }
   const eq = atom.match(/^([\u4e00-\u9fffA-Za-z0-9]{1,12})=([^\s且；，。]+)$/);
   if (eq) return { op: "eq", key: eq[1], value: eq[2] };
+  const reputation = atom.match(/^口碑(≥|<)(\d+)$/);
+  if (reputation) {
+    return { op: "reputation", cmp: reputation[1] === "≥" ? ">=" : "<", value: Number(reputation[2]) };
+  }
   fail(lineNo, `看不懂的条件：${atom}`);
 }
 

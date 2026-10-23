@@ -40,10 +40,14 @@ function linesIn(blocks: Block[]): Line[] {
 }
 
 describe("剧本解析", () => {
-  it("读完第 1 到 14 天", () => {
-    expect(story.days.map((day) => day.day)).toEqual([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]);
+  it("读完第 1 到 60 天", () => {
+    expect(story.days.map((day) => day.day)).toEqual(Array.from({ length: 60 }, (_, index) => index + 1));
     expect(story.days[0].chapter).toBe("序章");
     expect(story.days[1].chapter).toBe("第一章");
+    expect(story.days[14].chapter).toBe("第二章");
+    expect(story.days[14].day).toBe(15);
+    expect(story.days[40].chapter).toBe("第三章");
+    expect(story.days[40].day).toBe(41);
   });
 
   it("说话人只有名单里的这些", () => {
@@ -55,7 +59,9 @@ describe("剧本解析", () => {
         }
       }
     }
-    expect([...speakers].sort()).toEqual(["叶帆", "周总", "唐棠", "夏栀", "老唐", "老护士", "许之言", "电话", "秀姨", "陆屿", "沈若"].sort());
+    expect([...speakers].sort()).toEqual(
+      ["叶帆", "周总", "唐棠", "夏栀", "宋知远", "程鹭", "老唐", "老护士", "老夏", "苏念", "许之言", "电话", "秀姨", "陆屿", "沈若", "江叙白"].sort(),
+    );
   });
 
   it("每个场景都标明地名，开局显式不显示", () => {

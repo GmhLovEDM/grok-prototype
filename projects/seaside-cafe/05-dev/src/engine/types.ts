@@ -17,7 +17,8 @@ export type Cond =
   | { op: "eq"; key: string; value: string }
   | { op: "flag"; key: string; on: boolean }
   | { op: "winner"; who: string; threshold: number; present: PersonRef[] }
-  | { op: "belowAll"; threshold: number; present: Record<Gender, PersonRef[]> };
+  | { op: "belowAll"; threshold: number; present: Record<Gender, PersonRef[]> }
+  | { op: "reputation"; cmp: ">=" | "<"; value: number };
 
 export type Line =
   | { type: "narration"; text: string }

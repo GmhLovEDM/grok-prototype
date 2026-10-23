@@ -44,6 +44,8 @@ export function evalCond(state: GameState, cond: Cond | null): boolean {
       const people = cond.present[state.gender];
       return people.every((person) => readStat(state, person.name, "romance") < cond.threshold);
     }
+    case "reputation":
+      return cond.cmp === ">=" ? state.reputation >= cond.value : state.reputation < cond.value;
     default: {
       const never: never = cond;
       throw new Error(`未知条件：${JSON.stringify(never)}`);
