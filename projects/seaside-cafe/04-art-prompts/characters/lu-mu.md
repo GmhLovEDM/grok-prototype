@@ -18,13 +18,15 @@
 
 不要画成周总那种两鬓一丝不乱的西装。不要渔装。
 
+不要和秀姨画成同一张脸。秀姨是黑发夹银丝、盘成脑后的髻，深棕眼睛，家常短袖外面一条杂货铺围裙，看着人说话。陆母不盘发髻，头发拢在耳后并且梳齐；建议深黑狭长单眼皮，不是深棕；深色家常衫，没有围裙；眼睛不找人。
+
 ## 规格
 
 1536×2304，PNG，真实透明。腰以上。家常衫的下摆可以露一点。手臂自然向下。正面稍侧。
 
 固定身份：陆屿的母亲。儿子二十四岁。建议四十五到五十岁，不高，肩窄，身板是干活的，不是瘦高模特。建议黑发里有白，拢在耳后，整天都齐。建议深黑眼睛，狭长单眼皮。深色家常衫，没有围裙，没有字。平常不看人，不笑。
 
-共同负向：铜哨，格子衬衫，额前翘发，缆绳茧，旧疤，西装，渔船，信封，风景，棋盘格，照片，3D，Q 版，大眼，水印，乱码，多指，全身，大腿，别人的脸。
+共同负向：铜哨，格子衬衫，额前翘发，缆绳茧，旧疤，西装，渔船，信封，脑后发髻，杂货铺围裙，风景，棋盘格，照片，3D，Q 版，大眼，水印，乱码，多指，全身，大腿，别人的脸。
 
 ## 基准
 
@@ -35,7 +37,7 @@
 中文：陆母的基准半身。建议四十五到五十岁的中国妇女，不高，肩窄。头发黑里有白，梳得很齐，拢在耳后。建议深黑狭长单眼皮，和陆屿是同一类眼睛，眉骨平。肤色比儿子浅。深色家常衫。神情平常，眼睛不找人，嘴是平的。双手垂下。透明背景，1536×2304。半写实，和陆屿母版同一套线与左上方的自然光。
 
 ```text
-Use case: illustration-story. Master waist-up portrait of 陆母, Lu Yu's mother, in 《汐湾咖啡馆》. Suggested, not locked canon: mid-to-late forties, short stature, narrow shoulders, black hair with some white drawn back behind the ears and kept neat. Suggested family likeness: the same dark, narrow monolid eyes and level brows as 陆屿, mouth flat when not smiling, but lighter skin and no cowlick. Dark everyday blouse, no apron, no text. Expression: present, not looking for eye contact, not smiling. Arms hanging. Semi-realistic, same line and upper-left daylight as the chapter-1 masters. Real alpha, 1536×2304 PNG. A little of the hem may show.
+Use case: illustration-story. Master waist-up portrait of 陆母, Lu Yu's mother, in 《汐湾咖啡馆》. Suggested, not locked canon: mid-to-late forties, short stature, narrow shoulders, black hair with some white drawn back behind the ears and kept neat, not a bun. Suggested family likeness: the same dark, narrow monolid eyes and level brows as 陆屿, mouth flat when not smiling, but lighter skin and no cowlick. Dark everyday blouse, no apron, no text. Do not share 秀姨's face: no silver-streaked hair in a bun, no dark-brown eyes looking at the viewer, no general-store apron. Expression: present, not looking for eye contact, not smiling. Arms hanging. Semi-realistic, same line and upper-left daylight as the chapter-1 masters. Real alpha, 1536×2304 PNG. A little of the hem may show. No scenery, no ground, no cast shadow/backdrop, leave a little headroom.
 ```
 
 ## 表情

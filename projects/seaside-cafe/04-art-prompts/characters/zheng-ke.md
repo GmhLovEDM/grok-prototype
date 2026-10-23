@@ -35,7 +35,7 @@
 中文：郑恪的基准半身。建议三十岁上下的中国男人，清瘦，比周总年轻。建议黑短发梳齐，深棕眼睛。浅色衬衫，没有西装外套。头略低，神情客气，嘴不是笑。双手垂下，不拿文件夹。透明背景，1536×2304。半写实，和周总母版同一套线，光用白天的自然光，不要舞台光。
 
 ```text
-Use case: illustration-story. Master waist-up portrait of 郑恪, assistant to 周总, in 《汐湾咖啡馆》. He is not a member of the Zhou family. Suggested: about thirty, lean, neat short black hair, dark-brown eyes. Pale shirt, dark trousers, no suit jacket, no name badge. Head slightly lowered, polite, not smiling, eyes still visible. Arms down, no folder. Do not resemble 周总's grey temples or unwrinkled suit, and do not resemble 程鹭. Semi-realistic, same line as the chapter-1 masters, daylight. Real alpha, 1536×2304 PNG.
+Use case: illustration-story. Master waist-up portrait of 郑恪, assistant to 周总, in 《汐湾咖啡馆》. He is not a member of the Zhou family. Suggested: about thirty, lean, neat short black hair, dark-brown eyes. Pale shirt, dark trousers, no suit jacket, no name badge. Head slightly lowered, polite, not smiling, eyes still visible. Arms down, no folder. Do not resemble 周总's grey temples or unwrinkled suit, and do not resemble 程鹭. Semi-realistic, same line as the chapter-1 masters, daylight. Real alpha, 1536×2304 PNG. No scenery, no ground, no cast shadow/backdrop, leave a little headroom.
 ```
 
 ## 表情
