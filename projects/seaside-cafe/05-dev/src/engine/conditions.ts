@@ -6,7 +6,12 @@ export function fireworksWinner(
   present: PersonRef[],
   threshold: number,
 ): string | null {
-  const eligible = present.filter((person) => readStat(state, person.name, "romance") >= threshold);
+  const eligible = present.filter((person) => {
+    if (readStat(state, person.name, "romance") < threshold) return false;
+    // 沈若要在汐湾的自由行动里被选过一次，光靠电话和好感不够进这场。
+    if (person.name === "沈若" && state.vars["选过沈若"] !== "是") return false;
+    return true;
+  });
   if (eligible.length === 0) return null;
   const top = Math.max(...eligible.map((person) => readStat(state, person.name, "romance")));
   let tied = eligible.filter((person) => readStat(state, person.name, "romance") === top);
@@ -41,8 +46,17 @@ export function evalCond(state: GameState, cond: Cond | null): boolean {
       return fireworksWinner(state, cond.present, cond.threshold) === cond.who;
     case "belowAll": {
       if (!state.gender) return false;
-      const people = cond.present[state.gender];
+      const people = cond.present[state.gender].filter((person) => {
+        if (person.name === "沈若" && state.vars["选过沈若"] !== "是") return false;
+        return true;
+      });
       return people.every((person) => readStat(state, person.name, "romance") < cond.threshold);
+    }
+    case "reputation":
+      return cond.cmp === ">=" ? state.reputation >= cond.value : state.reputation < cond.value;
+    case "stat": {
+      const value = readStat(state, cond.who, cond.stat);
+      return cond.cmp === ">=" ? value >= cond.value : value < cond.value;
     }
     default: {
       const never: never = cond;
