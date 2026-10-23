@@ -1,0 +1,34 @@
+@font-face {
+  font-family: "XiwanUI";
+  src: url("../../../06-ui-design/mock/fonts/SourceHanSansCN-Regular-subset.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light;
+  --paper: #faf7ef;
+  --paper-soft: #f1eee4;
+  --ink: #293f39;
+  --ink-soft: #59665b;
+  --ink-muted: #6d756a;
+  --sea: #2e5b51;
+  --sea-dark: #203f38;
+  --sea-soft: #e4ebe3;
+  --accent: #a6654c;
+  --line: #d9ddd0;
+  --line-strong: #a7b4a4;
+  --glass: rgba(250, 247, 239, 0.94);
+  --shadow: 0 24px 80px rgba(15, 35, 30, 0.18);
+  --font-ui: "XiwanUI", "Microsoft YaHei", sans-serif;
+  --font-display:
+    "Baskerville", "Palatino Linotype", "STZhongsong", "Source Han Serif SC",
+    "SimSun", serif;
+  --font-latin: "Baskerville", "Palatino Linotype", Georgia, serif;
+  --hud-h: 88px;
+  --gutter: clamp(20px, 4vw, 72px);
+  --radius: 8px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}

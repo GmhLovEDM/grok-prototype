@@ -21,6 +21,7 @@ import {
   type TextSpeed,
 } from "../engine/storage";
 import type { GameState, Pos, Story } from "../engine/types";
+import { decodeImage, ImageCache, ImagePresenter } from "./images";
 
 type Look = { background: string; place: string | null; shift?: { includes: string; background: string } };
 type Mode = "title" | "settings" | "saves" | "log" | "play" | "version" | "menu";
@@ -44,7 +45,27 @@ const autoStops = [
 
 export function mount(root: ParentNode, storage: SaveStorage = browserStorage()): void {
   const stage = el("div", "stage");
+  const bg = el("div", "bg");
+  const portrait = document.createElement("img");
+  portrait.alt = "";
+  portrait.hidden = true;
+  portrait.className = "scene-portrait portrait";
+  const content = el("div", "scene-content");
+  stage.append(bg, portrait, content);
   root.append(stage);
+  const backgrounds = new ImageCache(decodeImage, 4);
+  const portraits = new ImageCache(decodeImage, 3);
+  const backgroundImage = new ImagePresenter(backgrounds, (image) => {
+    bg.style.backgroundImage = image ? `url("${image.src}")` : "";
+  });
+  let portraitClass = "portrait";
+  const portraitImage = new ImagePresenter(portraits, (image) => {
+    portrait.hidden = image === null;
+    if (image) {
+      portrait.className = `scene-portrait ${portraitClass}`;
+      portrait.src = image.src;
+    }
+  });
   let mode: Mode = "title";
   let backTo: Back = "title";
   let logBack: "play" | "menu" = "play";
@@ -135,6 +156,36 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     return "";
   }
 
+  function warmBackgrounds(view: View | null) {
+    const ids: string[] = [];
+    if (!view) {
+      ids.push("bg-chaoxi-dusty-afternoon", "bg-chaoxi-day");
+    } else if ("day" in view) {
+      const sourceDay = "sourceDay" in view ? view.sourceDay : view.day;
+      const dayIndex = script.days.findIndex((day) => day.day === sourceDay);
+      const day = script.days[dayIndex];
+      if (!day) return;
+      const sceneIndex = "scene" in view ? day.scenes.findIndex((scene) => scene.id === view.scene) : 0;
+      const look = "scene" in view ? looks[`${sourceDay}:${view.scene}`] : null;
+      if (look?.shift) ids.push(look.shift.background);
+      const next = day.scenes.slice(sceneIndex + 1, sceneIndex + 3);
+      for (const scene of next) {
+        const look = looks[`${sourceDay}:${scene.id}`];
+        if (look) ids.push(look.background);
+      }
+      if (!next.length) {
+        const nextDay = script.days[dayIndex + 1];
+        const scene = nextDay?.scenes[0];
+        const look = scene ? looks[`${nextDay.day}:${scene.id}`] : null;
+        if (look) ids.push(look.background);
+      }
+    }
+    // Only warm nearby scenes, rather than decode the entire art collection.
+    for (const id of [...new Set(ids)].slice(0, 2)) {
+      void backgrounds.load(asset(`assets/backgrounds/${id}/${id}.png`)).catch(() => undefined);
+    }
+  }
+
   function remember(view: View) {
     if (view.kind !== "line" || mode !== "play") return;
     const cursor = player.pos.jump ?? player.pos;
@@ -213,46 +264,38 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       }
     }
     stage.className = `stage ${pageClass(playing ? view : null)}`;
-    stage.replaceChildren();
-    const bg = el("div", "bg");
+    content.replaceChildren();
     const painted = playing && view ? backgroundOf(view) : shellBackground();
-    if (painted) bg.style.backgroundImage = `url("${painted}")`;
-    stage.append(bg);
+    void backgroundImage.show(painted || null).then((ready) => {
+      if (ready && token === renderToken) warmBackgrounds(view);
+    });
+    const targetPortrait = playing && view && mode !== "title" && showPortrait(view) ? portraitOf(view) : null;
+    portraitClass = targetPortrait?.cat ? "cat" : "portrait";
+    void portraitImage.show(targetPortrait?.src ?? null);
     if (playing && view && mode !== "title") {
       if (mode === "play") remember(view);
       appendPlay(view);
     }
-    if (mode === "menu") stage.append(menuOverlay());
-    if (mode === "log") stage.append(logOverlay());
-    if (mode === "title") stage.append(titleCard());
-    if (mode === "settings") stage.append(settingsPanel());
+    if (mode === "menu") content.append(menuOverlay());
+    if (mode === "log") content.append(logOverlay());
+    if (mode === "title") content.append(titleCard());
+    if (mode === "settings") content.append(settingsPanel());
     if (mode === "saves") void paintSaves(token);
-    if (mode === "version") stage.append(versionModal());
-    if (confirmLeave) stage.append(leaveModal());
+    if (mode === "version") content.append(versionModal());
+    if (confirmLeave) content.append(leaveModal());
     if (mode === "play" && view) schedulePace(view);
   }
 
   function appendPlay(view: View) {
-    if (showPortrait(view)) {
-      const found = portraitOf(view);
-      if (found) {
-        const img = document.createElement("img");
-        img.className = found.cat ? "cat" : "portrait";
-        img.alt = "";
-        img.src = found.src;
-        img.addEventListener("error", () => img.remove());
-        stage.append(img);
-      }
-    }
-    stage.append(hud(view));
-    if (view.kind === "day") stage.append(dayModal(view));
-    else if (view.kind === "end") stage.append(endModal(view));
-    else if (view.kind === "line") stage.append(lineCard(view));
-    else if (view.kind === "choice" && view.id === schedule.genderChoiceId) stage.append(genderModal(view));
-    else if (view.kind === "choice" && schedule.mapChoiceIds.includes(view.id)) stage.append(mapPanel(view));
-    else if (view.kind === "choice") stage.append(choiceList(view));
-    else if (view.kind === "input") stage.append(nameModal());
-    else if (view.kind === "minigame") stage.append(minigameModal(view));
+    content.append(hud(view));
+    if (view.kind === "day") content.append(dayModal(view));
+    else if (view.kind === "end") content.append(endModal(view));
+    else if (view.kind === "line") content.append(lineCard(view));
+    else if (view.kind === "choice" && view.id === schedule.genderChoiceId) content.append(genderModal(view));
+    else if (view.kind === "choice" && schedule.mapChoiceIds.includes(view.id)) content.append(mapPanel(view));
+    else if (view.kind === "choice") content.append(choiceList(view));
+    else if (view.kind === "input") content.append(nameModal());
+    else if (view.kind === "minigame") content.append(minigameModal(view));
   }
 
   function showPortrait(view: View): boolean {
@@ -507,8 +550,14 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
   }
 
   function titleCard(): HTMLElement {
+    const screen = el("div", "title-screen");
+    const brand = el("div", "title-brand", "SEASIDE CAFE");
+    brand.setAttribute("aria-hidden", "true");
     const card = el("section", "title-card");
-    card.append(el("p", "kicker", "老街十七号"), el("h1", "", "汐湾咖啡馆"), el("p", "subtitle", "一个夏天"));
+    const title = el("h1");
+    title.setAttribute("aria-label", "汐湾咖啡馆");
+    title.append(el("span", "", "汐湾"), el("span", "", "咖啡馆"));
+    card.append(el("p", "kicker", "老街十七号 · 海边的日常"), title, el("p", "subtitle", "一个夏天，一间等你回来的店。"));
     if (banner) card.append(el("p", "banner", banner));
     const list = el("div", "menu-list");
     list.append(
@@ -548,8 +597,15 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     gallery.setAttribute("aria-disabled", "true");
     gallery.append(document.createTextNode("图鉴"), el("span", "lock", "锁定"));
     list.append(gallery);
+    list.querySelectorAll("button").forEach((item) => {
+      item.setAttribute("aria-label", item.textContent ?? "");
+    });
     card.append(list, el("p", "fine", "外婆的店，叫「潮汐」"));
-    return card;
+    const stamp = el("div", "title-stamp");
+    stamp.setAttribute("aria-hidden", "true");
+    stamp.append(el("b", "", "潮汐"), el("span", "", "一封夏日来信"));
+    screen.append(brand, card, stamp, el("p", "title-foot", "A SUMMER BY THE SEA · 汐湾咖啡馆"));
+    return screen;
   }
 
   function settingsPanel(): HTMLElement {
@@ -608,7 +664,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     select.append(option);
     langRow.append(select);
     form.append(screenRow, langRow);
-    panel.append(form, el("p", "fine", "这一版界面只有简体中文。文字速度和自动速度的毫秒数见设计说明，玩家只看见慢和快。"));
+    panel.append(form, el("p", "fine", "按你的节奏，慢慢读。设置会自动保存。"));
     return panel;
   }
 
@@ -636,8 +692,8 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       rows.push({ slot, data });
     }
     if (token !== renderToken || mode !== "saves") return;
-    stage.append(savePanel(rows));
-    if (overwrite) stage.append(overwriteModal(overwrite.data));
+    content.append(savePanel(rows));
+    if (overwrite) content.append(overwriteModal(overwrite.data));
   }
 
   function savePanel(rows: { slot: string; data: SaveData | null }[]): HTMLElement {
@@ -802,7 +858,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
       if (confirmLeave) return;
       mode = "play";
       render();
-    }, true);
+    });
   }
 
   function logOverlay(): HTMLElement {
@@ -823,7 +879,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     return overlay(sheet, () => {
       mode = logBack;
       render();
-    }, true);
+    });
   }
 
   function leaveModal(): HTMLElement {
@@ -841,7 +897,7 @@ export function mount(root: ParentNode, storage: SaveStorage = browserStorage())
     return overlay(box, () => {
       confirmLeave = false;
       render();
-    }, false, true);
+    }, true);
   }
 
   async function leaveToTitle() {
@@ -1100,13 +1156,12 @@ function continueEl(): HTMLElement {
   return node;
 }
 
-function overlay(content: HTMLElement, onBackdrop?: () => void, belowHud = false, front = false): HTMLElement {
+function overlay(content: HTMLElement, onBackdrop?: () => void, front = false): HTMLElement {
   const layer = el("div", front ? "overlay confirm-layer" : "overlay");
   const backdrop = document.createElement("button");
   backdrop.type = "button";
   backdrop.className = "backdrop";
   backdrop.setAttribute("aria-label", "关闭");
-  if (belowHud) backdrop.style.top = "var(--hud-h)";
   if (onBackdrop) {
     backdrop.addEventListener("click", (event) => {
       event.stopPropagation();
