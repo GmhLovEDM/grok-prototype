@@ -1,0 +1,19 @@
+{
+  "generator": "built-in image_gen",
+  "edit_target": "C:/Users/Administrator/.codex/generated_images/01a16a41-4dfc-7653-9483-12bc90050d11/exec-f4062ce0-68e0-42e2-b833-5e19cd8e4718.png",
+  "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-a02564a9-f558-473d-9302-d788800c4c8f.png",
+  "native_file": "projects\\seaside-cafe\\assets\\_generation\\chapter-2-3-2026-10-24\\native\\bg-attic-day-canvas-front.png",
+  "file": "projects\\seaside-cafe\\assets\\backgrounds\\bg-attic-day\\bg-attic-day-canvas-front.png",
+  "native_size": [
+    1672,
+    941
+  ],
+  "output_size": [
+    1920,
+    1080
+  ],
+  "mode": "RGB",
+  "sha256": "5b6774454284e5b19da11bb2221a225bab76ac3a21c98b6f2bc2491f729199b3",
+  "prompt": "Use case: precise-object-edit.\nInput image: the supplied attic illustration is the EDIT TARGET. Make one local change only at the easel/canvas around x=75.1%, y=28.8%.\nRotate and rebuild that canvas on its easel so the FRONT painting surface faces the viewer STRAIGHT ON. Show a completely BLANK clean off-white artist's canvas, a simple upright rectangular surface with vertical left/right edges and horizontal top/bottom edges, fully front-facing and not turned away, not sideways, and not skewed. Do NOT show the back of the canvas, the wooden stretcher back, crossbars or central support across its front. The easel can naturally support the canvas from underneath and behind, but must not obscure the blank front surface. Retain approximately the same canvas size, center position, and easel footprint. Match the room's warm afternoon lighting and hand-painted material rendering.\nKeep EVERYTHING ELSE unchanged: camera viewpoint and 16:9 composition, low attic ceiling and beams, window, sea view, curtains, left shelving, floor, stool, dim hanging lamp, old black telephone and its desk on the RIGHT, chair, jars and other props. Preserve the original fine semi-realistic illustrated style and colors. Add no painting, lettering, people, animals, watermark, signature or border.\nOutput: opaque PNG, landscape16:9, target1920×1080.\n",
+  "validation": "PNG decoded; 1920x1080 RGB; blank canvas front faces viewer"
+}

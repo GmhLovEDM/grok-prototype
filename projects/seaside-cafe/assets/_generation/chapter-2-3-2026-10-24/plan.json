@@ -1,0 +1,20 @@
+[
+  {"id":"lu-mu_normal","kind":"portrait","file":"portraits/lu-mu/lu-mu_normal.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/lu-mu.md"},
+  {"id":"lu-mu_serious","kind":"portrait","file":"portraits/lu-mu/lu-mu_serious.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/lu-mu.md"},
+  {"id":"lu-mu_sad","kind":"portrait","file":"portraits/lu-mu/lu-mu_sad.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/lu-mu.md"},
+  {"id":"lu-ting_normal","kind":"portrait","file":"portraits/lu-ting/lu-ting_normal.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/lu-ting.md"},
+  {"id":"lu-ting_smile","kind":"portrait","file":"portraits/lu-ting/lu-ting_smile.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/lu-ting.md"},
+  {"id":"wai-po_normal","kind":"portrait","file":"portraits/wai-po/wai-po_normal.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/wai-po.md"},
+  {"id":"zheng-ke_normal","kind":"portrait","file":"portraits/zheng-ke/zheng-ke_normal.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/zheng-ke.md"},
+  {"id":"zheng-ke_serious","kind":"portrait","file":"portraits/zheng-ke/zheng-ke_serious.png","source_prompt":"projects/seaside-cafe/04-art-prompts/characters/zheng-ke.md"},
+  {"id":"bg-attic-day","kind":"background","file":"backgrounds/bg-attic-day/bg-attic-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/attic.md"},
+  {"id":"bg-archive-rain-night","kind":"background","file":"backgrounds/bg-archive-rain-night/bg-archive-rain-night.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/county.md"},
+  {"id":"bg-warehouse-late","kind":"background","file":"backgrounds/bg-warehouse-late/bg-warehouse-late.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/county.md"},
+  {"id":"bg-hall-day","kind":"background","file":"backgrounds/bg-hall-day/bg-hall-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/hall.md"},
+  {"id":"bg-inn-corridor-day","kind":"background","file":"backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/inn.md"},
+  {"id":"bg-lu-door-day","kind":"background","file":"backgrounds/bg-lu-door-day/bg-lu-door-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/lu-house.md"},
+  {"id":"bg-outer-boat-day","kind":"background","file":"backgrounds/bg-outer-boat-day/bg-outer-boat-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/outer-boat.md"},
+  {"id":"bg-outer-boat-dusk","kind":"background","file":"backgrounds/bg-outer-boat-dusk/bg-outer-boat-dusk.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/outer-boat.md"},
+  {"id":"bg-lab-day","kind":"background","file":"backgrounds/bg-lab-day/bg-lab-day.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/research-station.md"},
+  {"id":"bg-night-dive","kind":"background","file":"backgrounds/bg-night-dive/bg-night-dive.png","source_prompt":"projects/seaside-cafe/04-art-prompts/scenes/research-station.md"}
+]

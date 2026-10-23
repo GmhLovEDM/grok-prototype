@@ -1,0 +1,669 @@
+{
+  "status": "PASS",
+  "expected_deliverables": 18,
+  "saved_deliverables": 18,
+  "backgrounds": 10,
+  "portraits": 8,
+  "missing": [],
+  "errors": [],
+  "files": [
+    {
+      "id": "lu-mu_normal",
+      "kind": "portrait",
+      "file": "portraits/lu-mu/lu-mu_normal.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/lu-mu.md",
+      "planned_file": "portraits/lu-mu/lu-mu_normal.png",
+      "saved_at": "2026-10-23T19:37:32.730674+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-948735f6-3f0e-4bd1-ba7a-1118a1cde020.png",
+      "native_file": "native/lu-mu_normal-attempt1.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "51e36ffc1dea3486cd334dfc62c424671affc1f8c624560d14172d6c4be1c3b8",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 581214,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.3695259094238281
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1308818,
+        "fully_opaque_pixels": 1176,
+        "transparent_fraction": 0.36983292191116895
+      },
+      "sha256": "46bd2628f5e1a3a3e359b073f7a03263c1c2dbff94a60af183942ebc68c9c4d5",
+      "bytes": 3374690,
+      "prompt_file": "saved-prompts/lu-mu_normal.txt",
+      "prompt": "Use case: illustration-story. Asset: lu-mu_normal, one master waist-up character portrait for the Chinese visual novel 汐湾咖啡馆.\nMaster portrait of 陆母, Lu Yu's mother. Suggested appearance as specified in the source: Chinese woman 45–50, short stature, narrow shoulders, practical working build, visibly middle-aged and natural rather than a model. Black hair with some white, neatly combed behind the ears, NOT a bun. Dark near-black narrow monolid eyes, level brows, flat unsmiling mouth; a subtle maternal family resemblance to Lu Yu's narrow eyes and level brows, but an individual mature female face, lighter skin than her sun-tanned son and no cowlick. Dark plain everyday blouse, no apron, no text.\nExpression normal: quiet, emotionally reserved, looking slightly away without seeking eye contact; no smile. Standing front with a slight three-quarter angle, arms hanging naturally. Waist-up only, bottom ends at the blouse hem or waistline; no thighs, no legs. Leave a little clear space above the hair.\nStyle: polished delicate semi-realistic hand-drawn character illustration matching the existing chapter-1 portraits: fine clean linework, restrained layered painting, credible natural skin and fabric, realistic facial proportions, soft warm-neutral summer daylight from upper left with subtle cool ambient fill. NOT photography, NOT 3D, NOT anime big eyes or chibi.\nOutput portrait 2:3 composition, target 1536×2304 PNG, real transparent alpha background, isolated clean silhouette. No scenery, ground, backdrop, cast shadow, checkerboard pattern, border, signature, watermark or text.\nAvoid: brass whistle, plaid shirt, cowlick, rope calluses or scars, suit jacket, fishing costume, bun, shop apron, props held in hands, envelope, extra fingers, full body. Do not make her look like Xiu Yi.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "lu-mu_serious",
+      "kind": "portrait",
+      "file": "portraits/lu-mu/lu-mu_serious.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/lu-mu.md",
+      "planned_file": "portraits/lu-mu/lu-mu_serious.png",
+      "saved_at": "2026-10-23T19:38:13.108606+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-da5d30dc-0c07-4ec2-bbe2-a1af6efb71ec.png",
+      "native_file": "native/lu-mu_serious.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "5b3e24e1a25c21c5373db3ce5e0478ea96084edc0ffe538b84dc8afc33383ef0",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 580425,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.36902427673339844
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1307243,
+        "fully_opaque_pixels": 1146,
+        "transparent_fraction": 0.3693878738968461
+      },
+      "sha256": "672ecaec2ed1f307e8bc6386176277daee9b6d25ec8f17bae796919c281d2fe4",
+      "bytes": 2945641,
+      "prompt_file": "saved-prompts/lu-mu_serious.txt",
+      "prompt": "Use case: precise-object-edit. Edit the supplied lu-mu_normal master into lu-mu_serious for 汐湾咖啡馆. Change facial expression and face complexion ONLY: the color has drained from her face after seeing an envelope; quiet subdued pallor, lips flat, eyes still open. NOT flushed anger, no scowl, no tears. Keep this exact woman's identity, age, face shape, narrow eyes, neat black-and-white hair tucked behind ears (no bun), dark blouse, pose, framing, body, and upper-left soft daylight. Arms stay down. Do not add the envelope or any prop. Retain waist-up crop, little headroom, no thighs. Preserve real transparent alpha everywhere outside the silhouette; no backdrop, glow, cast shadow, checkerboard, text, watermark, border, whistle. Delicate semi-realistic hand-drawn style unchanged. Portrait 2:3, target 1536×2304 PNG.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "lu-mu_sad",
+      "kind": "portrait",
+      "file": "portraits/lu-mu/lu-mu_sad.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/lu-mu.md",
+      "planned_file": "portraits/lu-mu/lu-mu_sad.png",
+      "saved_at": "2026-10-23T19:39:23.802899+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-8d5cc377-c8ae-4532-8601-dbdf158e63d9.png",
+      "native_file": "native/lu-mu_sad.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "a1167474e36ba51e5fbfcd0fa9027aa57ce82f398599bfddb8ebdfa51baccda7",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 575802,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.3660850524902344
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1296555,
+        "fully_opaque_pixels": 1010,
+        "transparent_fraction": 0.36636776394314235
+      },
+      "sha256": "1c5186e2b3ed6e3d69fe7da24a6014c1ab19ad437caa92f09e1fe11e2692e9d6",
+      "bytes": 2986346,
+      "prompt_file": "saved-prompts/lu-mu_sad.txt",
+      "prompt": "Use case: precise-object-edit. Edit only the facial expression of the supplied lu-mu_normal master into lu-mu_sad, the same middle-aged Chinese mother. Quiet sadness after finishing a difficult sentence: eye rims noticeably reddened, a slight wetness in the eyes, no tears streaming, no sobbing. Mouth still flat and closed. Keep exact face identity, age, features, neat black-and-white hair behind ears (not a bun), dark everyday blouse, pose, framing, soft upper-left daylight and delicate semi-realistic hand-drawn treatment unchanged. Arms/hands remain down and steady, no shaking and no prop. Same waist-up portrait with a little headroom and bottom at waist. Real transparent alpha cutout, no backdrop or shadow, no checkerboard, no text, border, watermark, whistle or envelope. Target 1536×2304 PNG, portrait 2:3.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "lu-ting_normal",
+      "kind": "portrait",
+      "file": "portraits/lu-ting/lu-ting_normal.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/lu-ting.md",
+      "planned_file": "portraits/lu-ting/lu-ting_normal.png",
+      "saved_at": "2026-10-23T20:07:28.958793+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-f7fa03c1-2eae-4215-a11f-6749ea2cbc37.png",
+      "native_file": "native/lu-ting_normal-v2.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "975de5a359ec6885b49ad143063aed6ad6e6c88be8e5244369f8496c320e653c",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 616354,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.39186731974283856
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1386773,
+        "fully_opaque_pixels": 448,
+        "transparent_fraction": 0.3918606793438947
+      },
+      "sha256": "93f9d4b2574fd432acc1a73fd23161b506880c97053f5de78ffdf58f75ecfc9c",
+      "bytes": 2814055,
+      "prompt_file": "saved-prompts/lu-ting_normal-v2.txt",
+      "prompt": "Use case: precise-object-edit. Correct the provided lu-ting_normal portrait while keeping the SAME character, black LOW ponytail, pale summer school shirt, body, arms-down pose, waist-up framing, scale and hand-drawn painting.\nOnly corrections: make her eyelids naturally narrow MONOLIDS with no visible upper-lid crease, slightly straighter level brows, irises near-black; give her face, neck and arms a modest natural sun tan consistent with a coastal student. Expression tense and held in, mouth flat, no smile. She is about eighteen, small and slight. No beauty makeup or round wide-open eyes. Retain all other facial identity and hairstyle.\nClean the alpha silhouette carefully: REMOVE all detached white/colored fragments around sleeves and bottom edge, remove all background/glow. Everything outside the character must be fully transparent alpha including gaps beside arms. Keep soft natural hair detail with no colored fringe. Do not paint a checkerboard. Do not add any new props, text, ornaments or scene.\nDelicate semi-realistic hand-drawn illustration with restrained color and soft upper-left daylight, NOT photo or 3D. PNG with genuine transparent background, 2:3 portrait target1536×2304.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing",
+      "event": "selected refinement promoted to canonical filename",
+      "previous_selected_file": "portraits/lu-ting/lu-ting_normal-v2.png",
+      "first_draft_file": "drafts/lu-ting_normal-v1.png"
+    },
+    {
+      "id": "lu-ting_smile",
+      "kind": "portrait",
+      "file": "portraits/lu-ting/lu-ting_smile.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/lu-ting.md",
+      "planned_file": "portraits/lu-ting/lu-ting_smile.png",
+      "saved_at": "2026-10-23T19:42:39.138691+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-37f4bfa0-0519-47fc-b801-be49c05f9af7.png",
+      "native_file": "native/lu-ting_smile.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "d343fb2261831dd39574c2539f011cc0915ed7bd30658437271807efbb191e6b",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 612632,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.3895009358723958
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1378784,
+        "fully_opaque_pixels": 670,
+        "transparent_fraction": 0.38960322627314814
+      },
+      "sha256": "99a2e701bde5fca6be4ba4006b796d8f9bb87a42e8740ef684102f9ce98e036a",
+      "bytes": 2601259,
+      "prompt_file": "saved-prompts/lu-ting_smile.txt",
+      "prompt": "Use case: precise-object-edit. Use supplied lu-ting_normal-v2 as the exact identity master for lu-ting_smile. Change the expression ONLY: lift the corners of her closed mouth just a little into a small held-back smile, eyes still somewhat tense. Not laughing, not a broad grin, no teeth. Keep the exact same young Chinese woman's face, dark narrow monolid eyes, skin tone, black LOW ponytail, plain short-sleeved summer school shirt, arms-down pose, waist-up framing, headroom and upper-left daylight. Preserve delicate semi-realistic hand-drawn style and genuine transparent alpha outside the silhouette, with clean hair and sleeve edges and no detached fragments. No envelope or admission letter, no other props, no backdrop, shadow, checkerboard, text, signature or watermark. Portrait 2:3 target1536×2304 PNG.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "wai-po_normal",
+      "kind": "portrait",
+      "file": "portraits/wai-po/wai-po_normal.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/wai-po.md",
+      "planned_file": "portraits/wai-po/wai-po_normal.png",
+      "saved_at": "2026-10-23T19:44:01.180996+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-f30ce85c-842d-476c-a4be-7ae488c1a63f.png",
+      "native_file": "native/wai-po_normal.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "7d5833e1a1b4f271f4d1035350ab67e842e421bb2135849690ba6ab355a65927",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 715294,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.4547716776529948
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1610341,
+        "fully_opaque_pixels": 406,
+        "transparent_fraction": 0.4550343266239873
+      },
+      "sha256": "003375b76937069cf9b4bd63c4303c85c58d9f93bfa497b081f33cffd100d52c",
+      "bytes": 3287302,
+      "prompt_file": "saved-prompts/wai-po_normal.txt",
+      "prompt": "Use case: illustration-story. Asset wai-po_normal: one master waist-up portrait of 外婆 AS A YOUNG WOMAN in 汐湾咖啡馆. She is the café's future original owner, depicted BEFORE she founded the café, in her early twenties. NOT elderly, NOT forty, NOT an aged photograph.\nChinese young adult woman of ordinary stature and build, black hair gathered into a LOW tucked knot at back, a few natural loose strands stirred by sea breeze. Dark-brown eyes, individual natural face, not Xia Zhi's downward almond eyes and not Lu Yu's monolids. Plain LIGHT period cotton blouse and skirt with simple old-fashioned tailoring, modest, no flashy jewelry. Only a little of the skirt waistline visible at bottom. Calm, eyes toward the camera, closed relaxed flat mouth, no big smile. Arms down, front slightly three-quarter.\nShe will later be composited into an old photograph beside a boat, but THIS deliverable is the full-color isolated character ONLY: no boat, photograph border, sepia filter or background.\nPolished fine semi-realistic hand-drawn illustration, clean fine lines, restrained colors, believable fabric and natural skin, adult human proportions; soft warm-neutral daylight from upper left and slight cool ambient fill, matching chapter-1 character painting.\nWaist-up portrait 2:3 target1536×2304 PNG, real transparent alpha outside clean silhouette, slight headroom. No scenery, floor, backdrop, cast shadow, checkerboard, letters, border, watermark or signature.\nAvoid: modern key, brass lighthouse key, sugar tin, wooden hairpin, modern apron, phone, glasses, liver spots, rope scars, boat, the text 远帆 or 就站这儿, whole body, thighs, photo realism, 3D, chibi, anime big eyes. Do not reuse another character's face.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "zheng-ke_normal",
+      "kind": "portrait",
+      "file": "portraits/zheng-ke/zheng-ke_normal.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/zheng-ke.md",
+      "planned_file": "portraits/zheng-ke/zheng-ke_normal.png",
+      "saved_at": "2026-10-23T19:45:55.012677+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-e7773422-1840-4512-996b-2894afad607d.png",
+      "native_file": "native/zheng-ke_normal.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "4fb7a74575fe23159c3341ba01353f6942e2a40c421f61ddcaa56543c60b9969",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 556279,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.35367266337076825
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1253624,
+        "fully_opaque_pixels": 1571,
+        "transparent_fraction": 0.35423674406828703
+      },
+      "sha256": "f9dc78da34c55a0e62284263421934c77f7102be2bc4734058fc754a1068a015",
+      "bytes": 3105280,
+      "prompt_file": "saved-prompts/zheng-ke_normal.txt",
+      "prompt": "Use case: illustration-story. Asset zheng-ke_normal: master waist-up portrait of 郑恪, assistant to 周总 in the Chinese visual novel 汐湾咖啡馆.\nChinese man about thirty, lean build, neat short black hair, dark-brown eyes. A distinct understated young man's face, not related to Zhou Zong, no grey temples; do NOT reuse Zhou Zong's face. Do not resemble Cheng Lu: no wet ponytail, grey eyes, diving watch or coral scars.\nPale plain shirt, dark trousers with at most a glimpse of belt at bottom. NO suit jacket, tie, name badge or company logo. Head slightly lowered but both eyes remain visible; politely reserved expression as if speaking quietly, flat closed mouth without smiling. Front with a small three-quarter turn, arms naturally hanging at sides, no folder or props.\nPolished fine semi-realistic hand-drawn character illustration matching chapter-1 masters: clean subtle linework, restrained painted colors, credible skin and cloth, realistic adult proportions, soft warm-neutral daylight from upper left and cool ambient fill, not stage lighting. Not a photo, not 3D, not chibi or anime big eyes.\nStrict waist-up, lower crop at waist/belt top, no thighs. Leave a little headroom. Portrait 2:3 target1536×2304 PNG, genuine transparent alpha all around clean silhouette. No background, scenery, floor, cast shadow, glow, checkerboard pattern, text, border, signature or watermark. No additional fingers, no held objects.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "zheng-ke_serious",
+      "kind": "portrait",
+      "file": "portraits/zheng-ke/zheng-ke_serious.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/characters/zheng-ke.md",
+      "planned_file": "portraits/zheng-ke/zheng-ke_serious.png",
+      "saved_at": "2026-10-23T19:47:45.921312+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-0dd5c893-f406-41e9-89f8-569b373c2a2b.png",
+      "native_file": "native/zheng-ke_serious.png",
+      "native_size": [
+        1024,
+        1536
+      ],
+      "native_mode": "RGBA",
+      "native_sha256": "3570288a67686e47234d4eb62dceefdaf3b68c8b769edf2b5f101f5af5096807",
+      "native_alpha": {
+        "range": [
+          0,
+          254
+        ],
+        "fully_transparent_pixels": 550146,
+        "fully_opaque_pixels": 0,
+        "transparent_fraction": 0.3497734069824219
+      },
+      "output_size": [
+        1536,
+        2304
+      ],
+      "mode": "RGBA",
+      "alpha": {
+        "range": [
+          0,
+          255
+        ],
+        "fully_transparent_pixels": 1239943,
+        "fully_opaque_pixels": 1566,
+        "transparent_fraction": 0.3503709016022859
+      },
+      "sha256": "07d90ca7f0c7b049bd293f6c71bf574336c043c394af4791e2f5e2e304fc3aa7",
+      "bytes": 2742904,
+      "prompt_file": "saved-prompts/zheng-ke_serious.txt",
+      "prompt": "Use case: precise-object-edit. Edit the supplied zheng-ke_normal master into zheng-ke_serious for 汐湾咖啡馆. Change facial expression ONLY: mouth closed, gaze a little farther down and aside as though speaking confidentially. Still courteous, restrained, not angry, not threatening, no scowl. Keep this exact man's face, age around thirty, short neat black hair, brown eyes, pale shirt, lean body, arms-down pose, framing, upper-left natural daylight and fine semi-realistic painted treatment unchanged. No folder, suit jacket, tie, badge, name or other prop. Waist-up crop, little headroom, bottom at waist/belt top. Preserve genuine transparent alpha outside the silhouette, no background, shadow, glow, checkerboard, border, text, signature or watermark. Portrait 2:3, target1536×2304 PNG.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-attic-day",
+      "kind": "background",
+      "file": "backgrounds/bg-attic-day/bg-attic-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/attic.md",
+      "planned_file": "backgrounds/bg-attic-day/bg-attic-day.png",
+      "saved_at": "2026-10-23T20:22:54.310441+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-f4062ce0-68e0-42e2-b833-5e19cd8e4718.png",
+      "native_file": "native/bg-attic-day.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "9befbd532dec4d96feadcba18a4d87d7e31db9320e28f45b3e7c998651d1d9af",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "2c37dc9606b4dc3ada00ed60df3c8e89c4dc5fe3720b3d175d89316efbc167e9",
+      "bytes": 2861799,
+      "prompt_file": "saved-prompts/bg-attic-day.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-attic-day for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic 16:9 painting, target1920×1080 opaque PNG. Fine clean linework, restrained painted color, believable worn wood and plaster, matching the established chapter-1 cafe interiors; NOT a photograph, NOT 3D, NOT chibi.\nDaytime attic above a general store, viewed into the small rented room from the doorway. VERY LOW ceiling and low exposed timber beams. Worn wooden floor with a few isolated paint marks that form no writing. A small sea-facing window in the central 80% gives warm afternoon daylight from upper left, with a little cool sky fill. One yellow pull-cord bulb, dim and only half bright, weaker than the daylight. An easel with the canvas turned toward the wall: show only its blank back, no finished painting. A low stool, an empty brush-washing jar, and an old landline telephone with receiver ON the hook, no screen. Quiet space where someone could paint or simply sit.\nKeep window, easel, phone and stool inside the central 80%; outer left/right 10% are expendable wall/floor continuations for phone cropping. Leave usable central ground for later character overlays, but paint NO person or animal.\nNo people, faces, hands, feet, cat, dog, close bird, finished seascape, torn canvas, readable writing, sketchbook text, contract, red lines, neon, extra signs, watermark, signature, border, garbled letters.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing",
+      "event": "user explicitly selected original attic image",
+      "previous_canonical_backup": "drafts/bg-attic-day-phone-center.png"
+    },
+    {
+      "id": "bg-archive-rain-night",
+      "kind": "background",
+      "file": "backgrounds/bg-archive-rain-night/bg-archive-rain-night.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/county.md",
+      "planned_file": "backgrounds/bg-archive-rain-night/bg-archive-rain-night.png",
+      "saved_at": "2026-10-23T19:50:37.848682+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-d277a847-58e3-440b-ba4f-9f9bc6d7c850.png",
+      "native_file": "native/bg-archive-rain-night.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "00958d8f85737cba9d375c220de321a3b37681587379b88d14bb9c3468c37ec1",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "bc5c95d7a4b6859b2f787060d009b3d793cf79d69d819c355e83d369c4f224ee",
+      "bytes": 2695318,
+      "prompt_file": "saved-prompts/bg-archive-rain-night.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-archive-rain-night for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting, target1920×1080 opaque PNG; fine clean lines, restrained paint and believable worn materials, not photo or3D.\nSmall COUNTY ARCHIVE room at NIGHT IN RAIN. A counter and shelves of files and round film cans centered. Metal and/or wood filing cabinets. One empty chair. Labels and folder spines are faded, blank or too indistinct to read. Cool-white fluorescent tubes overhead; one tube dim and flickering, others steady. A window clearly inside the central80% shows rain streaks, wet glass and darkness outside. The room feels opened late solely to search one old record. Interior fluorescent light, not sunny coastal golden light.\nAll key objects and window inside the central80%; outer left/right10% may be cropped, only continuations of wall/floor/shelves there. Comfortable eye-level framing with usable central space for later character overlay; absolutely empty of people and animals.\nNo readable names, no readable records or household-register pages, no readable text anywhere, no 渔民巷, no 翌日 doorplate, no dominant green postal cabinet. This is the county archive, not the town post office. No people, faces, hands, feet, cat, dog, close bird, neon, watermark, signature, border, gibberish or extra signage.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-warehouse-late",
+      "kind": "background",
+      "file": "backgrounds/bg-warehouse-late/bg-warehouse-late.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/county.md",
+      "planned_file": "backgrounds/bg-warehouse-late/bg-warehouse-late.png",
+      "saved_at": "2026-10-23T19:51:51.526614+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-3942e4ff-5474-428c-8a07-826098855e4c.png",
+      "native_file": "native/bg-warehouse-late.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "084bfb354012a0774c5b8409da6fde5cfabacf620aa0abdc8052b0bb4e8545bd",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "d60441679f6238b3f78b1c12589adc9a143dbb79b970db92cc75a35d89a6aadc",
+      "bytes": 2917861,
+      "prompt_file": "saved-prompts/bg-warehouse-late.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-warehouse-late for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG, fine clean linework, restrained color and credible dusty aged materials, matching chapter-1 background illustration. Not photo, not3D.\nCOUNTY RETURNED-MAIL WAREHOUSE in late afternoon. Tall old shelving, dust on the floor and in the air. One ROW OF CLOSED KRAFT ENVELOPES at reachable hand height in the center, their addresses faded and illegible. Rows of fluorescent tube lights switched on, dust floating visibly in the light beams. A narrow open doorway in the middle area reveals a platform still in late DAYLIGHT, not full night. Shelves feel untouched for decades; attention rests on this one row today.\nMain envelope row, lit narrow doorway and floor space inside central80%; outer10% each side are crop-safe shelf/wall continuations without key objects. Empty eye-level environment for later character overlays.\nNo people, faces, hands, feet, animals, opened envelopes, opened letters, loose letter text, readable addresses or names, readable writing anywhere, 渔民巷, 翌日 doorplate, dominant green post cabinets, neon, watermark, signature, border, garbled letters or extra signs. This is a county storage warehouse, not the small-town post office.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-hall-day",
+      "kind": "background",
+      "file": "backgrounds/bg-hall-day/bg-hall-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/hall.md",
+      "planned_file": "backgrounds/bg-hall-day/bg-hall-day.png",
+      "saved_at": "2026-10-23T19:53:11.695161+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-c93c84ff-361a-4dbd-8d84-d4497888301d.png",
+      "native_file": "native/bg-hall-day.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "8e477737088ef223e1d69d828405c1cf9a303c9ad11eef630887d19138b17f97",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "6f7afd255644f7748706f284c27bb8d628a02b4b9f28f60f5467b0c67e0bf5f0",
+      "bytes": 2858053,
+      "prompt_file": "saved-prompts/bg-hall-day.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-hall-day for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG. Fine clean lines, restrained paint, honest worn materials like the chapter-1 interiors, not a photo or3D.\nSMALL TOWN GOVERNMENT HALL BY DAY. Eye-level view toward a modest low platform and centered long table. Rows of empty slightly CROOKED chairs, not perfectly aligned; this is usually a chair-storage room temporarily used for a meeting. High windows let angled DAYLIGHT in from above, mixed with cool-white fluorescent tubes switched on. One ceiling fan stopped or just slowing. A single switched-OFF microphone with no brand on the long table. In the middle of the wooden floor, one visibly LIGHTER RECENTLY PATCHED FLOORBOARD. Simple local meeting room, human-scaled and unpretentious.\nCenter the table, chair arrangement and patched floor in middle80%; outer left/right10% are crop-safe continuation of walls/floor. Leave space for character overlays, draw no person.\nNo people, faces, hands, feet, animals, papers, documents, torn paper, intention letter, data board, banners, readable text, emblem closeup, microphone writing, sea, fireworks, stalls, neon, watermark, signature, border or garbled letters. Daytime, not dusk.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-inn-corridor-day",
+      "kind": "background",
+      "file": "backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/inn.md",
+      "planned_file": "backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png",
+      "saved_at": "2026-10-23T20:07:28.963814+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-da741e66-342d-4e53-87f3-ea2371d459df.png",
+      "native_file": "native/bg-inn-corridor-day-v2.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "4d4fba48823c46b40a86dc7fa8ff9a2ca6c7f8aa38a83524f9da8715951afc3b",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "af790b5472df54dc8873dadf7e59e60f2953d6e51f884b5c66487a711296f530",
+      "bytes": 3061195,
+      "prompt_file": "saved-prompts/bg-inn-corridor-day-v2.txt",
+      "prompt": "Use case: precise-object-edit. Edit the supplied old seaside inn corridor image. Change ONLY the location and size of the wooden 浪花里 sign so it is completely safe from side cropping. Remove its current right-wall position and restore plain old wooden wall there. Hang a SMALLER wooden sign in the MIDDLE of the image, under the row of old frames, with its center around 55% of image width and 58% of image height. Its whole rectangle must fit between 40% and70% of image width, well away from the outer10% sides. It should read EXACTLY “浪花里”, three clear Chinese characters, no other text. Preserve corridor, daytime light, damp wood, faded unrecognizable photo images, old numberless surfboard and painted style. No people, no new objects. Output panoramic16:9 target1920×1080 opaque PNG.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing",
+      "event": "selected refinement promoted to canonical filename",
+      "previous_selected_file": "backgrounds/bg-inn-corridor-day/bg-inn-corridor-day-v2.png",
+      "first_draft_file": "drafts/bg-inn-corridor-day-v1.png"
+    },
+    {
+      "id": "bg-lu-door-day",
+      "kind": "background",
+      "file": "backgrounds/bg-lu-door-day/bg-lu-door-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/lu-house.md",
+      "planned_file": "backgrounds/bg-lu-door-day/bg-lu-door-day.png",
+      "saved_at": "2026-10-23T19:57:39.485341+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-2ea5088b-adf7-4567-8e39-553f43dc552d.png",
+      "native_file": "native/bg-lu-door-day.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "ddb6b1b2f9984b78f85a9c97bda70cad2e132940bf05b28c83d0a973dbcb4196",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "dae817748398f6058b154f28e933d40187019dcfadb98d11cf3a9d4db3e72b75",
+      "bytes": 3676290,
+      "prompt_file": "saved-prompts/bg-lu-door-day.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-lu-door-day for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG, fine clean lines, restrained paint, believable sun-aged salt-worn wood matching chapter-1 old street and dock. Not photo, not3D.\nDAYTIME FRONT DOOR OF THE LU FISHERMAN'S HOUSE immediately next to the cafe. Face the old wooden door straight on. The SHUT DOOR in the CENTER has old water staining across its lower half and one copper ring knocker with green verdigris. Worn steps lead down to central empty ground where a person can later be overlaid. The steps have OLD water stains, not freshly falling rain. One upstairs window is visible, dark inside because the lamp is off; the outside scene is clearly daytime. A small slice of neighboring wooden or plaster wall indicates the buildings touch. Warm-neutral sunshine from upper left and a touch of cool sky fill.\nDoor, knocker, steps, upstairs window and character standing area within central80%; left/right10% only continuation of walls and ground, crop-safe. Quiet fisherman's home, no people drawn.\nNo people, faces, hands, feet, cat, dog, close bird, envelopes, letter paper, letters, boat, brass whistle, sign text, 潮汐 characters, readable writing, neon, nighttime light, watermark, signature, border or gibberish.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-outer-boat-day",
+      "kind": "background",
+      "file": "backgrounds/bg-outer-boat-day/bg-outer-boat-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/outer-boat.md",
+      "planned_file": "backgrounds/bg-outer-boat-day/bg-outer-boat-day.png",
+      "saved_at": "2026-10-23T19:59:20.727707+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-06bd5bc2-ae4d-42d2-838f-d257e818a7f4.png",
+      "native_file": "native/bg-outer-boat-day.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "4f9491fb3c559f24aa9eaddaa4f2c1d279b948bce48048c69e0073e8076aa8d5",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "2e9e5d08ae7128717ce1382c158335b7da56bf06fbd96cc448093a0a33a8e4aa",
+      "bytes": 3456403,
+      "prompt_file": "saved-prompts/bg-outer-boat-day.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-outer-boat-day for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG, clean subtle lines and restrained brushwork, believable heavy sea and worn wood matching chapter-1 dock illustrations. Not a photo or3D.\nDAYTIME JUST AFTER A TYPHOON. Thick grey-white cloud, grey-white daylight, waves still HIGH and striking mooring posts. Quiet dock with very few boats. From the dock look at a SMALL UNNAMED WORK BOAT still at the quay, about to depart. Its CABIN and wooden GANGWAY are centered in the image; simple railings, worn practical working hull. Gangway still connects to shore. In the cabin, ONE CLOSED MEDICAL BOX is clearly visible at natural scale; the box bears ONE RED CROSS and NO TEXT. No red-cross people or other people. A few distant boats permissible, not busy.\nKeep entire main boat, cabin, gangway and medical box well inside central80%; outer left/right10% should be crop-safe sea/quay continuation. Character overlay space on quay in central area; do not draw characters.\nNo people, faces, hands, feet, animals, hull name, boat name, lettering, 远帆号, dry net piles, empty berth as main subject, sunny golden light, bright turquoise holiday sea, neon, watermark, signature, border or garbled text. This small workboat is not the named 远帆号.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-outer-boat-dusk",
+      "kind": "background",
+      "file": "backgrounds/bg-outer-boat-dusk/bg-outer-boat-dusk.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/outer-boat.md",
+      "planned_file": "backgrounds/bg-outer-boat-dusk/bg-outer-boat-dusk.png",
+      "saved_at": "2026-10-23T20:01:09.402669+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-e2a34687-2354-4414-a72a-bc22a846e7da.png",
+      "native_file": "native/bg-outer-boat-dusk.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "bcbbad241687fce0ccf6dcde3ab3c5f9a9124cc3ec9da6c3c1112b6c1c17b0b8",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "49dc81794fa5288f4f7b04f9ab36614f8a830843209000e88dd5037ebe9aca76",
+      "bytes": 3438892,
+      "prompt_file": "saved-prompts/bg-outer-boat-dusk.txt",
+      "prompt": "Use case: lighting-weather. Use the supplied bg-outer-boat-day as the exact boat and dock reference. Create bg-outer-boat-dusk, the SAME small unnamed working boat RETURNING at DUSK after the typhoon in 汐湾咖啡馆.\nKeep the same recognizable hull, cabin, rails, wet quay, mooring posts and gangway, with cabin centered. The gangway has been reattached. Make the deck and railings wet, water beads and puddles. The sea still has high unsettled waves. The sky remains GREY and overcast, with ONLY a NARROW WARM EDGE along the base of the clouds. It is evening now, distinctly dimmer than the daylight reference, not full night. ONE small dock lamp just switched on. No broad golden sunset or amber scenic glow. The medical box can remain inconspicuous inside but must not become the subject and must carry no writing.\nPreserve polished semi-realistic hand-drawn background painting, fine linework, restrained colors, believable heavy sea and worn wood; not photo or3D. All key objects inside central80%, outer10% each side crop-safe sea/quay. Panoramic16:9 target1920×1080 opaque PNG.\nNo people, faces, hands, feet, animals, hull names, 远帆号, lettering, empty berth as main subject, large golden sunset, neon, signature, watermark, border or garbled text.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-lab-day",
+      "kind": "background",
+      "file": "backgrounds/bg-lab-day/bg-lab-day.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/research-station.md",
+      "planned_file": "backgrounds/bg-lab-day/bg-lab-day.png",
+      "saved_at": "2026-10-23T20:03:11.662782+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-86d54464-3b65-4c2f-a22c-7db129497dbd.png",
+      "native_file": "native/bg-lab-day.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "6b1df1590a9766cd08c739bbe5ac8cbb099d231911dbf2a395d612155337c588",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "d92b87982748b0c080876ab950108bcb501b3e064d9fa7034d5ee30ee615b85d",
+      "bytes": 3626648,
+      "prompt_file": "saved-prompts/bg-lab-day.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-lab-day for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG, fine clean lines and restrained layered painting, credible salt-worn materials matching chapter-1 plates, not photo or3D.\nDAYTIME MARINE FIELD STATION beyond the rocky reef, a row of modest prefabricated rooms beside NEARSHORE SHALLOW WATER. Practical working coastal station, not a lighthouse, dock restaurant or clinic. Center the entrance and shallow water immediately in front. Paint chipped in one patch on the door, door open JUST A CRACK, one step. Warm-neutral sunlight from upper left, a little cool skylight, wet reflections.\nA modest BRASS PLAQUE on the station wall near the entrance, placed close to the MIDDLE of the frame, entirely inside central80%. It bears EXACTLY ONE CLEAR CHINESE SENTENCE: “启动经费：匿名捐赠”. Each of these characters and the colon must be correct and clearly legible. No extra characters, no Latin letters, no gibberish, no donor name. The plaque must be large enough to read naturally in this scene.\nIn the SHALLOW WATER just outside the door, within the central area, ONE BLEACHED CORAL with THIN DELICATE BRANCHES, pale enough to resemble a light stone at a distance. It is underwater in nature, not a display specimen. A dry sample bag or small pressure gauge is permissible, markings indistinct. NO data board or notice.\nAll key objects, plaque, entrance and coral stay within middle80%; outer10% each side are expendable water/rock/wall continuation for mobile crop. Empty of people.\nNo person, face, hand, foot, diver, cat, dog, bird closeup, donor name, merger/closure notice, yacht marina notice, coral labels, scientific names, extra writing, readable gauge labels, neon, watermark, signature or border. Only readable text is 启动经费：匿名捐赠.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    },
+    {
+      "id": "bg-night-dive",
+      "kind": "background",
+      "file": "backgrounds/bg-night-dive/bg-night-dive.png",
+      "source_prompt": "projects/seaside-cafe/04-art-prompts/scenes/research-station.md",
+      "planned_file": "backgrounds/bg-night-dive/bg-night-dive.png",
+      "saved_at": "2026-10-23T20:04:28.894676+00:00",
+      "generator": "built-in image_gen",
+      "source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-097bacb2-3496-4064-a947-34358c4f547f.png",
+      "native_file": "native/bg-night-dive.png",
+      "native_size": [
+        1672,
+        941
+      ],
+      "native_mode": "RGB",
+      "native_sha256": "3b02c785b1a6cab695ba61c17bd5ad99a8ea18e7e6eaed505f6ca9c3871fbdda",
+      "native_alpha": null,
+      "output_size": [
+        1920,
+        1080
+      ],
+      "mode": "RGB",
+      "alpha": null,
+      "sha256": "9d7c6a37b7dd3dd8d5624d63bd351bfb3d5f9e0a91ab62c3565320f28f7b96ec",
+      "bytes": 2358423,
+      "prompt_file": "saved-prompts/bg-night-dive.txt",
+      "prompt": "Use case: illustration-story. Empty visual-novel background bg-night-dive for 汐湾咖啡馆. Polished semi-realistic hand-drawn panoramic16:9 painting target1920×1080 opaque PNG, fine clean lines and restrained painted color, credible dark sea and rock. Not photo, not3D.\nNIGHT SHORE BESIDE THE MARINE FIELD STATION. Camera is ON LAND looking toward the water surface, NOT an underwater viewpoint. The sea is BLACK and nearly opaque, with a little foam at shoreline rocks. A SINGLE DIVE LAMP is moving a short way UNDER THE WATER SURFACE in the CENTER of the frame, its soft small localized beam diffused beneath ripples. The lamp's operator is entirely unseen: NO DIVER, no silhouette, no human shape. The light alone conveys the nighttime dive. A dark low prefabricated station shape is on the bank, barely visible, its plaque unlit and unreadable. At most ONE very small unobtrusive work lamp on shore. There may be a faint unlit hint of pale branching coral in very shallow water, but it is not spotlighted or a display.\nUnderwater lamp and ripple glow entirely inside the central80% of frame; outer10% left/right only crop-safe dark rock/water/sky continuation. Calm restricted viewpoint: waiting on shore, watching the light go down and return. Night remains convincingly dark; do not brighten into twilight or a luminous fantasy lagoon.\nNo people, diver, face, hand, foot, flipper, boat, animal, moon closeup, huge full moon, readable plaque, readable writing, neon, bioluminescent fantasy, watermark, signature, border or garbled letters.\n",
+      "processing": "Pillow mode conversion and Lanczos resize only; no semantic editing"
+    }
+  ]
+}

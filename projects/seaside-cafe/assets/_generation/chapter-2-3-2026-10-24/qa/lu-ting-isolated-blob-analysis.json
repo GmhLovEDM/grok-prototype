@@ -1,0 +1,46 @@
+[
+  {
+    "name": "lu-ting_normal-v2",
+    "isolated_blob_roi": [
+      10,
+      1430,
+      75,
+      1530
+    ],
+    "alpha_histogram": {
+      "0": 4536,
+      "1": 1964
+    },
+    "white_nonzero_alpha_minmax": [
+      1,
+      1
+    ],
+    "max_composited_color_delta_8bit": {
+      "0": 1,
+      "45": 1,
+      "255": 0
+    }
+  },
+  {
+    "name": "lu-ting_smile",
+    "isolated_blob_roi": [
+      20,
+      1460,
+      65,
+      1510
+    ],
+    "alpha_histogram": {
+      "0": 1922,
+      "1": 328
+    },
+    "white_nonzero_alpha_minmax": [
+      1,
+      1
+    ],
+    "max_composited_color_delta_8bit": {
+      "0": 1,
+      "45": 1,
+      "255": 0
+    }
+  }
+]

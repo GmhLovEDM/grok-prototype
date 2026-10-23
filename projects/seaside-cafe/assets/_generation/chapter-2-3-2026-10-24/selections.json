@@ -1,0 +1,23 @@
+[
+  {
+    "id": "lu-ting_normal",
+    "file": "portraits/lu-ting/lu-ting_normal.png",
+    "first_draft_file": "drafts/lu-ting_normal-v1.png",
+    "sha256": "93f9d4b2574fd432acc1a73fd23161b506880c97053f5de78ffdf58f75ecfc9c"
+  },
+  {
+    "id": "bg-inn-corridor-day",
+    "file": "backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png",
+    "first_draft_file": "drafts/bg-inn-corridor-day-v1.png",
+    "sha256": "af790b5472df54dc8873dadf7e59e60f2953d6e51f884b5c66487a711296f530"
+  },
+  {
+    "id": "bg-attic-day",
+    "file": "backgrounds/bg-attic-day/bg-attic-day.png",
+    "first_draft_file": "drafts/bg-attic-day-v1.png",
+    "sha256": "2c37dc9606b4dc3ada00ed60df3c8e89c4dc5fe3720b3d175d89316efbc167e9",
+    "selected_version": "original; confirmed by user",
+    "selected_source": "C:\\Users\\Administrator\\.codex\\generated_images\\01a16a41-4dfc-7653-9483-12bc90050d11\\exec-f4062ce0-68e0-42e2-b833-5e19cd8e4718.png",
+    "previous_canonical_backup": "drafts/bg-attic-day-phone-center.png"
+  }
+]
