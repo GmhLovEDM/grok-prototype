@@ -15,5 +15,9 @@
   { "name": "老护士", "id": "lao-hushi", "affection": false },
   { "name": "老夏", "id": "lao-xia", "affection": false },
   { "name": "拿铁", "id": "na-tie", "affection": false },
+  { "name": "陆母", "id": null, "affection": false },
+  { "name": "陆汀", "id": null, "affection": false },
+  { "name": "郑恪", "id": null, "affection": false },
+  { "name": "外婆", "id": null, "affection": false },
   { "name": "电话", "id": null, "affection": false }
 ]

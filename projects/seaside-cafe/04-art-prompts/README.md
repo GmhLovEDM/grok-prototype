@@ -20,7 +20,7 @@
 
 画风与立绘同一套：细腻的半写实手绘，干净的线，克制的上色，材料可信。不是照片，不是 3D，不是 Q 版。晴天用左上方的暖中性阳光，加一点冷天光。夜里和台风用该条自己的光源。
 
-除非该条写明，否则不要可读文字。允许的字只有：「老街十七号」、「远帆号」、「唐记」、「翌日」。别的招牌、价签、登记簿保持旧、空，或看不清。
+除非该条写明，否则不要可读文字。允许的字只有：「老街十七号」、「远帆号」、「唐记」、「翌日」、「浪花里」。别的招牌、价签、登记簿保持旧、空，或看不清。
 
 负向（每条场景都加上）：人物，脸，手，脚，猫，狗，鸟的特写，Q 版，二次元大眼，照片，3D，水印，边框，乱码，霓虹，没写明的招牌。
 
@@ -70,7 +70,7 @@ P0 共 20 张。P1 共 9 张。合计 29 张。
 
 ## 第二章与第三章的场景
 
-下面这些地方，现在的 `presentation.json` 还用第 1 章的旧图顶着。提示词按剧本里的时段写。成图还没有，映射先不要改，否则构建会找不到文件。
+下面这些地方，成图还没有。`presentation.json` 里仍用第 1 章已有的旧图顶着，包括第 28 天拆开的两场。提示词里的新 id 先不要写进映射，否则构建会找不到文件。
 
 同一地点多个时段就拆开。左右各约 10% 仍只留给裁切。不要把后文才揭开的名字、信纸和通知画进图。
 
@@ -79,16 +79,15 @@ P0 共 20 张。P1 共 9 张。合计 29 张。
 | `bg-lab-day` | `assets/backgrounds/bg-lab-day/bg-lab-day.png` | 研究站板房，白天。铜牌和浅水里的白珊瑚。第 16、19、30、32、34、51 天，以及第 60 天研究站还在的几场 |
 | `bg-night-dive` | `assets/backgrounds/bg-night-dive/bg-night-dive.png` | 第 36 天「夜潜」。夜里，岸上看水下的灯 |
 | `bg-attic-day` | `assets/backgrounds/bg-attic-day/bg-attic-day.png` | 杂货铺阁楼，白天，灯只亮一半。第 27、30、31、43、54 天，以及第 60 天人还在阁楼的几场 |
-| `bg-outer-boat-day` | `assets/backgrounds/bg-outer-boat-day/bg-outer-boat-day.png` | 第 28 天「外岛」前半。台风过后的白天，船离开 |
-| `bg-outer-boat-dusk` | `assets/backgrounds/bg-outer-boat-dusk/bg-outer-boat-dusk.png` | 第 28 天「外岛」后半。傍晚船回来 |
-| `bg-inn-corridor-day` | `assets/backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png` | 「浪花里」走廊，白天。第 29 天「还巾」，第 34 天「旧照片」 |
-| `bg-inn-steps-day` | `assets/backgrounds/bg-inn-steps-day/bg-inn-steps-day.png` | 「浪花里」门口台阶，白天。第 29 天「民宿」，第 32 天锁定沈若，第 60 天宋知远各场 |
+| `bg-outer-boat-day` | `assets/backgrounds/bg-outer-boat-day/bg-outer-boat-day.png` | 第 28 天「开船」。台风过后的白天，船离开 |
+| `bg-outer-boat-dusk` | `assets/backgrounds/bg-outer-boat-dusk/bg-outer-boat-dusk.png` | 第 28 天「外岛」。傍晚船回来。这一张是主图 |
+| `bg-inn-corridor-day` | `assets/backgrounds/bg-inn-corridor-day/bg-inn-corridor-day.png` | 「浪花里」走廊，白天。第 29 天「还巾」「民宿」，第 32 天锁定沈若，第 34 天「旧照片」，第 60 天宋知远各场。台阶上的戏也用这张 |
 | `bg-archive-rain-night` | `assets/backgrounds/bg-archive-rain-night/bg-archive-rain-night.png` | 第 37 天「档案室」。县城，雨夜 |
 | `bg-warehouse-late` | `assets/backgrounds/bg-warehouse-late/bg-warehouse-late.png` | 第 40 天「仓库」。县城退件仓库，午后偏晚 |
 | `bg-hall-day` | `assets/backgrounds/bg-hall-day/bg-hall-day.png` | 第 38 天「礼堂」。白天 |
 | `bg-lu-door-day` | `assets/backgrounds/bg-lu-door-day/bg-lu-door-day.png` | 第 41 天「陆家」。白天的门口 |
 
-共 11 张。研究站的水下不另做。阁楼没有夜场。陆家没有夜场。「浪花里」的走廊和台阶是两个站位，光都是白天。
+共 10 张。研究站的水下不另做。阁楼没有夜场。陆家没有夜场。「浪花里」只留走廊这一张，台阶上的戏也用它。木牌放在画面中间。
 
 文件：
 
@@ -160,4 +159,4 @@ P0 共 20 张。P1 共 9 张。合计 29 张。
 | 郑恪 | [zheng-ke.md](characters/zheng-ke.md) | 2 |
 | 外婆 | [wai-po.md](characters/wai-po.md) | 1 |
 
-共 8 张。外婆这一张是年轻时，给旧照片用，船不画进立绘。
+共 8 张。Grok Bot 已确认：要补的配角就是外婆、陆汀、郑恪、陆母这 4 位，不用再补别人。外婆这一张是年轻时，给旧照片用，船不画进立绘。

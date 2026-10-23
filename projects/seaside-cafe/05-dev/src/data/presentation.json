@@ -631,6 +631,10 @@
     "background": "bg-post-interior-day",
     "place": "邮局"
   },
+  "28:开船":   {
+    "background": "bg-dock-entrance-dusk",
+    "place": "码头"
+  },
   "28:外岛":   {
     "background": "bg-dock-no-boat-dusk",
     "place": "外岛"
